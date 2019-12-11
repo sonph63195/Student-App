@@ -23,6 +23,7 @@ import android.widget.TextView;
 import com.duatson.studentapp.NavigationHost;
 import com.duatson.studentapp.R;
 import com.duatson.studentapp.RegisterFragment;
+import com.duatson.studentapp.RegisterServiceActivity;
 import com.duatson.studentapp.adapter.ContactAdapter;
 import com.duatson.studentapp.application.ExpandableHeightListView;
 import com.duatson.studentapp.model.Contact;
@@ -46,7 +47,6 @@ public class ServiceDetailFragment extends Fragment {
     private ExpandableHeightListView lvContact;
     private MaterialButton btnRegister;
     private List<Contact> contacts = new ArrayList<>();
-    private ImageView imgClose;
     private Service service;
 
     private BottomSheetBehavior bottomSheetBehavior;
@@ -120,7 +120,11 @@ public class ServiceDetailFragment extends Fragment {
 
             NumberFormat formatter = new DecimalFormat("#,###");
             TextView tvServiceFee = view.findViewById(R.id.tvServiceFee);
-            tvServiceFee.setText(formatter.format(service.getFee()));
+            if (service.getFee() > 0) {
+                tvServiceFee.setText(formatter.format(service.getFee()));
+            } else {
+                tvServiceFee.setText(getString(R.string.service_detail_free));
+            }
 
             ImageView ivServiceThumbnail = view.findViewById(R.id.ivServiceThumbnail);
             Picasso.get().load(service.getThumbnail()).into(ivServiceThumbnail);
@@ -139,18 +143,9 @@ public class ServiceDetailFragment extends Fragment {
     private View.OnClickListener registerCLicked = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-//            NavigationHost navigationHost = (NavigationHost) getActivity();
-//            navigationHost.navigateTo(new RegisterFragment(), true);
-//            final Dialog registerDialog  = new Dialog(getContext());
-//            registerDialog.setContentView(R.layout.fragment_register);
-//            imgClose = registerDialog.findViewById(R.id.imgClose);
-//            imgClose.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    registerDialog.dismiss();
-//                }
-//            });
-//            registerDialog.show();
+            Intent intent = new Intent(getContext(), RegisterServiceActivity.class);
+
+            startActivity(intent);
         }
     };
 

@@ -21,4 +21,6 @@
     <string name="note">Ghi chú</string>
     <string name="request_default_status">Đang xử lý</string>
     <string name="request_default_time">19/12/2019</string>
+    <string name="service_detail_free">Miễn phí</string>
+    <string name="title_History">Lịch sử</string>
 </resources>
