@@ -23,4 +23,10 @@
     <string name="request_default_time">19/12/2019</string>
     <string name="service_detail_free">Miễn phí</string>
     <string name="title_History">Lịch sử</string>
+    <string name="title_request_detail">Xem chi tiết yêu cầu</string>
+    <string name="btn_send_feedback">Đánh giá</string>
+    <string name="requestDetail_title_default">Xin cấp bảng điểm</string>
+    <string name="req_detail_title_Note">Note</string>
+    <string name="lorem_ipsum_default_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia quis metus quis condimentum. Integer tincidunt rutrum risus, non luctus felis vestibulum non.</string>
+    <string name="req_detail_title_More_Info">Thông tin thêm</string>
 </resources>
