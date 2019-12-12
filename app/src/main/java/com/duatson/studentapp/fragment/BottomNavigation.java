@@ -37,7 +37,7 @@ public class BottomNavigation extends Fragment {
 
         navigationHost = (NavigationHost) getActivity();
         manager = getActivity().getSupportFragmentManager();
-
+        
         return view;
     }
 
@@ -49,17 +49,17 @@ public class BottomNavigation extends Fragment {
             switch (item.getItemId()) {
                 case R.id.icProfile:
                     //toolbar.setTitle("Profile");
-                    navigationHost.navigateTo(new ProfileFragment(), true);
+                    navigationHost.navigateTo(new ProfileFragment(), false);
                     return true;
                 case R.id.icDashboard:
                     //toolbar.setTitle("Dashboard");
-                    navigationHost.navigateTo(new DashboardFragment(), true);
+                    navigationHost.navigateTo(new DashboardFragment(), false);
                     return true;
                 case R.id.icSearch:
-                    navigationHost.navigateTo(new ServicesListFragment(), true);
+                    navigationHost.navigateTo(new ServicesListFragment(), false);
                     return true;
                 case R.id.icHistory:
-                    navigationHost.navigateTo(new HistoryFragment(), true);
+                    navigationHost.navigateTo(new HistoryFragment(), false);
                     return true;
             }
 

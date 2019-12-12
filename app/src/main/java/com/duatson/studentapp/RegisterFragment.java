@@ -15,6 +15,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.kofigyan.stateprogressbar.StateProgressBar;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -22,6 +24,7 @@ import android.widget.Toast;
 public class RegisterFragment extends Fragment {
 
     private Toolbar toolbar;
+    String[] descriptionData = {"Chi tiết".toUpperCase(), "Đăng ký".toUpperCase(), "Xác nhận".toUpperCase()};
 
     public RegisterFragment() {
         // Required empty public constructor
@@ -36,7 +39,8 @@ public class RegisterFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_register, container, false);
 
         setUpTopToolBar(view);
-
+        StateProgressBar stateProgressBar = (StateProgressBar) view.findViewById(R.id.progressStep);
+        stateProgressBar.setStateDescriptionData(descriptionData);
         toolbar.setNavigationOnClickListener(onClickToBack);
 
         return view;

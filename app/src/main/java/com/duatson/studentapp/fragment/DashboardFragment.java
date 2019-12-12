@@ -24,6 +24,8 @@ import com.duatson.studentapp.MainActivity;
 import com.duatson.studentapp.NavigationHost;
 import com.duatson.studentapp.R;
 import com.duatson.studentapp.RequestDetailFragment;
+import com.duatson.studentapp.ServiceDetailActivity;
+import com.duatson.studentapp.ServiceListActivity;
 import com.duatson.studentapp.adapter.CategoryGridAdapter;
 import com.duatson.studentapp.adapter.RequestListAdapter;
 import com.duatson.studentapp.adapter.SliderAdapter;
@@ -51,12 +53,7 @@ public class DashboardFragment extends Fragment {
     private ExpandableHeightGridView gvServices;
     private TextView tvSearch;
     private SliderView sliderView;
-
     private List<Service> servicesCatDocs;
-
-    private ListView lvRequestListDashboard;
-    private List<Request> requests;
-
 
     @Nullable
     @Override
@@ -90,12 +87,10 @@ public class DashboardFragment extends Fragment {
         });
 
         // Connect to firebase
-        firebaseDb = FirebaseDb.makeDbRef("Services/learns");
+        firebaseDb = FirebaseDb.makeDbRef("Services/trending");
 
         gvServices = view.findViewById(R.id.gvServices);
         gvServices.setOnItemClickListener(serviceItemCLickDocs);
-
-//        setUpRequestList(view);
 
         return view;
     }
@@ -108,11 +103,9 @@ public class DashboardFragment extends Fragment {
             Bundle bundle = new Bundle();
             bundle.putSerializable("service", service);
 
-            ServiceDetailFragment serviceDetailFragment = new ServiceDetailFragment();
-            serviceDetailFragment.setArguments(bundle);
-
-            // move to service_detail_fragment
-            ((NavigationHost) getActivity()).navigateTo(serviceDetailFragment, true);
+            Intent intent = new Intent(getActivity(), ServiceDetailActivity.class);
+            intent.putExtras(bundle);
+            startActivity(intent);
         }
     };
 
@@ -124,8 +117,7 @@ public class DashboardFragment extends Fragment {
     }
 
     private void initServiceData() {
-//        lvServicesList = view.findViewById(R.id.lvServicesList);
-        servicesCatDocs = new ArrayList<Service>();
+        servicesCatDocs = new ArrayList<>();
 
         firebaseDb.addValueEventListener(new ValueEventListener() {
             @Override
@@ -136,7 +128,6 @@ public class DashboardFragment extends Fragment {
                     Service service = snapshot.getValue(Service.class);
                     // Add to list
                     servicesCatDocs.add(service);
-                    //System.out.println(snapshot.getValue());
                 }
 
                 CategoryGridAdapter categoryDocsGridAdapter = new CategoryGridAdapter(getActivity(), servicesCatDocs);

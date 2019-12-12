@@ -125,24 +125,39 @@
             android:background="@color/whiteColor"
             android:orientation="vertical">
 
-            <com.smarteist.autoimageslider.SliderView
-                android:id="@+id/imageSlider"
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="80sp"
-                app:sliderAnimationDuration="600"
-                app:sliderAutoCycleDirection="back_and_forth"
-                app:sliderAutoCycleEnabled="true"
-                app:sliderCircularHandlerEnabled="true"
-                app:sliderIndicatorAnimationDuration="600"
-                app:sliderIndicatorGravity="center_horizontal|bottom"
-                app:sliderIndicatorMargin="@dimen/margin_small"
-                app:sliderIndicatorOrientation="horizontal"
-                app:sliderIndicatorPadding="3dp"
-                app:sliderIndicatorRadius="2dp"
-                app:sliderIndicatorSelectedColor="@color/primaryLightColor"
-                app:sliderIndicatorUnselectedColor="@color/greyLight"
-                app:sliderScrollTimeInSec="2"
-                app:sliderStartAutoCycle="true" />
+                android:layout_height="wrap_content"
+                android:background="@color/greyLight"
+                android:orientation="vertical"
+                android:paddingVertical="@dimen/padding_extra_small">
+
+                <View style="@style/Divider" />
+
+                <com.smarteist.autoimageslider.SliderView
+                    android:id="@+id/imageSlider"
+                    android:layout_width="match_parent"
+                    android:layout_height="96sp"
+                    app:sliderAnimationDuration="600"
+                    app:sliderAutoCycleDirection="back_and_forth"
+                    app:sliderAutoCycleEnabled="true"
+                    app:sliderCircularHandlerEnabled="true"
+                    app:sliderIndicatorAnimationDuration="600"
+                    app:sliderIndicatorGravity="center_horizontal|bottom"
+                    app:sliderIndicatorMargin="@dimen/margin_small"
+                    app:sliderIndicatorOrientation="horizontal"
+                    app:sliderIndicatorPadding="3dp"
+                    app:sliderIndicatorRadius="2dp"
+                    app:sliderIndicatorSelectedColor="@color/primaryLightColor"
+                    app:sliderIndicatorUnselectedColor="@color/greyLight"
+                    app:sliderScrollTimeInSec="2"
+                    app:sliderStartAutoCycle="true" />
+
+                <View style="@style/Divider" />
+
+            </LinearLayout>
+
 
             <View style="@style/Divider" />
 
@@ -151,7 +166,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="@color/primaryLightColor"
-                android:paddingVertical="@dimen/padding_extra_small"
+                android:paddingVertical="@dimen/padding_small"
                 android:paddingLeft="@dimen/padding_medium"
                 android:text="Yêu cầu trong tuần"
                 android:textColor="@color/whiteColor"

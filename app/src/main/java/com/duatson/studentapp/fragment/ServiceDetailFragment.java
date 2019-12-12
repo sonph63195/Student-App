@@ -20,6 +20,7 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.duatson.studentapp.MainActivity;
 import com.duatson.studentapp.NavigationHost;
 import com.duatson.studentapp.R;
 import com.duatson.studentapp.RegisterFragment;
@@ -61,7 +62,7 @@ public class ServiceDetailFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         //return inflater.inflate(R.layout.fragment_service_detail, container, false);
-        View view = inflater.inflate(R.layout.fragment_service_detail, container,false);
+        View view = inflater.inflate(R.layout.fragment_service_detail, container, false);
         lvContact = view.findViewById(R.id.lvContact);
 
         initServiceData(view);
@@ -73,7 +74,7 @@ public class ServiceDetailFragment extends Fragment {
             @RequiresApi(api = Build.VERSION_CODES.M)
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if(contacts.get(position).getContent().equals("Email")){
+                if (contacts.get(position).getContent().equals("Email")) {
                     /* Create the Intent */
                     final Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
 
@@ -83,9 +84,9 @@ public class ServiceDetailFragment extends Fragment {
 
                     /* Send it off to the Activity-Chooser */
                     startActivity(Intent.createChooser(emailIntent, "Send mail..."));
-                }else{
+                } else {
                     String posted_by = service.getPhone();
-                    String uri = "tel:" + posted_by.trim() ;
+                    String uri = "tel:" + posted_by.trim();
                     Intent intent = new Intent(Intent.ACTION_DIAL);
                     intent.setData(Uri.parse(uri));
                     startActivity(intent);
@@ -143,8 +144,7 @@ public class ServiceDetailFragment extends Fragment {
     private View.OnClickListener registerCLicked = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent(getContext(), RegisterServiceActivity.class);
-
+            Intent intent = new Intent(getActivity(), RegisterServiceActivity.class);
             startActivity(intent);
         }
     };
