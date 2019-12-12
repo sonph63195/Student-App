@@ -47,9 +47,17 @@ public class HistoryFragment extends Fragment {
 
     private void loadRequests() {
         requests = new ArrayList<>();
-        requests.add(new Request("1", "CB9WNML10", "25/12/2019", "Pending", "Note something", null));
-        requests.add(new Request("1", "CB9WNML10", "25/12/2019", "Pending", "Note something", null));
-        requests.add(new Request("1", "CB9WNML6", "25/12/2019", "Pending", "Note something", null));
+
+        requests.add(new Request("1", "CB9WNML20", "25/12/2019", "Pending", "Note something", null));
+        requests.add(new Request("1", "CB9WNML21", "25/12/2019", "Pending", "Note something", null));
+        requests.add(new Request("1", "CB9WNML22", "25/12/2019", "Pending", "Note something", null));
+        requests.add(new Request("1", "CB9WNML23", "25/12/2019", "Pending", "Note something", null));
+        requests.add(new Request("1", "CB9WNML24", "25/12/2019", "Pending", "Note something", null));
+        requests.add(new Request("1", "CB9WNML25", "25/12/2019", "Pending", "Note something", null));
+        requests.add(new Request("1", "CB9WNML32", "25/12/2019", "Pending", "Note something", null));
+        requests.add(new Request("1", "CB9WNML27", "25/12/2019", "Pending", "Note something", null));
+        requests.add(new Request("1", "CB9WNML28", "25/12/2019", "Pending", "Note something", null));
+        requests.add(new Request("1", "CB9WNML29", "25/12/2019", "Pending", "Note something", null));
 
         RequestListAdapter adapter = new RequestListAdapter(getActivity(), requests);
         lvRequestsList.setAdapter(adapter);
