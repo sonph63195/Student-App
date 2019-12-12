@@ -106,14 +106,21 @@
 
         </LinearLayout>
 
-        <View style="@style/Divider"/>
+        <View style="@style/Divider" />
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/primaryLightColor"
+            android:paddingVertical="@dimen/padding_extra_small"
+            android:paddingLeft="@dimen/padding_medium"
             android:text="@string/service_detail_description"
-            android:paddingHorizontal="@dimen/grid_spacing"
-            android:paddingTop="@dimen/grid_spacing"/>
+            android:textColor="@color/whiteColor"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:ignore="RtlHardcoded,RtlSymmetry,UnusedAttribute" />
+        <View style="@style/Divider" />
+
         <TextView
             android:id="@+id/tvServiceDescription"
             android:layout_width="match_parent"
@@ -128,13 +135,20 @@
             android:orientation="vertical"
             android:layout_marginTop="@dimen/grid_spacing">
 
-            <View style="@style/Divider"/>
+            <View style="@style/Divider" />
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/primaryLightColor"
+                android:paddingVertical="@dimen/padding_extra_small"
+                android:paddingLeft="@dimen/padding_medium"
                 android:text="@string/service_contact_title"
-                android:padding="@dimen/grid_spacing"/>
+                android:textColor="@color/whiteColor"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="RtlHardcoded,RtlSymmetry,UnusedAttribute" />
+            <View style="@style/Divider" />
 
             <com.duatson.studentapp.application.ExpandableHeightListView
                 android:id="@+id/lvContact"

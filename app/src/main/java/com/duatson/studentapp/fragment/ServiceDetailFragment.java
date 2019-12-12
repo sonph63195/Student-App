@@ -48,7 +48,6 @@ public class ServiceDetailFragment extends Fragment {
     private ExpandableHeightListView lvContact;
     private MaterialButton btnRegister;
     private List<Contact> contacts = new ArrayList<>();
-    private ImageView imgClose;
     private Service service;
 
     private BottomSheetBehavior bottomSheetBehavior;
@@ -122,7 +121,11 @@ public class ServiceDetailFragment extends Fragment {
 
             NumberFormat formatter = new DecimalFormat("#,###");
             TextView tvServiceFee = view.findViewById(R.id.tvServiceFee);
-            tvServiceFee.setText(formatter.format(service.getFee()));
+            if (service.getFee() > 0) {
+                tvServiceFee.setText(formatter.format(service.getFee()));
+            } else {
+                tvServiceFee.setText(getString(R.string.service_detail_free));
+            }
 
             ImageView ivServiceThumbnail = view.findViewById(R.id.ivServiceThumbnail);
             Picasso.get().load(service.getThumbnail()).into(ivServiceThumbnail);
@@ -142,7 +145,7 @@ public class ServiceDetailFragment extends Fragment {
         @Override
         public void onClick(View v) {
             Intent intent = new Intent(getActivity(), RegisterServiceActivity.class);
-            getActivity().startActivity(intent);
+            startActivity(intent);
         }
     };
 
