@@ -11,12 +11,11 @@
         android:roundIcon="@mipmap/ic_ctsv_app_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RegisterServiceActivity">
-
-        </activity>
+        <activity android:name=".ServiceDetailActivity"></activity>
+        <activity android:name=".RegisterServiceActivity"></activity>
         <activity android:name=".ProfileActivity" />
         <activity android:name=".ServiceListActivity" />
-        <activity android:name=".DashboardActivity"></activity>
+        <activity android:name=".fragment.DashboardFragment" />
         <activity android:name=".FeedbackActivity" />
         <activity
             android:name=".MainActivity"

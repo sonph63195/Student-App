@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.StudentInfoFragment">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!--Toolbar-->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/app_top_bar"
+            style="@style/Widget.StudentApp.Toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="45sp"
+            android:background="@color/primaryDarkColor"
+            android:scrollbarStyle="insideInset"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:titleTextColor="@color/whiteColor">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="32sp"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:text="Thông tin sinh viên"
+                android:textAppearance="@style/TitleText"
+                android:textColor="@color/whiteColor" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <!--Image profile-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/padding_medium">
+
+            <ImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="96sp"
+                android:layout_height="96sp"
+                android:src="@drawable/ic_student" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_small"
+            android:background="@color/greyLight" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--Student Information-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/padding_large">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/margin_small"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="128sp"
+                        android:layout_height="wrap_content"
+                        android:text="Họ và tên:"
+                        android:textAppearance="@style/MediumText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Phạm Hoàng Sơn"
+                        android:textAppearance="@style/MediumText" />
+                </LinearLayout>
+
+                <View style="@style/Divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/margin_small"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="128sp"
+                        android:layout_height="wrap_content"
+                        android:text="Giới tính:"
+                        android:textAppearance="@style/MediumText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Nam"
+                        android:textAppearance="@style/MediumText" />
+                </LinearLayout>
+
+                <View style="@style/Divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/margin_small"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="128sp"
+                        android:layout_height="wrap_content"
+                        android:text="Mã số SV:"
+                        android:textAppearance="@style/MediumText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="SE130001"
+                        android:textAppearance="@style/MediumText" />
+                </LinearLayout>
+
+                <View style="@style/Divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/margin_small"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="128sp"
+                        android:layout_height="wrap_content"
+                        android:text="Nghành:"
+                        android:textAppearance="@style/MediumText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Kỹ thuật phần mềm"
+                        android:textAppearance="@style/MediumText" />
+                </LinearLayout>
+
+                <View style="@style/Divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/margin_small"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="128sp"
+                        android:layout_height="wrap_content"
+                        android:text="Ngày sinh:"
+                        android:textAppearance="@style/MediumText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="01/01/1998"
+                        android:textAppearance="@style/MediumText" />
+                </LinearLayout>
+
+                <View style="@style/Divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/margin_medium"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="128sp"
+                        android:layout_height="wrap_content"
+                        android:text="Số điện thoại:"
+                        android:textAppearance="@style/MediumText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="033 303 0303"
+                        android:textAppearance="@style/MediumText" />
+                </LinearLayout>
+
+                <View style="@style/Divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/margin_small"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="128sp"
+                        android:layout_height="wrap_content"
+                        android:text="Email:"
+                        android:textAppearance="@style/MediumText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="phamhoangson@gmail.com"
+                        android:textAppearance="@style/MediumText" />
+                </LinearLayout>
+
+                <View style="@style/Divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/margin_small"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="128sp"
+                        android:layout_height="wrap_content"
+                        android:text="Địa chỉ:"
+                        android:textAppearance="@style/MediumText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="288 Man Thiện, Phường Tăng Nhơn Phú A, Quận 9, Thành phố Hồ Chí Minh"
+                        android:textAppearance="@style/MediumText" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <!--Edit Button-->
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin_small"
+            android:layout_marginHorizontal="@dimen/margin_extra_large"
+            android:onClick="clickToEditProfile"
+            android:text="Chỉnh sửa thông tin"
+            tools:ignore="OnClick" />
+
+    </LinearLayout>
+
+</FrameLayout>

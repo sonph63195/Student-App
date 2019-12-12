@@ -22,17 +22,23 @@
                 android:layout_height="45sp"
                 android:background="@color/primaryDarkColor"
                 android:elevation="8sp"
-                app:navigationIcon="@drawable/ic_arrow_back"
+                app:menu="@menu/top_app_bar_menu_history"
                 app:titleTextColor="@color/whiteColor">
 
-                <TextView
-                    android:layout_width="fill_parent"
+                <EditText
+                    android:layout_width="match_parent"
                     android:layout_height="32sp"
                     android:layout_marginLeft="@dimen/margin_medium"
                     android:layout_marginRight="@dimen/margin_medium"
-                    android:text="Lịch sử"
-                    android:textAppearance="@style/TitleText"
-                    android:textColor="@color/whiteColor" />
+                    android:background="@drawable/rounded_edittext_2"
+                    android:drawableLeft="@drawable/ic_search_24px"
+                    android:drawableTint="@color/primaryDarkColor"
+                    android:gravity="center_vertical"
+                    android:hint="Tìm kiếm yêu cầu, mã yêu cầu,..."
+                    android:paddingLeft="@dimen/padding_small"
+                    android:paddingRight="@dimen/padding_small"
+                    android:textAppearance="@style/NormalText" />
+
             </androidx.appcompat.widget.Toolbar>
 
         </com.google.android.material.appbar.AppBarLayout>
