@@ -13,11 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".RegisterServiceActivity">
-
-        </activity>
-        <activity android:name=".ProfileActivity" />
         <activity android:name=".RequestDetailActivity" />
+        <activity android:name=".ServiceDetailActivity" />
+        <activity android:name=".RegisterServiceActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".ServiceListActivity" />
+        <activity android:name=".fragment.DashboardFragment" />
         <activity android:name=".FeedbackActivity" />
         <activity
             android:name=".MainActivity"

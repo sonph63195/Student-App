@@ -59,9 +59,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:background="@color/blueBerry"
-                        android:paddingLeft="@dimen/padding_medium"
+                        android:background="@color/primaryColor"
                         android:paddingVertical="@dimen/padding_small"
+                        android:paddingLeft="@dimen/padding_medium"
                         android:text="@string/cat_learn"
                         android:textAppearance="@style/MediumText"
                         android:textColor="@color/whiteColor"
@@ -86,9 +86,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:background="@color/blueBerry"
-                        android:paddingLeft="@dimen/padding_medium"
+                        android:background="@color/primaryColor"
                         android:paddingVertical="@dimen/padding_small"
+                        android:paddingLeft="@dimen/padding_medium"
                         android:text="@string/cat_docs"
                         android:textAppearance="@style/MediumText"
                         android:textColor="@color/whiteColor"
@@ -100,20 +100,12 @@
                         android:id="@+id/gvCatDocs"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/grid_spacing"
+                        android:layout_margin="@dimen/margin_medium"
                         android:columnWidth="60dp"
                         android:gravity="center"
                         android:horizontalSpacing="@dimen/grid_spacing"
                         android:numColumns="auto_fit"
                         android:verticalSpacing="@dimen/grid_spacing" />
-
-
-                    <!--            <ListView-->
-                    <!--                android:id="@+id/lvServicesList"-->
-                    <!--                android:layout_width="match_parent"-->
-                    <!--                android:layout_height="wrap_content"-->
-                    <!--                android:layout_marginBottom="60dp"-->
-                    <!--                android:divider="@color/secondaryTextColor" />-->
 
                     <View style="@style/Divider" />
 
@@ -121,9 +113,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:background="@color/blueBerry"
-                        android:paddingLeft="@dimen/padding_medium"
+                        android:background="@color/primaryColor"
                         android:paddingVertical="@dimen/padding_small"
+                        android:paddingLeft="@dimen/padding_medium"
                         android:text="@string/cat_allowance"
                         android:textAppearance="@style/MediumText"
                         android:textColor="@color/whiteColor"
@@ -148,9 +140,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:background="@color/blueBerry"
-                        android:paddingLeft="@dimen/padding_medium"
+                        android:background="@color/primaryColor"
                         android:paddingVertical="@dimen/padding_small"
+                        android:paddingLeft="@dimen/padding_medium"
                         android:text="@string/cat_others"
                         android:textAppearance="@style/MediumText"
                         android:textColor="@color/whiteColor"

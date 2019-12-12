@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.SettingsFragment">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!--Toolbar-->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/app_top_bar"
+            style="@style/Widget.StudentApp.Toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="45sp"
+            android:background="@color/primaryDarkColor"
+            android:scrollbarStyle="insideInset"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:titleTextColor="@color/whiteColor">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="32sp"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:text="Hỗ trợ"
+                android:textAppearance="@style/TitleText"
+                android:textColor="@color/whiteColor" />
+        </androidx.appcompat.widget.Toolbar>
+    </LinearLayout>
+
+</FrameLayout>
