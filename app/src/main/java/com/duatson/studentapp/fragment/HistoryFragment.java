@@ -42,16 +42,17 @@ public class HistoryFragment extends Fragment {
         lvRequestsList = view.findViewById(R.id.lvRequestsList);
         lvRequestsList.setOnItemClickListener(requestItemClick);
         loadRequests();
+
         return view;
     }
 
     private void loadRequests() {
         requests = new ArrayList<>();
 
-        requests.add(new Request("1", "CB9WNML20", "25/12/2019", "Pending", "Note something", null));
-        requests.add(new Request("1", "CB9WNML21", "25/12/2019", "Pending", "Note something", null));
-        requests.add(new Request("1", "CB9WNML22", "25/12/2019", "Pending", "Note something", null));
-        requests.add(new Request("1", "CB9WNML23", "25/12/2019", "Pending", "Note something", null));
+        requests.add(new Request("1", "CB9WNML20", "25/12/2019", "Đang xử lý", "Note something", null));
+        requests.add(new Request("1", "CB9WNML21", "25/12/2019", "Đang xử lý", "Note something", null));
+        requests.add(new Request("1", "CB9WNML22", "25/12/2019", "Đã hoàn thành", "Note something", null));
+        requests.add(new Request("1", "CB9WNML23", "25/12/2019", "Đã hoàn thành", "Note something", null));
         requests.add(new Request("1", "CB9WNML24", "25/12/2019", "Pending", "Note something", null));
         requests.add(new Request("1", "CB9WNML25", "25/12/2019", "Pending", "Note something", null));
         requests.add(new Request("1", "CB9WNML32", "25/12/2019", "Pending", "Note something", null));
@@ -63,12 +64,13 @@ public class HistoryFragment extends Fragment {
         lvRequestsList.setAdapter(adapter);
     }
 
+
     private AdapterView.OnItemClickListener requestItemClick = new AdapterView.OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             Request request = requests.get(position);
             Intent intent = new Intent(getContext(), RequestDetailActivity.class);
-
+            intent.putExtra("REQUEST", request);
             startActivity(intent);
         }
     };
