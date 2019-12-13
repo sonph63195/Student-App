@@ -130,8 +130,10 @@ public class DashboardFragment extends Fragment {
                     servicesCatDocs.add(service);
                 }
 
-                CategoryGridAdapter categoryDocsGridAdapter = new CategoryGridAdapter(getActivity(), servicesCatDocs);
-                gvServices.setAdapter(categoryDocsGridAdapter);
+                if (servicesCatDocs.size() > 0) {
+                    CategoryGridAdapter categoryDocsGridAdapter = new CategoryGridAdapter(getActivity(), servicesCatDocs);
+                    gvServices.setAdapter(categoryDocsGridAdapter);
+                }
             }
 
             @Override

@@ -6,6 +6,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -85,15 +86,20 @@ public class ServiceListActivity extends AppCompatActivity implements Navigation
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Service service = services.get(position);
-                if (service != null) {
-                    Bundle args = new Bundle();
-                    args.putSerializable(ServicesListFragment.BUNDLE_KEY, service);
+//                if (service != null) {
+//                    Bundle args = new Bundle();
+//                    args.putSerializable(ServicesListFragment.BUNDLE_KEY, service);
+//
+//                    ServiceDetailFragment serviceDetailFragment = new ServiceDetailFragment();
+//                    serviceDetailFragment.setArguments(args);
+//                    navigateTo(serviceDetailFragment, true);
+//                }
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("service", service);
 
-                    ServiceDetailFragment serviceDetailFragment = new ServiceDetailFragment();
-                    serviceDetailFragment.setArguments(args);
-                    navigateTo(serviceDetailFragment, true);
-                }
-                System.out.println(services.get(position));
+                Intent intent = new Intent(getApplicationContext(), ServiceDetailActivity.class);
+                intent.putExtras(bundle);
+                startActivity(intent);
             }
         };
     }

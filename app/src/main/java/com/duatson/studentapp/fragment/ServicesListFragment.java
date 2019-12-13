@@ -1,6 +1,7 @@
 package com.duatson.studentapp.fragment;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -16,6 +17,7 @@ import android.widget.Toast;
 
 import com.duatson.studentapp.NavigationHost;
 import com.duatson.studentapp.R;
+import com.duatson.studentapp.ServiceDetailActivity;
 import com.duatson.studentapp.adapter.CategoryGridAdapter;
 import com.duatson.studentapp.application.ExpandableHeightGridView;
 import com.duatson.studentapp.model.Service;
@@ -93,16 +95,22 @@ public class ServicesListFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Service service = services.get(position);
-                if (service != null) {
-                    Bundle args = new Bundle();
-                    args.putSerializable(ServicesListFragment.BUNDLE_KEY, service);
+//                if (service != null) {
+//                    Bundle args = new Bundle();
+//                    args.putSerializable(ServicesListFragment.BUNDLE_KEY, service);
+//
+//                    ServiceDetailFragment fragment = new ServiceDetailFragment();
+//                    fragment.setArguments(args);
+//                    // move to service_detail_fragment
+//                    ((NavigationHost) getActivity()).navigateTo(fragment, true);
+//                }
+//                System.out.println(services.get(position));
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("service", service);
 
-                    ServiceDetailFragment fragment = new ServiceDetailFragment();
-                    fragment.setArguments(args);
-                    // move to service_detail_fragment
-                    ((NavigationHost) getActivity()).navigateTo(fragment, true);
-                }
-                System.out.println(services.get(position));
+                Intent intent = new Intent(getContext(), ServiceDetailActivity.class);
+                intent.putExtras(bundle);
+                startActivity(intent);
             }
         };
     }

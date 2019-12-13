@@ -104,7 +104,7 @@ public class ServiceDetailFragment extends Fragment {
     private Service getDataFromClick() {
         Bundle bundle = this.getArguments();
         if (bundle != null) {
-            return (Service) bundle.getSerializable(ServicesListFragment.BUNDLE_KEY);
+            return (Service) bundle.getSerializable("service");
         }
         return null;
     }
