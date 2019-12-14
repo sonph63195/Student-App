@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="?selectableItemBackground">
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/Widget.MaterialComponents.CardView"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:strokeWidth="0dp"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="0dp"
+        android:background="@android:color/transparent">
+
+        <ImageView
+            android:id="@+id/requestItemIcon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_account"
+            android:layout_margin="@dimen/grid_spacing"
+            android:layout_gravity="center"
+            tools:ignore="ContentDescription" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TableRow android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:orientation="vertical"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:id="@+id/tvRequestItemTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/request_default_status"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tvRequestItemTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/request_default_time"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvRequestItemStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="end"
+                android:text="@string/request_default_status"
+                android:textColor="@color/primaryColor"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+
+    </LinearLayout>
+
+</LinearLayout>

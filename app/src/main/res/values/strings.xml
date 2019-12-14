@@ -29,4 +29,10 @@
     <string name="req_detail_title_Note">Note</string>
     <string name="lorem_ipsum_default_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia quis metus quis condimentum. Integer tincidunt rutrum risus, non luctus felis vestibulum non.</string>
     <string name="req_detail_title_More_Info">Thông tin thêm</string>
+    <string name="settings">Cài đặt</string>
+    <string name="help_contact">Trung tâm hỗ trợ</string>
+    <string name="student_infomation">Thông tin sinh viên</string>
+    <string name="sign_out">Đăng xuất</string>
+    <string name="application_infomation">Thông tin ứng dụng</string>
+    <string name="profile">Cá nhân</string>
 </resources>

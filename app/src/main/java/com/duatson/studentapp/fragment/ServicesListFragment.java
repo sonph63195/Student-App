@@ -12,7 +12,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.Toast;
 
 import com.duatson.studentapp.NavigationHost;
 import com.duatson.studentapp.R;
@@ -59,8 +58,8 @@ public class ServicesListFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         // Inflate the layout for this fragment
-        //return inflater.inflate(R.layout.fragment_services_list, container, false);
-        View view = inflater.inflate(R.layout.fragment_services_list, container, false);
+        //return inflater.inflate(R.layout.activity_services_list, container, false);
+        View view = inflater.inflate(R.layout.activity_services_list, container, false);
 
         setUpTopToolBar(view);
 

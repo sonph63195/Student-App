@@ -22,7 +22,7 @@ public class ContactAdapter extends ArrayAdapter {
     private List<Contact> contacts;
 
     public ContactAdapter(Activity context, List<Contact> contacts) {
-        super(context, R.layout.contact_item_service_detail, contacts);
+        super(context, R.layout.item_contact_service_detail, contacts);
         this.context = context;
         this.contacts = contacts;
     }
@@ -32,7 +32,7 @@ public class ContactAdapter extends ArrayAdapter {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         LayoutInflater inflater = context.getLayoutInflater();
 
-        View viewItem = inflater.inflate(R.layout.contact_item_service_detail, null, true);
+        View viewItem = inflater.inflate(R.layout.item_contact_service_detail, null, true);
 
         Contact contact = contacts.get(position);
 

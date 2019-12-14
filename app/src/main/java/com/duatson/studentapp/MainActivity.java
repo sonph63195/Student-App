@@ -1,19 +1,19 @@
 package com.duatson.studentapp;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
-
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+
 import com.duatson.studentapp.fragment.DashboardFragment;
 import com.duatson.studentapp.fragment.HelpFragment;
-import com.duatson.studentapp.fragment.NotificationFragment;
 import com.duatson.studentapp.fragment.SettingsFragment;
 import com.duatson.studentapp.fragment.StudentInfoFragment;
 
@@ -33,23 +33,15 @@ public class MainActivity extends AppCompatActivity implements NavigationHost {
         }
     }
 
-    /**
-     * Navigate to the given fragment.
-     *
-     * @param fragment       Fragment to navigate to.
-     * @param addToBackstack Whether or not the current fragment should be added to the backstack.
-     */
     @Override
-    public void navigateTo(Fragment fragment, boolean addToBackstack) {
+    public void navigateTo(Fragment fragment, boolean addToBackStack) {
         FragmentTransaction transaction =
                 getSupportFragmentManager()
                         .beginTransaction()
                         .replace(R.id.container, fragment);
-
-        if (addToBackstack) {
+        if (addToBackStack) {
             transaction.addToBackStack(null);
         }
-
         transaction.commit();
     }
 
@@ -62,13 +54,6 @@ public class MainActivity extends AppCompatActivity implements NavigationHost {
         }
     }
 
-    public void clickToBack(View view) {
-        super.onBackPressed();
-    }
-
-    public void clickToNotification(MenuItem item) {
-        this.navigateTo(new NotificationFragment(), true);
-    }
 
     public void clickToSignOut(View view) {
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
@@ -76,7 +61,6 @@ public class MainActivity extends AppCompatActivity implements NavigationHost {
         builder.setPositiveButton("hủy", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                // TODO do nothing
             }
         });
         builder.setNegativeButton("Đăng xuất", new DialogInterface.OnClickListener() {

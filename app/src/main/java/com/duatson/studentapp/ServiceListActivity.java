@@ -1,19 +1,19 @@
 package com.duatson.studentapp;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.GridView;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.GridView;
-
 import com.duatson.studentapp.adapter.CategoryGridAdapter;
 import com.duatson.studentapp.application.ExpandableHeightGridView;
-import com.duatson.studentapp.fragment.ServiceDetailFragment;
 import com.duatson.studentapp.fragment.ServicesListFragment;
 import com.duatson.studentapp.model.Service;
 import com.duatson.studentapp.network.FirebaseDb;
@@ -45,15 +45,17 @@ public class ServiceListActivity extends AppCompatActivity implements Navigation
     private static final String FB_OTHERS_PATH = "Services/others";
     private static final String FB_ALLOWANCE_PATH = "Services/allowance";
 
+    public static final String BUNDLE_KEY = "service";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_service_list);
-        toolbar = findViewById(R.id.app_top_bar);
+        setContentView(R.layout.activity_services_list);
+        toolbar = findViewById(R.id.tbrServiceList);
         toolbar.setNavigationOnClickListener(new Toolbar.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getSupportFragmentManager().popBackStack();
+                onBackPressed();
             }
         });
         gvCatDocs = findViewById(R.id.gvCatDocs);
@@ -89,11 +91,10 @@ public class ServiceListActivity extends AppCompatActivity implements Navigation
                     Bundle args = new Bundle();
                     args.putSerializable(ServicesListFragment.BUNDLE_KEY, service);
 
-                    ServiceDetailFragment serviceDetailFragment = new ServiceDetailFragment();
-                    serviceDetailFragment.setArguments(args);
-                    navigateTo(serviceDetailFragment, true);
+                    Intent intent = new Intent(getApplicationContext(), ServiceDetailActivity.class);
+                    intent.putExtras(args);
+                    startActivity(intent);
                 }
-                System.out.println(services.get(position));
             }
         };
     }

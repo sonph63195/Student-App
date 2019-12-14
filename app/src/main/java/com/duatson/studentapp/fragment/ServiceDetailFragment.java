@@ -3,16 +3,11 @@ package com.duatson.studentapp.fragment;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
-import android.app.Dialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-
-import androidx.annotation.RequiresApi;
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,16 +15,16 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.duatson.studentapp.MainActivity;
-import com.duatson.studentapp.NavigationHost;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+
 import com.duatson.studentapp.R;
-import com.duatson.studentapp.RegisterFragment;
 import com.duatson.studentapp.RegisterServiceActivity;
 import com.duatson.studentapp.adapter.ContactAdapter;
 import com.duatson.studentapp.application.ExpandableHeightListView;
 import com.duatson.studentapp.model.Contact;
 import com.duatson.studentapp.model.Service;
-import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.button.MaterialButton;
 import com.squareup.picasso.Picasso;
 
@@ -38,32 +33,31 @@ import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-
-/**
- * A simple {@link Fragment} subclass.
- */
 public class ServiceDetailFragment extends Fragment {
 
-
+    private Toolbar toolbar;
     private ExpandableHeightListView lvContact;
     private MaterialButton btnRegister;
     private List<Contact> contacts = new ArrayList<>();
     private Service service;
 
-    private BottomSheetBehavior bottomSheetBehavior;
-
     public ServiceDetailFragment() {
         // Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        //return inflater.inflate(R.layout.fragment_service_detail, container, false);
-        View view = inflater.inflate(R.layout.fragment_service_detail, container, false);
+        View view = inflater.inflate(R.layout.activity_service_detail, container, false);
         lvContact = view.findViewById(R.id.lvContact);
+
+        toolbar = view.findViewById(R.id.tbrServiceDetail);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().getSupportFragmentManager().popBackStack();
+            }
+        });
 
         initServiceData(view);
 

@@ -1,20 +1,18 @@
 package com.duatson.studentapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.kofigyan.stateprogressbar.StateProgressBar;
 
 public class RegisterServiceActivity extends AppCompatActivity {
 
     private TextView textFile;
-    private ImageView imgFile;
     private Toolbar toolbar;
     String[] descriptionData = {"CHI TIẾT", "ĐĂNG KÝ", "XÁC NHẬN"};
     private static final int PICK_FILE_RESULT_CODE = 1;
@@ -23,7 +21,16 @@ public class RegisterServiceActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_register);
+        setContentView(R.layout.activity_register_service);
+
+        toolbar = findViewById(R.id.tbrRegister);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+
         StateProgressBar stateProgressBar = findViewById(R.id.progressStep);
         stateProgressBar.setStateDescriptionData(descriptionData);
     }

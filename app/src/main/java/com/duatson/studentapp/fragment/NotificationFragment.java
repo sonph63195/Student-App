@@ -2,15 +2,15 @@ package com.duatson.studentapp.fragment;
 
 
 import android.os.Bundle;
-
-import androidx.appcompat.widget.Toolbar;
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import static com.duatson.studentapp.R.*;
+import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+
+import static com.duatson.studentapp.R.id;
+import static com.duatson.studentapp.R.layout;
 
 
 /**
@@ -34,7 +34,7 @@ public class NotificationFragment extends Fragment {
     }
 
     private void setUpTopToolBar(View view) {
-        toolbar = view.findViewById(id.app_top_bar);
+        toolbar = view.findViewById(id.tbrNotification);
         toolbar.setNavigationOnClickListener(new Toolbar.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -3,64 +3,56 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ServiceDetailActivity"
-    android:layout_marginBottom="58dp">
+    android:layout_height="fill_parent"
+    android:layout_marginBottom="58dp"
+    tools:context=".ServiceDetailActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="fill_parent"
         android:orientation="vertical">
 
-        <RelativeLayout
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/service_detail_cover_image_height">
+            android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/ivServiceThumbnail"
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:scaleType="centerCrop"
-                android:src="@drawable/img_helper_service_detail" />
+                android:layout_height="wrap_content">
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:scaleType="centerCrop"
-                android:src="@drawable/img_filter" />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-                <LinearLayout
-                    android:onClick="clickToBack"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="@dimen/grid_spacing"
-                    android:background="?selectableItemBackground"
-                    android:clickable="true"
-                    android:focusable="true">
-
-                    <ImageView
-                        android:id="@+id/btnBack"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@drawable/ic_arrow_back"/>
-
-                </LinearLayout>
-                <TextView
-                    android:id="@+id/tvServiceTitle"
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/tbrServiceDetail"
+                    style="@style/Widget.StudentApp.Toolbar"
                     android:layout_width="match_parent"
-                    android:layout_height="192dp"
-                    android:text="@string/welcome"
-                    android:gravity="bottom"
-                    android:textAppearance="?attr/textAppearanceHeadline4"
-                    android:textColor="@color/secondaryTextColor"
-                    android:padding="@dimen/grid_spacing"/>
+                    android:layout_height="@dimen/toolbar_height"
+                    android:layout_gravity="top"
+                    android:background="@android:color/transparent"
+                    android:elevation="8sp"
+                    app:navigationIcon="@drawable/ic_arrow_back_blue_24dp"
+                    app:titleTextColor="@color/whiteColor" />
 
-            </LinearLayout>
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivServiceThumbnail"
+                    android:layout_width="match_parent"
+                    android:layout_height="256sp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_helper_service_detail" />
+            </FrameLayout>
 
-        </RelativeLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <View style="@style/Divider" />
+
+        <TextView
+            android:id="@+id/tvServiceTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:paddingLeft="@dimen/grid_spacing"
+            android:paddingTop="@dimen/grid_spacing"
+            android:paddingRight="@dimen/grid_spacing"
+            android:text="@string/welcome"
+            android:textAppearance="?attr/textAppearanceHeadline5" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -71,74 +63,93 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_gravity="center"
-                android:layout_weight="0.5">
-
+                android:layout_weight="0.5"
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/tvServiceFee"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/primaryColor"
-                    android:textAppearance="?attr/textAppearanceHeadline5"
                     android:layout_marginRight="5dp"
-                    android:text="20,000"/>
+                    android:text="20,000"
+                    android:textAppearance="?attr/textAppearanceHeadline5"
+                    android:textColor="@color/primaryColor" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/service_currency"
-                    android:textColor="@color/primaryColor"/>
+                    android:textColor="@color/primaryColor" />
 
             </LinearLayout>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnRegister"
+                style="@style/Widget.MaterialComponents.Button"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="56sp"
                 android:layout_weight="0.5"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:text="@string/register"
+                android:textSize="16sp"
                 app:icon="@drawable/ic_send"
-                app:iconGravity="end"/>
+                app:iconGravity="end" />
 
         </LinearLayout>
 
-        <View style="@style/Divider"/>
+        <View style="@style/Divider" />
+
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/primaryLightColor"
+            android:paddingVertical="@dimen/padding_small"
+            android:paddingLeft="@dimen/padding_medium"
             android:text="@string/service_detail_description"
-            android:paddingHorizontal="@dimen/grid_spacing"
-            android:paddingTop="@dimen/grid_spacing"/>
+            android:textColor="@color/whiteColor"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:ignore="RtlHardcoded,RtlSymmetry,UnusedAttribute" />
+
+        <View style="@style/Divider" />
+
         <TextView
             android:id="@+id/tvServiceDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="@dimen/grid_spacing"
             android:text="@string/app_name"
-            android:textAppearance="?attr/textAppearanceBody1"
-            android:layout_margin="@dimen/grid_spacing"/>
+            android:textAppearance="?attr/textAppearanceBody1" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="@dimen/grid_spacing">
+            android:layout_marginTop="@dimen/grid_spacing"
+            android:orientation="vertical">
 
-            <View style="@style/Divider"/>
+            <View style="@style/Divider" />
+
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/primaryLightColor"
+                android:paddingVertical="@dimen/padding_small"
+                android:paddingLeft="@dimen/padding_medium"
                 android:text="@string/service_contact_title"
-                android:padding="@dimen/grid_spacing"/>
+                android:textColor="@color/whiteColor"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="RtlHardcoded,RtlSymmetry,UnusedAttribute" />
+
+            <View style="@style/Divider" />
 
             <com.duatson.studentapp.application.ExpandableHeightListView
                 android:id="@+id/lvContact"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:divider="@color/whiteColor"/>
+                android:divider="@color/whiteColor" />
 
         </LinearLayout>
 

@@ -21,7 +21,7 @@
                 android:id="@+id/app_top_bar"
                 style="@style/Widget.StudentApp.Toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="45sp"
+                android:layout_height="@dimen/toolbar_height"
                 android:background="@color/primaryDarkColor"
                 android:elevation="8sp"
                 app:navigationIcon="@drawable/ic_arrow_back"

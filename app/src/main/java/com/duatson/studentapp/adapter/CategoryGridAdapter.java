@@ -10,7 +10,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.duatson.studentapp.R;
-import com.duatson.studentapp.application.DrawableUtil;
 import com.duatson.studentapp.model.Service;
 import com.squareup.picasso.Picasso;
 
@@ -22,7 +21,7 @@ public class CategoryGridAdapter extends ArrayAdapter<Service> {
     private final List<Service> services;
 
     public CategoryGridAdapter(Activity context, List<Service> services) {
-        super(context, R.layout.service_list_item, services);
+        super(context, R.layout.item_service_list, services);
         this.context = context;
         this.services = services;
     }
@@ -34,7 +33,7 @@ public class CategoryGridAdapter extends ArrayAdapter<Service> {
 
         LayoutInflater inflater = context.getLayoutInflater();
         @SuppressLint({"ViewHolder", "InflateParams"})
-        View view = inflater.inflate(R.layout.service_list_item, null, true);
+        View view = inflater.inflate(R.layout.item_service_list, null, true);
 
         // Item title
         TextView serviceItemTitle = view.findViewById(R.id.serviceItemTitle);

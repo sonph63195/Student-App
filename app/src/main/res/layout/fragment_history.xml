@@ -20,7 +20,7 @@
                 android:id="@+id/app_top_bar"
                 style="@style/Widget.StudentApp.Toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="45sp"
+                android:layout_height="@dimen/toolbar_height"
                 android:background="@color/primaryDarkColor"
                 android:elevation="8sp"
                 app:menu="@menu/top_app_bar_menu_history"
@@ -28,7 +28,7 @@
 
                 <EditText
                     android:layout_width="match_parent"
-                    android:layout_height="32sp"
+                    android:layout_height="40sp"
                     android:layout_marginLeft="@dimen/margin_medium"
                     android:layout_marginRight="@dimen/margin_medium"
                     android:background="@drawable/rounded_edittext_2"

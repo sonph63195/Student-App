@@ -6,16 +6,17 @@
         android:icon="@drawable/ic_home_outlined_24px"
         android:title="Trang Chủ"
         app:showAsAction="always" />
-    <item
-        android:id="@+id/icSearch"
-        android:icon="@drawable/ic_search_24px"
-        android:title="Tìm Kiếm"
-        app:showAsAction="always" />
 
     <item
         android:id="@+id/icHistory"
         android:icon="@drawable/ic_history_black_24dp"
         android:title="Lịch Sử"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/icNotification"
+        android:icon="@drawable/ic_notifications_24px"
+        android:title="Thông Báo"
         app:showAsAction="always" />
 
     <item

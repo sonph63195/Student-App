@@ -34,7 +34,7 @@ public class StudentInfoFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_student_info, container, false);
 
-//        navigationView = view.getRootView().findViewById(R.id.bottom_navigation);
+//        navigationView = view.getRootView().findViewById(R.id.layout_bottom_navigation);
 //        if (navigationView != null) {
 //            Toast.makeText(getContext(), "Navigation != null", Toast.LENGTH_SHORT).show();
 //        } else {
