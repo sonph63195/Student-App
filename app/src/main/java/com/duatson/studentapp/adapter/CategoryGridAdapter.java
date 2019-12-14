@@ -24,6 +24,7 @@ public class CategoryGridAdapter extends ArrayAdapter<Service> {
         super(context, R.layout.item_service_list, services);
         this.context = context;
         this.services = services;
+        System.out.println(services);
     }
 
     @Override
@@ -35,13 +36,15 @@ public class CategoryGridAdapter extends ArrayAdapter<Service> {
         @SuppressLint({"ViewHolder", "InflateParams"})
         View view = inflater.inflate(R.layout.item_service_list, null, true);
 
-        // Item title
-        TextView serviceItemTitle = view.findViewById(R.id.serviceItemTitle);
-        serviceItemTitle.setText(service.getName());
-        // Item Icon
-        if (service.getIcon() != null) {
-            ImageView serviceItemIcon = view.findViewById(R.id.serviceItemIcon);
-            Picasso.get().load(service.getIcon()).into(serviceItemIcon);
+        if (service != null) {
+            // Item title
+            TextView serviceItemTitle = view.findViewById(R.id.serviceItemTitle);
+            serviceItemTitle.setText(service.getName());
+            // Item Icon
+            if (service.getIcon() != null) {
+                ImageView serviceItemIcon = view.findViewById(R.id.serviceItemIcon);
+                Picasso.get().load(service.getIcon()).into(serviceItemIcon);
+            }
         }
 
         return view;
