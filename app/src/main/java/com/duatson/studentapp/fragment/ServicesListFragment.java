@@ -1,6 +1,7 @@
 package com.duatson.studentapp.fragment;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -15,6 +16,7 @@ import android.widget.GridView;
 
 import com.duatson.studentapp.NavigationHost;
 import com.duatson.studentapp.R;
+import com.duatson.studentapp.ServiceDetailActivity;
 import com.duatson.studentapp.adapter.CategoryGridAdapter;
 import com.duatson.studentapp.application.ExpandableHeightGridView;
 import com.duatson.studentapp.model.Service;
@@ -32,36 +34,26 @@ import java.util.List;
  */
 public class ServicesListFragment extends Fragment {
 
-    private DatabaseReference firebaseDb;
-    private Toolbar toolbar;
-
-    // private ListView lvServicesList;
     private ExpandableHeightGridView gvCatDocs;
     private ExpandableHeightGridView gvCatLearn;
     private ExpandableHeightGridView gvCatOthers;
     private ExpandableHeightGridView gvCatAllowance;
 
-    private List<Service> servicesCatDocs;
-    private List<Service> servicesCatLearn;
-    private List<Service> servicesCatOthers;
-    private List<Service> servicesCatAllowance;
+    private static final String FB_DOCS_PATH = "Services/docs";
+    private static final String FB_LEARNS_PATH = "Services/learns";
+    private static final String FB_OTHERS_PATH = "Services/others";
+    private static final String FB_ALLOWANCE_PATH = "Services/allowance";
 
-    public static final String BUNDLE_KEY = "service";
+    public static final String MY_SERVICE_KEY = "service";
 
     public ServicesListFragment() {
         // Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        // Inflate the layout for this fragment
-        //return inflater.inflate(R.layout.activity_services_list, container, false);
-        View view = inflater.inflate(R.layout.activity_services_list, container, false);
-
-        setUpTopToolBar(view);
+        View view = inflater.inflate(R.layout.fragment_services_list, container, false);
 
         gvCatDocs = view.findViewById(R.id.gvCatDocs);
         gvCatLearn = view.findViewById(R.id.gvCatLearn);
@@ -71,37 +63,16 @@ public class ServicesListFragment extends Fragment {
         return view;
     }
 
-//    private GridView.OnItemClickListener serviceItemCLickDocs = new GridView.OnItemClickListener() {
-//        @Override
-//        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//            Service service = servicesCatDocs.get(position);
-//
-//            Bundle bundle = new Bundle();
-//            bundle.putSerializable(ServicesListFragment.BUNDLE_KEY, service);
-//
-//            ServiceDetailFragment serviceDetailFragment = new ServiceDetailFragment();
-//            serviceDetailFragment.setArguments(bundle);
-//
-//            // move to service_detail_fragment
-//            ((NavigationHost) getActivity()).navigateTo(serviceDetailFragment, true);
-//        }
-//    };
-
     private GridView.OnItemClickListener gridItemClick(final List<Service> services) {
         return new GridView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Service service = services.get(position);
                 if (service != null) {
-                    Bundle args = new Bundle();
-                    args.putSerializable(ServicesListFragment.BUNDLE_KEY, service);
-
-                    ServiceDetailFragment fragment = new ServiceDetailFragment();
-                    fragment.setArguments(args);
-                    // move to service_detail_fragment
-                    ((NavigationHost) getActivity()).navigateTo(fragment, true);
+                    Intent intent = new Intent(getActivity(), ServiceDetailActivity.class);
+                    intent.putExtra(MY_SERVICE_KEY, service);
+                    startActivity(intent);
                 }
-                System.out.println(services.get(position));
             }
         };
     }
@@ -109,18 +80,15 @@ public class ServicesListFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-
         initServiceData();
     }
 
     private void initServiceData() {
-//        lvServicesList = view.findViewById(R.id.lvServicesList);
-        servicesCatDocs = dataSnapshot("Services/docs", gvCatDocs);
-        servicesCatLearn = dataSnapshot("Services/learns", gvCatLearn);
-        servicesCatOthers = dataSnapshot("Services/others", gvCatOthers);
-        servicesCatAllowance = dataSnapshot("Services/allowance", gvCatAllowance);
+        List<Service> servicesCatDocs = dataSnapshot(FB_DOCS_PATH, gvCatDocs);
+        List<Service> servicesCatLearn = dataSnapshot(FB_LEARNS_PATH, gvCatLearn);
+        List<Service> servicesCatOthers = dataSnapshot(FB_OTHERS_PATH, gvCatOthers);
+        List<Service> servicesCatAllowance = dataSnapshot(FB_ALLOWANCE_PATH, gvCatAllowance);
 
-        // Add item click listener
         gvCatDocs.setOnItemClickListener(gridItemClick(servicesCatDocs));
         gvCatLearn.setOnItemClickListener(gridItemClick(servicesCatLearn));
         gvCatOthers.setOnItemClickListener(gridItemClick(servicesCatOthers));
@@ -129,7 +97,7 @@ public class ServicesListFragment extends Fragment {
 
     private List<Service> dataSnapshot(String firebasePath, final ExpandableHeightGridView gridView) {
         final List<Service> services = new ArrayList<>();
-        firebaseDb = FirebaseDb.makeDbRef(firebasePath);
+        DatabaseReference firebaseDb = FirebaseDb.makeDbRef(firebasePath);
 
         firebaseDb.addValueEventListener(new ValueEventListener() {
             @Override
@@ -139,10 +107,8 @@ public class ServicesListFragment extends Fragment {
                     Service service = snapshot.getValue(Service.class);
                     services.add(service);
                 }
-
                 CategoryGridAdapter gridAdapter = new CategoryGridAdapter(getActivity(), services);
                 gridView.setAdapter(gridAdapter);
-
             }
 
             @Override
@@ -150,17 +116,6 @@ public class ServicesListFragment extends Fragment {
 
             }
         });
-
         return services;
-    }
-
-    private void setUpTopToolBar(View view) {
-        toolbar = view.findViewById(R.id.app_top_bar);
-        toolbar.setNavigationOnClickListener(new Toolbar.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getActivity().getSupportFragmentManager().popBackStack();
-            }
-        });
     }
 }

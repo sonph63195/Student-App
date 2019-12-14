@@ -35,4 +35,16 @@
     <string name="sign_out">Đăng xuất</string>
     <string name="application_infomation">Thông tin ứng dụng</string>
     <string name="profile">Cá nhân</string>
+    <string name="hello_text">Xin chào</string>
+    <string name="today_text">Thứ 7, ngày 30 tháng 11 năm 2019</string>
+    <string name="serviceDetail_title">Chi tiết dịch vụ</string>
+    <string name="menu_home">Trang Chủ</string>
+    <string name="menu_history">Lịch Sử</string>
+    <string name="menu_account">Cá Nhân</string>
+    <string name="menu_notification">Thông Báo</string>
+    <string name="cat_decs_learn">Các vấn đề liên quan tới học tập</string>
+    <string name="cat_decs_docs">Những vấn đề liên quan tới văn bản, giấy tờ</string>
+    <string name="cat_decs_allowance">Đăng ký nhận trợ cấp</string>
+    <string name="cat_decs_others">Những danh mục khác</string>
+    <string name="search_hint">Tìm kiếm dịch vụ...</string>
 </resources>

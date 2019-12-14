@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.GridView;
 
 import androidx.annotation.NonNull;
@@ -14,7 +15,6 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.duatson.studentapp.adapter.CategoryGridAdapter;
 import com.duatson.studentapp.application.ExpandableHeightGridView;
-import com.duatson.studentapp.fragment.ServicesListFragment;
 import com.duatson.studentapp.model.Service;
 import com.duatson.studentapp.network.FirebaseDb;
 import com.google.firebase.database.DataSnapshot;
@@ -29,6 +29,7 @@ public class ServiceListActivity extends AppCompatActivity implements Navigation
 
     private DatabaseReference firebaseDb;
     private Toolbar toolbar;
+    private EditText edtSearch;
 
     private ExpandableHeightGridView gvCatDocs;
     private ExpandableHeightGridView gvCatLearn;
@@ -45,12 +46,13 @@ public class ServiceListActivity extends AppCompatActivity implements Navigation
     private static final String FB_OTHERS_PATH = "Services/others";
     private static final String FB_ALLOWANCE_PATH = "Services/allowance";
 
-    public static final String BUNDLE_KEY = "service";
+    public static final String MY_SERVICE_KEY = "service";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_services_list);
+
         toolbar = findViewById(R.id.tbrServiceList);
         toolbar.setNavigationOnClickListener(new Toolbar.OnClickListener() {
             @Override
@@ -58,6 +60,10 @@ public class ServiceListActivity extends AppCompatActivity implements Navigation
                 onBackPressed();
             }
         });
+
+        edtSearch = findViewById(R.id.edtSearch);
+        edtSearch.requestFocus();
+
         gvCatDocs = findViewById(R.id.gvCatDocs);
         gvCatLearn = findViewById(R.id.gvCatLearn);
         gvCatAllowance = findViewById(R.id.gvCatAllowance);
@@ -88,11 +94,8 @@ public class ServiceListActivity extends AppCompatActivity implements Navigation
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Service service = services.get(position);
                 if (service != null) {
-                    Bundle args = new Bundle();
-                    args.putSerializable(ServicesListFragment.BUNDLE_KEY, service);
-
                     Intent intent = new Intent(getApplicationContext(), ServiceDetailActivity.class);
-                    intent.putExtras(args);
+                    intent.putExtra(MY_SERVICE_KEY, service);
                     startActivity(intent);
                 }
             }

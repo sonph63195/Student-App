@@ -1,5 +1,6 @@
 package com.duatson.studentapp.fragment;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -8,6 +9,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
@@ -17,25 +19,28 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class BottomNavigation extends Fragment {
 
+    private BottomNavigationView bottomNavigationView;
     private NavigationHost navigationHost;
-    private FragmentManager manager;
+
+    private Fragment dashboardFragment = new DashboardFragment();
+    private Fragment historyFragment = new HistoryFragment();
+    private Fragment profileFragment = new ProfileFragment();
+    private Fragment notificationFragment = new NotificationFragment();
+    private Fragment active = dashboardFragment;
+    private Fragment lastActive = active;
 
     public BottomNavigation() {
         // Required empty public constructor
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        //return super.onCreateView(inflater, container, savedInstanceState);
         View view = inflater.inflate(R.layout.layout_bottom_navigation, container, false);
-
-        BottomNavigationView bottomNavigationView = view.findViewById(R.id.bottom_navigation);
+        bottomNavigationView = view.findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-
         navigationHost = (NavigationHost) getActivity();
-        manager = getActivity().getSupportFragmentManager();
-        
         return view;
     }
 
@@ -46,19 +51,30 @@ public class BottomNavigation extends Fragment {
 
             switch (item.getItemId()) {
                 case R.id.icProfile:
-                    navigationHost.navigateTo(new ProfileFragment(), false);
+                    active = profileFragment;
+                    replaceFragment();
                     return true;
                 case R.id.icDashboard:
-                    navigationHost.navigateTo(new DashboardFragment(), false);
+                    active = dashboardFragment;
+                    replaceFragment();
                     return true;
                 case R.id.icNotification:
-                    navigationHost.navigateTo(new NotificationFragment(), false);
+                    active = notificationFragment;
+                    replaceFragment();
                     return true;
                 case R.id.icHistory:
-                    navigationHost.navigateTo(new HistoryFragment(), false);
+                    active = historyFragment;
+                    replaceFragment();
                     return true;
             }
             return false;
         }
     };
+
+    private void replaceFragment() {
+        boolean lastOpen = lastActive.equals(active);
+        navigationHost.navigateTo(active, !lastOpen);
+        lastActive = active;
+
+    }
 }

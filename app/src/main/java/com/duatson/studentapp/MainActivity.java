@@ -27,9 +27,8 @@ public class MainActivity extends AppCompatActivity implements NavigationHost {
             getSupportFragmentManager()
                     .beginTransaction()
                     .add(R.id.container, new DashboardFragment())
+                    .addToBackStack(null)
                     .commit();
-
-            System.out.println("Frame: " + getSupportFragmentManager().getBackStackEntryCount());
         }
     }
 

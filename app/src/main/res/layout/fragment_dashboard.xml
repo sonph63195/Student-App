@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:layout_marginBottom="60dp">
+    android:layout_marginBottom="56sp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -35,9 +35,9 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_marginBottom="@dimen/margin_extra_small"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_extra_small"
                         android:text="Phòng Công tác Sinh viên"
                         android:textColor="@color/whiteColor"
                         android:textSize="24sp"
@@ -47,11 +47,10 @@
                         android:id="@+id/tvDateTime"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Thứ 7, ngày 30 tháng 11 năm 2019"
+                        android:text="Thứ 2, ngày 16 tháng 12 năm 2019"
                         android:textAppearance="@style/MediumText"
                         android:textColor="@color/whiteColor" />
                 </LinearLayout>
-
 
             </androidx.appcompat.widget.Toolbar>
 
@@ -82,28 +81,7 @@
 
         <View style="@style/Divider" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/whiteColor"
-            android:orientation="vertical">
+        <include layout="@layout/fragment_services_list" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/whiteColor"
-                android:padding="@dimen/padding_medium">
-
-                <com.duatson.studentapp.application.ExpandableHeightGridView
-                    android:id="@+id/gvServices"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:columnWidth="60dp"
-                    android:gravity="center"
-                    android:horizontalSpacing="@dimen/grid_spacing"
-                    android:numColumns="auto_fit"
-                    android:verticalSpacing="@dimen/grid_spacing" />
-            </LinearLayout>
-        </LinearLayout>
     </LinearLayout>
 </LinearLayout>

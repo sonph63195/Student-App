@@ -26,20 +26,34 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 
 public class DashboardFragment extends Fragment {
-    private DatabaseReference firebaseDb;
-    private ExpandableHeightGridView gvServices;
+    private ExpandableHeightGridView gvCatDocs;
+    private ExpandableHeightGridView gvCatLearn;
+    private ExpandableHeightGridView gvCatOthers;
+    private ExpandableHeightGridView gvCatAllowance;
     private TextView tvSearch;
-    private List<Service> servicesCatDocs;
+    private TextView tvDateTime;
+
+    public static final String MY_SERVICE_KEY = "service";
+
+    private static final String FB_DOCS_PATH = "Services/docs";
+    private static final String FB_LEARNS_PATH = "Services/learns";
+    private static final String FB_OTHERS_PATH = "Services/others";
+    private static final String FB_ALLOWANCE_PATH = "Services/allowance";
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_dashboard, container, false);
-        setHasOptionsMenu(true);
+        gvCatDocs = view.findViewById(R.id.gvCatDocs);
+        gvCatLearn = view.findViewById(R.id.gvCatLearn);
+        gvCatAllowance = view.findViewById(R.id.gvCatAllowance);
+        gvCatOthers = view.findViewById(R.id.gvCatOthers);
 
         tvSearch = view.findViewById(R.id.tvSearch);
         tvSearch.setOnClickListener(new View.OnClickListener() {
@@ -50,64 +64,64 @@ public class DashboardFragment extends Fragment {
             }
         });
 
-        // Connect to firebase
-        firebaseDb = FirebaseDb.makeDbRef("Services/trending");
-
-        gvServices = view.findViewById(R.id.gvServices);
-        gvServices.setOnItemClickListener(serviceItemCLickDocs);
-
         return view;
     }
 
-    private GridView.OnItemClickListener serviceItemCLickDocs = new GridView.OnItemClickListener() {
-        @Override
-        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            Service service = servicesCatDocs.get(position);
-
-            Bundle bundle = new Bundle();
-            bundle.putSerializable("service", service);
-
-            Intent intent = new Intent(getActivity(), ServiceDetailActivity.class);
-            intent.putExtras(bundle);
-            startActivity(intent);
-        }
-    };
+    private GridView.OnItemClickListener gridItemClick(final List<Service> services) {
+        return new GridView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Service service = services.get(position);
+                if (service != null) {
+                    Intent intent = new Intent(getActivity(), ServiceDetailActivity.class);
+                    intent.putExtra(MY_SERVICE_KEY, service);
+                    startActivity(intent);
+                }
+            }
+        };
+    }
 
     @Override
     public void onStart() {
         super.onStart();
-
         initServiceData();
     }
 
     private void initServiceData() {
-        servicesCatDocs = new ArrayList<>();
+        List<Service> servicesCatDocs = dataSnapshot(FB_DOCS_PATH, gvCatDocs);
+        List<Service> servicesCatLearn = dataSnapshot(FB_LEARNS_PATH, gvCatLearn);
+        List<Service> servicesCatOthers = dataSnapshot(FB_OTHERS_PATH, gvCatOthers);
+        List<Service> servicesCatAllowance = dataSnapshot(FB_ALLOWANCE_PATH, gvCatAllowance);
+
+        gvCatDocs.setOnItemClickListener(gridItemClick(servicesCatDocs));
+        gvCatLearn.setOnItemClickListener(gridItemClick(servicesCatLearn));
+        gvCatOthers.setOnItemClickListener(gridItemClick(servicesCatOthers));
+        gvCatAllowance.setOnItemClickListener(gridItemClick(servicesCatAllowance));
+    }
+
+    private List<Service> dataSnapshot(String firebasePath, final ExpandableHeightGridView gridView) {
+        final List<Service> services = new ArrayList<>();
+        DatabaseReference firebaseDb = FirebaseDb.makeDbRef(firebasePath);
 
         firebaseDb.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                servicesCatDocs.clear(); // clear all data
-
+                services.clear();
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     Service service = snapshot.getValue(Service.class);
-                    // Add to list
-                    servicesCatDocs.add(service);
+                    services.add(service);
                 }
-
-                CategoryGridAdapter categoryDocsGridAdapter = new CategoryGridAdapter(getActivity(), servicesCatDocs);
-                gvServices.setAdapter(categoryDocsGridAdapter);
+                CategoryGridAdapter gridAdapter = new CategoryGridAdapter(getActivity(), services);
+                gridView.setAdapter(gridAdapter);
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
+
             }
         });
-    }
 
-    private AdapterView.OnItemClickListener requestItemClick = new AdapterView.OnItemClickListener() {
-        @Override
-        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        }
-    };
+        return services;
+    }
 
 }

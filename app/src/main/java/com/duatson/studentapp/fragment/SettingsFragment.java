@@ -35,7 +35,7 @@ public class SettingsFragment extends Fragment {
     }
 
     private void setUpTopToolBar(View view) {
-        toolbar = view.findViewById(R.id.app_top_bar);
+        toolbar = view.findViewById(R.id.tbrSettings);
         toolbar.setNavigationOnClickListener(new Toolbar.OnClickListener() {
             @Override
             public void onClick(View v) {

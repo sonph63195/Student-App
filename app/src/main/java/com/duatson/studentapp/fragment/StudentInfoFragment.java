@@ -45,7 +45,7 @@ public class StudentInfoFragment extends Fragment {
     }
 
     private void setUpTopToolBar(View view) {
-        toolbar = view.findViewById(R.id.app_top_bar);
+        toolbar = view.findViewById(R.id.tbrStudentInfo);
         toolbar.setNavigationOnClickListener(new Toolbar.OnClickListener() {
             @Override
             public void onClick(View v) {

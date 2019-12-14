@@ -37,8 +37,8 @@ public class RequestListAdapter extends ArrayAdapter<Request> {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        //return super.getView(position, convertView, parent);
         LayoutInflater inflater = context.getLayoutInflater();
+
         @SuppressLint("ViewHolder")
         View view = inflater.inflate(R.layout.item_request_list, null, true);
         final Request request = requests.get(position);
@@ -48,11 +48,9 @@ public class RequestListAdapter extends ArrayAdapter<Request> {
         Service service = storeServices.setResources(view.getResources()).getServicesMap().get(request.getServiceId());
         if (service != null) {
             Picasso.get().load(service.getIcon()).into(requestItemIcon);
-            System.out.println(service.getId());
             TextView tvRequestItemTitle = view.findViewById(R.id.tvRequestItemTitle);
             tvRequestItemTitle.setText(service.getName());
         }
-
 
         TextView tvRequestItemStatus = view.findViewById(R.id.tvRequestItemStatus);
         tvRequestItemStatus.setText(request.getStatus());
