@@ -58,7 +58,7 @@ public class RequestListAdapter extends ArrayAdapter<Request> {
         Service service = storeServices.setResources(view.getResources()).getServicesMap().get(request.getServiceId());
         if (service != null) {
             Picasso.get().load(service.getIcon()).into(requestItemIcon);
-            System.out.println(service.getId());
+            // System.out.println(service.getId());
             TextView tvRequestItemTitle = view.findViewById(R.id.tvRequestItemTitle);
             tvRequestItemTitle.setText(service.getName());
         }

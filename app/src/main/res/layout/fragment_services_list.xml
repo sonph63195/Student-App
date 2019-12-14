@@ -1,171 +1,185 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginBottom="58dp"
     tools:context=".fragment.ServicesListFragment">
 
-    <FrameLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
-            <com.google.android.material.appbar.AppBarLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <androidx.appcompat.widget.Toolbar
-                    android:id="@+id/app_top_bar"
-                    style="@style/Widget.StudentApp.Toolbar"
-                    android:layout_width="match_parent"
-                    android:layout_height="45sp"
-                    android:background="@color/primaryDarkColor"
-                    android:elevation="8sp"
-                    app:navigationIcon="@drawable/ic_arrow_back"
-                    app:titleTextColor="@color/whiteColor">
-
-                    <EditText
-                        android:layout_width="fill_parent"
-                        android:layout_height="32sp"
-                        android:layout_marginLeft="@dimen/margin_medium"
-                        android:layout_marginRight="@dimen/margin_medium"
-                        android:background="@drawable/rounded_edittext_2"
-                        android:drawableRight="@drawable/ic_search_24px"
-                        android:drawableTint="#016EFD"
-                        android:hint="Tìm kiếm dịch vụ..."
-                        android:paddingLeft="@dimen/padding_small"
-                        android:paddingRight="@dimen/padding_small"
-                        android:textAppearance="@style/NormalText" />
-                </androidx.appcompat.widget.Toolbar>
-
-            </com.google.android.material.appbar.AppBarLayout>
-
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/primaryColor"
+                    android:paddingVertical="@dimen/padding_small"
+                    android:paddingLeft="@dimen/padding_medium"
+                    tools:ignore="RtlSymmetry,UnusedAttribute"
+                    android:paddingStart="@dimen/padding_medium"
                     android:orientation="vertical">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:background="@color/primaryColor"
-                        android:paddingVertical="@dimen/padding_small"
-                        android:paddingLeft="@dimen/padding_medium"
                         android:text="@string/cat_learn"
                         android:textAppearance="@style/MediumText"
                         android:textColor="@color/whiteColor"
-                        android:textStyle="bold" />
-
-                    <View style="@style/Divider" />
-
-                    <com.duatson.studentapp.application.ExpandableHeightGridView
-                        android:id="@+id/gvCatLearn"
+                        android:textStyle="bold"
+                        />
+                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="@dimen/grid_spacing"
-                        android:columnWidth="60dp"
-                        android:gravity="center"
-                        android:horizontalSpacing="@dimen/grid_spacing"
-                        android:numColumns="auto_fit"
-                        android:verticalSpacing="@dimen/grid_spacing" />
+                        android:layout_height="wrap_content"
+                        android:text="@string/cat_decs_learn"
+                        android:textColor="@color/whiteColor"
+                        android:textAppearance="?attr/textAppearanceCaption"/>
 
-                    <View style="@style/Divider" />
+                </LinearLayout>
+
+                <com.duatson.studentapp.application.ExpandableHeightGridView
+                    android:id="@+id/gvCatLearn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/grid_spacing"
+                    android:columnWidth="60dp"
+                    android:gravity="center"
+                    android:horizontalSpacing="@dimen/grid_spacing"
+                    android:numColumns="auto_fit"
+                    android:verticalSpacing="@dimen/grid_spacing" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/primaryColor"
+                    android:paddingVertical="@dimen/padding_small"
+                    android:paddingLeft="@dimen/padding_medium"
+                    tools:ignore="RtlSymmetry,UnusedAttribute"
+                    android:paddingStart="@dimen/padding_medium"
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:background="@color/primaryColor"
-                        android:paddingVertical="@dimen/padding_small"
-                        android:paddingLeft="@dimen/padding_medium"
                         android:text="@string/cat_docs"
                         android:textAppearance="@style/MediumText"
                         android:textColor="@color/whiteColor"
-                        android:textStyle="bold" />
-
-                    <View style="@style/Divider" />
-
-                    <com.duatson.studentapp.application.ExpandableHeightGridView
-                        android:id="@+id/gvCatDocs"
+                        android:textStyle="bold"
+                        />
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/margin_medium"
-                        android:columnWidth="60dp"
-                        android:gravity="center"
-                        android:horizontalSpacing="@dimen/grid_spacing"
-                        android:numColumns="auto_fit"
-                        android:verticalSpacing="@dimen/grid_spacing" />
+                        android:text="@string/cat_decs_docs"
+                        android:textColor="@color/whiteColor"
+                        android:textAppearance="?attr/textAppearanceCaption"/>
 
-                    <View style="@style/Divider" />
+                </LinearLayout>
+
+                <com.duatson.studentapp.application.ExpandableHeightGridView
+                    android:id="@+id/gvCatDocs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_medium"
+                    android:columnWidth="60dp"
+                    android:gravity="center"
+                    android:horizontalSpacing="@dimen/grid_spacing"
+                    android:numColumns="auto_fit"
+                    android:verticalSpacing="@dimen/grid_spacing" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/primaryColor"
+                    android:paddingVertical="@dimen/padding_small"
+                    android:paddingLeft="@dimen/padding_medium"
+                    tools:ignore="RtlSymmetry,UnusedAttribute"
+                    android:paddingStart="@dimen/padding_medium"
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:background="@color/primaryColor"
-                        android:paddingVertical="@dimen/padding_small"
-                        android:paddingLeft="@dimen/padding_medium"
                         android:text="@string/cat_allowance"
                         android:textAppearance="@style/MediumText"
                         android:textColor="@color/whiteColor"
-                        android:textStyle="bold" />
-
-                    <View style="@style/Divider" />
-
-                    <com.duatson.studentapp.application.ExpandableHeightGridView
-                        android:id="@+id/gvCatAllowance"
+                        android:textStyle="bold"
+                        />
+                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="@dimen/grid_spacing"
-                        android:columnWidth="60dp"
-                        android:gravity="center"
-                        android:horizontalSpacing="@dimen/grid_spacing"
-                        android:numColumns="auto_fit"
-                        android:verticalSpacing="@dimen/grid_spacing" />
+                        android:layout_height="wrap_content"
+                        android:text="@string/cat_decs_allowance"
+                        android:textColor="@color/whiteColor"
+                        android:textAppearance="?attr/textAppearanceCaption"/>
 
-                    <View style="@style/Divider" />
+                </LinearLayout>
+
+                <com.duatson.studentapp.application.ExpandableHeightGridView
+                    android:id="@+id/gvCatAllowance"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/grid_spacing"
+                    android:columnWidth="60dp"
+                    android:gravity="center"
+                    android:horizontalSpacing="@dimen/grid_spacing"
+                    android:numColumns="auto_fit"
+                    android:verticalSpacing="@dimen/grid_spacing" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/primaryColor"
+                    android:paddingVertical="@dimen/padding_small"
+                    android:paddingLeft="@dimen/padding_medium"
+                    tools:ignore="RtlSymmetry,UnusedAttribute"
+                    android:paddingStart="@dimen/padding_medium"
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:background="@color/primaryColor"
-                        android:paddingVertical="@dimen/padding_small"
-                        android:paddingLeft="@dimen/padding_medium"
                         android:text="@string/cat_others"
                         android:textAppearance="@style/MediumText"
                         android:textColor="@color/whiteColor"
-                        android:textStyle="bold" />
-
-                    <View style="@style/Divider" />
-
-                    <com.duatson.studentapp.application.ExpandableHeightGridView
-                        android:id="@+id/gvCatOthers"
+                        android:textStyle="bold"
+                        />
+                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="@dimen/grid_spacing"
-                        android:columnWidth="60dp"
-                        android:gravity="center"
-                        android:horizontalSpacing="@dimen/grid_spacing"
-                        android:numColumns="auto_fit"
-                        android:verticalSpacing="@dimen/grid_spacing" />
+                        android:layout_height="wrap_content"
+                        android:text="@string/cat_decs_others"
+                        android:textColor="@color/whiteColor"
+                        android:textAppearance="?attr/textAppearanceCaption"/>
 
                 </LinearLayout>
-            </ScrollView>
 
-        </LinearLayout>
+                <com.duatson.studentapp.application.ExpandableHeightGridView
+                    android:id="@+id/gvCatOthers"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/grid_spacing"
+                    android:columnWidth="60dp"
+                    android:gravity="center"
+                    android:horizontalSpacing="@dimen/grid_spacing"
+                    android:numColumns="auto_fit"
+                    android:verticalSpacing="@dimen/grid_spacing" />
 
-    </FrameLayout>
+            </LinearLayout>
+        </ScrollView>
 
-</RelativeLayout>
+    </LinearLayout>
+
+</FrameLayout>

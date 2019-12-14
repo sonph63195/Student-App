@@ -40,6 +40,7 @@ public class RequestDetailActivity extends AppCompatActivity {
         tvRequestStatus = findViewById(R.id.tvRequestStatus);
         btnCancel = findViewById(R.id.btnCancel);
         tvRequestStatus.setText(status);
+
         if(status.equals("Đã hoàn thành")){
             tvRequestStatus.setTextColor(Color.RED);
             btnFeedback.setVisibility(View.VISIBLE);

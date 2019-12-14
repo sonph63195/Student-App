@@ -1,147 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ServiceDetailActivity"
-    android:layout_marginBottom="58dp">
+    android:orientation="vertical">
 
-    <LinearLayout
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
-        <RelativeLayout
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/app_top_bar"
+            style="@style/Widget.StudentApp.Toolbar"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/service_detail_cover_image_height">
+            android:layout_height="45sp"
+            android:background="@color/primaryDarkColor"
+            android:elevation="8sp"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:titleTextColor="@color/whiteColor"
+            tools:ignore="UnusedAttribute">
 
-            <ImageView
-                android:id="@+id/ivServiceThumbnail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:scaleType="centerCrop"
-                android:src="@drawable/img_helper_service_detail" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="32sp"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:text="@string/serviceDetail_title"
+                android:textAppearance="@style/TitleText"
+                android:textColor="@color/whiteColor" />
+        </androidx.appcompat.widget.Toolbar>
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:scaleType="centerCrop"
-                android:src="@drawable/img_filter" />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-                <LinearLayout
-                    android:onClick="clickToBack"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="@dimen/grid_spacing"
-                    android:background="?selectableItemBackground"
-                    android:clickable="true"
-                    android:focusable="true">
+    </com.google.android.material.appbar.AppBarLayout>
 
-                    <ImageView
-                        android:id="@+id/btnBack"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@drawable/ic_arrow_back"/>
-
-                </LinearLayout>
-                <TextView
-                    android:id="@+id/tvServiceTitle"
-                    android:layout_width="match_parent"
-                    android:layout_height="192dp"
-                    android:text="@string/welcome"
-                    android:gravity="bottom"
-                    android:textAppearance="?attr/textAppearanceHeadline4"
-                    android:textColor="@color/secondaryTextColor"
-                    android:padding="@dimen/grid_spacing"/>
-
-            </LinearLayout>
-
-        </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="@dimen/grid_spacing">
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/service_detail_cover_image_height">
+
+                <ImageView
+                    android:id="@+id/ivServiceThumbnail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_helper_service_detail"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_filter"
+                    tools:ignore="ContentDescription" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvServiceTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/welcome"
+                android:gravity="bottom"
+                android:textAppearance="?attr/textAppearanceHeadline5"
+                android:textStyle="bold"
+                android:paddingTop="@dimen/grid_spacing"
+                android:paddingLeft="@dimen/grid_spacing"
+                android:paddingRight="@dimen/grid_spacing" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_gravity="center"
-                android:layout_weight="0.5">
+                android:padding="@dimen/grid_spacing">
 
-
-                <TextView
-                    android:id="@+id/tvServiceFee"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/primaryColor"
-                    android:textAppearance="?attr/textAppearanceHeadline5"
-                    android:layout_marginRight="5dp"
-                    android:text="20,000"/>
-                <TextView
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5">
+
+
+                    <TextView
+                        android:id="@+id/tvServiceFee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primaryColor"
+                        android:textAppearance="?attr/textAppearanceHeadline5"
+                        android:layout_marginRight="5dp"
+                        android:text="20,000"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/service_currency"
+                        android:textColor="@color/primaryColor"/>
+
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnRegister"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/service_currency"
-                    android:textColor="@color/primaryColor"/>
+                    android:layout_weight="0.5"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:text="@string/register"
+                    app:icon="@drawable/ic_send"
+                    app:iconGravity="end"/>
 
             </LinearLayout>
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnRegister"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:text="@string/register"
-                app:icon="@drawable/ic_send"
-                app:iconGravity="end"/>
-
-        </LinearLayout>
-
-        <View style="@style/Divider"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textAppearance="?attr/textAppearanceHeadline6"
-            android:text="@string/service_detail_description"
-            android:paddingHorizontal="@dimen/grid_spacing"
-            android:paddingTop="@dimen/grid_spacing"/>
-        <TextView
-            android:id="@+id/tvServiceDescription"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/app_name"
-            android:textAppearance="?attr/textAppearanceBody1"
-            android:layout_margin="@dimen/grid_spacing"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="@dimen/grid_spacing">
-
-            <View style="@style/Divider"/>
+            <View style="@style/Divider" />
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textAppearance="?attr/textAppearanceHeadline6"
-                android:text="@string/service_contact_title"
-                android:padding="@dimen/grid_spacing"/>
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingVertical="@dimen/padding_extra_small"
+                android:paddingLeft="@dimen/padding_medium"
+                android:text="@string/service_detail_description"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="RtlHardcoded,RtlSymmetry,UnusedAttribute" />
+            <View style="@style/Divider" />
 
-            <com.duatson.studentapp.application.ExpandableHeightListView
-                android:id="@+id/lvContact"
+            <TextView
+                android:id="@+id/tvServiceDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:divider="@color/whiteColor"/>
+                android:text="@string/app_name"
+                android:textAppearance="?attr/textAppearanceBody1"
+                android:layout_margin="@dimen/grid_spacing"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/grid_spacing">
+
+                <View style="@style/Divider" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingVertical="@dimen/padding_extra_small"
+                    android:paddingLeft="@dimen/padding_medium"
+                    android:text="@string/service_contact_title"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:ignore="RtlHardcoded,RtlSymmetry,UnusedAttribute" />
+                <View style="@style/Divider" />
+
+                <com.duatson.studentapp.application.ExpandableHeightListView
+                    android:id="@+id/lvContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@color/whiteColor"/>
+
+            </LinearLayout>
 
         </LinearLayout>
 
-    </LinearLayout>
+    </ScrollView>
 
-</ScrollView>
+</LinearLayout>

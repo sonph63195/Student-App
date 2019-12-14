@@ -1,7 +1,5 @@
 package com.duatson.studentapp.model;
 
-import android.content.res.Resources;
-
 import java.io.Serializable;
 
 public class Contact implements Serializable {

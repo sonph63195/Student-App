@@ -8,7 +8,7 @@
 
     <!-- Dimens for Services -->
     <dimen name="service_card_image_height">60dp</dimen>
-    <dimen name="service_detail_cover_image_height">244dp</dimen>
+    <dimen name="service_detail_cover_image_height">200dp</dimen>
 
     <!-- Dimens for staggered asymmetric grid layout cards-->
     <dimen name="staggered_product_grid_spacing_large">30dp</dimen>

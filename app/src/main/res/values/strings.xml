@@ -30,4 +30,14 @@
     <string name="req_detail_title_Note">Note</string>
     <string name="lorem_ipsum_default_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia quis metus quis condimentum. Integer tincidunt rutrum risus, non luctus felis vestibulum non.</string>
     <string name="req_detail_title_More_Info">Thông tin thêm</string>
+    <string name="hello_text">Xin chào</string>
+    <string name="today_text">Thứ 7, ngày 30 tháng 11 năm 2019</string>
+    <string name="serviceDetail_title">Chi tiết dịch vụ</string>
+    <string name="menu_home">Trang Chủ</string>
+    <string name="menu_history">Lịch Sử</string>
+    <string name="menu_account">Cá Nhân</string>
+    <string name="cat_decs_learn">Các vấn đề liên quan tới học tập</string>
+    <string name="cat_decs_docs">Những vấn đề liên quan tới văn bản, giấy tờ</string>
+    <string name="cat_decs_allowance">Đăng ký nhận trợ cấp</string>
+    <string name="cat_decs_others">Những danh mục khác</string>
 </resources>
