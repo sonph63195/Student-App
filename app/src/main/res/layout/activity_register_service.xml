@@ -57,6 +57,7 @@
         <View style="@style/Divider" />
 
         <TextView
+            android:id="@+id/txtRegisterTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -154,15 +155,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/greyLight"
+                android:orientation="vertical"
                 android:paddingHorizontal="@dimen/padding_medium"
                 android:paddingVertical="@dimen/padding_small">
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnSend"
+                    android:id="@+id/btnNext"
                     android:layout_width="fill_parent"
                     android:layout_height="60sp"
                     android:text="Tiếp tục"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:visibility="visible" />
+
+                <com.google.android.material.button.MaterialButton
+                    app:icon="@drawable/ic_lock_outline_black_24dp"
+                    app:iconGravity="textStart"
+                    android:id="@+id/btnConfirm"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60sp"
+                    android:text="Xác nhận"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
             </LinearLayout>
 
             <View style="@style/Divider" />

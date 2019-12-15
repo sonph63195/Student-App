@@ -3,7 +3,6 @@ package com.duatson.studentapp;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
@@ -13,9 +12,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.duatson.studentapp.fragment.DashboardFragment;
-import com.duatson.studentapp.fragment.HelpFragment;
-import com.duatson.studentapp.fragment.SettingsFragment;
-import com.duatson.studentapp.fragment.StudentInfoFragment;
 
 public class MainActivity extends AppCompatActivity implements NavigationHost {
 
@@ -79,14 +75,17 @@ public class MainActivity extends AppCompatActivity implements NavigationHost {
     }
 
     public void clickToViewProfile(View view) {
-        navigateTo(new StudentInfoFragment(), true);
+        Intent intent = new Intent(this, StudentInfoActivity.class);
+        startActivity(intent);
     }
 
     public void clickToHelp(View view) {
-        navigateTo(new HelpFragment(), true);
+        Intent intent = new Intent(this, HelpContactActivity.class);
+        startActivity(intent);
     }
 
     public void clickToSetting(View view) {
-        navigateTo(new SettingsFragment(), true);
+        Intent intent = new Intent(this, SettingsActivity.class);
+        startActivity(intent);
     }
 }

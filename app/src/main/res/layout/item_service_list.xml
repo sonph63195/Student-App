@@ -9,24 +9,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginBottom="@dimen/margin_medium"
         android:gravity="center"
         android:orientation="vertical">
 
         <com.google.android.material.card.MaterialCardView
+            android:layout_marginHorizontal="@dimen/margin_medium"
             style="@style/Widget.MaterialComponents.CardView"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="64sp"
+            android:layout_height="64sp"
             android:background="?selectableItemBackground"
-            app:cardCornerRadius="@dimen/grid_spacing"
-            app:cardElevation="0dp"
+            app:cardCornerRadius="24sp"
+            app:cardElevation="0sp"
             app:strokeColor="@color/outlineColor"
             app:strokeWidth="1dp">
 
             <ImageView
                 android:id="@+id/serviceItemIcon"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
                 android:layout_gravity="center"
                 android:layout_margin="@dimen/grid_spacing"
                 android:src="@drawable/ic_account" />
@@ -35,7 +35,7 @@
 
         <TextView
             android:id="@+id/serviceItemTitle"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
