@@ -49,4 +49,5 @@
     <string name="search_hint">Tìm kiếm dịch vụ...</string>
     <string name="btn_next">Tiếp tục</string>
     <string name="btn_confirm">Xác nhận</string>
+    <string name="btn_reg_prev">Trở về</string>
 </resources>

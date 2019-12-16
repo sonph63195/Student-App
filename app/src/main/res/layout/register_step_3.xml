@@ -19,21 +19,36 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/greyLight"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:paddingHorizontal="@dimen/padding_medium"
             android:paddingVertical="@dimen/padding_small"
-            tools:targetApi="o">
-
+            tools:targetApi="o"
+            android:weightSum="1"
+            tools:ignore="UselessParent">
 
             <com.google.android.material.button.MaterialButton
-                app:icon="@drawable/ic_lock_outline_black_24dp"
-                app:iconGravity="textStart"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:id="@+id/btnPrev"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:text="@string/btn_reg_prev"
+                android:textSize="18sp"
+                android:layout_weight="0.5"
+                android:layout_marginHorizontal="@dimen/padding_small"
+                android:layout_marginVertical="@dimen/padding_small"/>
+
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnConfirm"
-                android:layout_width="fill_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="60sp"
                 android:text="@string/btn_confirm"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:layout_weight="0.5"
+                android:layout_marginHorizontal="@dimen/padding_small"
+                android:layout_marginVertical="@dimen/padding_small"/>
+
         </LinearLayout>
+
     </RelativeLayout>
 
 </LinearLayout>

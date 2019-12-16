@@ -14,7 +14,7 @@
         app:spb_checkStateCompleted="true"
         app:spb_currentStateDescriptionColor="@color/primaryColor"
         app:spb_currentStateNumber="one"
-        app:spb_maxStateNumber="three"
+        app:spb_maxStateNumber="two"
         app:spb_stateBackgroundColor="#BDBDBD"
         app:spb_stateDescriptionColor="#808080"
         app:spb_stateForegroundColor="@color/primaryColor"

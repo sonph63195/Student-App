@@ -5,10 +5,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent">
 
-    <TextView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Step 2"/>
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/layoutForm" />
+
+    </androidx.core.widget.NestedScrollView>
 
     <RelativeLayout
         android:layout_width="fill_parent"
@@ -19,22 +26,25 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/greyLight"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:paddingHorizontal="@dimen/padding_medium"
             android:paddingVertical="@dimen/padding_small"
             tools:targetApi="o"
+            android:weightSum="1"
             tools:ignore="UselessParent">
-
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnNext2"
-                android:layout_width="fill_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="60sp"
                 android:text="@string/btn_next"
                 android:textSize="18sp"
-                android:visibility="visible" />
+                android:layout_weight="1"
+                android:layout_marginHorizontal="@dimen/padding_small"
+                android:layout_marginVertical="@dimen/padding_small"/>
 
         </LinearLayout>
+
     </RelativeLayout>
 
 </LinearLayout>

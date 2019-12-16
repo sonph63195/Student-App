@@ -18,6 +18,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.duatson.studentapp.adapter.ContactAdapter;
 import com.duatson.studentapp.application.ExpandableHeightListView;
+import com.duatson.studentapp.fragment.DashboardFragment;
 import com.duatson.studentapp.fragment.ServicesListFragment;
 import com.duatson.studentapp.model.Contact;
 import com.duatson.studentapp.model.Service;
@@ -105,6 +106,11 @@ public class ServiceDetailActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             Intent intent = new Intent(getApplicationContext(), RegisterServiceActivity.class);
+
+            if (service != null) {
+                intent.putExtra(DashboardFragment.MY_SERVICE_KEY, service);
+            }
+
             startActivity(intent);
         }
     };
