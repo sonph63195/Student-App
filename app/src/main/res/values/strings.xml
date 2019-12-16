@@ -47,4 +47,6 @@
     <string name="cat_decs_allowance">Đăng ký nhận trợ cấp</string>
     <string name="cat_decs_others">Những danh mục khác</string>
     <string name="search_hint">Tìm kiếm dịch vụ...</string>
+    <string name="btn_next">Tiếp tục</string>
+    <string name="btn_confirm">Xác nhận</string>
 </resources>

@@ -6,6 +6,7 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
@@ -53,33 +54,7 @@ public class ServiceDetailActivity extends AppCompatActivity {
         MaterialButton btnRegister = findViewById(R.id.btnRegister);
         btnRegister.setOnClickListener(registerCLicked);
 
-        lvContact.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @RequiresApi(api = Build.VERSION_CODES.M)
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if (contacts.get(position).getContent().equals("Email")) {
-                    /* Create the Intent */
-                    final Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
-
-                    /* Fill it with Data */
-                    emailIntent.setType("plain/text");
-                    emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{service.getEmail()});
-
-                    /* Send it off to the Activity-Chooser */
-                    startActivity(Intent.createChooser(emailIntent, "Send mail..."));
-                } else {
-                    String posted_by = service.getPhone();
-                    String uri = "tel:" + posted_by.trim();
-                    Intent intent = new Intent(Intent.ACTION_DIAL);
-                    intent.setData(Uri.parse(uri));
-                    startActivity(intent);
-                    if (checkSelfPermission(Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
-                        startActivity(intent);
-                    }
-
-                }
-            }
-        });
+        lvContact.setOnItemClickListener(contactClicked);
     }
 
     private Service getDataFromClick() {
@@ -94,7 +69,7 @@ public class ServiceDetailActivity extends AppCompatActivity {
             tvServiceTitle.setText(service.getName());
 
             TextView tvServiceDescription = findViewById(R.id.tvServiceDescription);
-            tvServiceDescription.setText(service.getDescription());
+            tvServiceDescription.setText(Html.fromHtml(service.getDescription()));
 
             NumberFormat formatter = new DecimalFormat("#,###");
             TextView tvServiceFee = findViewById(R.id.tvServiceFee);

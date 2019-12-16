@@ -128,9 +128,7 @@
                 android:paddingVertical="@dimen/padding_extra_small"
                 android:paddingLeft="@dimen/padding_medium"
                 android:text="@string/service_detail_description"
-                android:textSize="18sp"
-                android:textColor="@color/primaryLightColor"
-                android:textStyle="bold"
+                android:textAppearance="?attr/textAppearanceSubtitle1"
                 tools:ignore="RtlHardcoded,RtlSymmetry,UnusedAttribute" />
 
             <View style="@style/Divider" />
@@ -152,15 +150,13 @@
                 <View style="@style/Divider" />
 
                 <TextView
-                    android:textColor="@color/primaryLightColor"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:paddingVertical="@dimen/padding_extra_small"
                     android:paddingLeft="@dimen/padding_medium"
                     android:text="@string/service_contact_title"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
                     tools:ignore="RtlHardcoded,RtlSymmetry,UnusedAttribute" />
 
                 <View style="@style/Divider" />

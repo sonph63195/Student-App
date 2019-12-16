@@ -4,12 +4,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
 
 import com.duatson.studentapp.fragment.HistoryFragment;
 import com.kofigyan.stateprogressbar.StateProgressBar;
@@ -19,11 +22,15 @@ import com.kofigyan.stateprogressbar.listeners.OnStateItemClickListener;
 public class RegisterServiceActivity extends AppCompatActivity {
 
     private TextView txtRegisterTitle;
-    private Button btnNext;
+    private Button btnNext1;
     private Button btnConfirm;
+    private Button btnNext2;
     private Toolbar toolbar;
     private int currentNumber = 1;
     private StateProgressBar stateProgressBar;
+
+    private ViewGroup registerStep;
+
     String[] descriptionData = {"CHI TIẾT", "ĐĂNG KÝ", "XÁC NHẬN"};
     private static final int PICK_FILE_RESULT_CODE = 1;
 
@@ -33,35 +40,15 @@ public class RegisterServiceActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_service);
 
+        registerStep = findViewById(R.id.registerStep);
+        setRegisterLayout(R.layout.register_step_1);
+
         stateProgressBar = findViewById(R.id.progressStep);
         stateProgressBar.setStateDescriptionData(descriptionData);
         txtRegisterTitle = findViewById(R.id.txtRegisterTitle);
-        btnNext = findViewById(R.id.btnNext);
-        btnConfirm = findViewById(R.id.btnConfirm);
+        btnNext1 = findViewById(R.id.btnNext1);
 
-        btnNext.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (currentNumber == 1) {
-                    stateProgressBar.setCurrentStateNumber(StateProgressBar.StateNumber.TWO);
-                    txtRegisterTitle.setText("Đăng ký thông tin");
-                    currentNumber = 2;
-                } else if (currentNumber == 2) {
-                    stateProgressBar.setCurrentStateNumber(StateProgressBar.StateNumber.THREE);
-                    txtRegisterTitle.setText("Xác nhận thông tin");
-                    currentNumber = 3;
-                    btnNext.setVisibility(View.GONE);
-                    btnConfirm.setVisibility(View.VISIBLE);
-                }
-            }
-        });
-
-        btnConfirm.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "Đăng ký thành công", Toast.LENGTH_SHORT).show();
-            }
-        });
+        btnNext1.setOnClickListener(clickToNextStep);
 
         stateProgressBar.setOnStateItemClickListener(new OnStateItemClickListener() {
             @Override
@@ -72,22 +59,17 @@ public class RegisterServiceActivity extends AppCompatActivity {
                         stateProgressBar.setCurrentStateNumber(StateProgressBar.StateNumber.ONE);
                         txtRegisterTitle.setText("Thông tin chi tiết");
                         currentNumber = 1;
-                        btnNext.setVisibility(View.VISIBLE);
-                        btnConfirm.setVisibility(View.GONE);
                         break;
                     case 2:
                         stateProgressBar.setCurrentStateNumber(StateProgressBar.StateNumber.TWO);
                         txtRegisterTitle.setText("Đăng ký thông tin");
                         currentNumber = 2;
-                        btnNext.setVisibility(View.VISIBLE);
-                        btnConfirm.setVisibility(View.GONE);
+
                         break;
                     case 3:
                         stateProgressBar.setCurrentStateNumber(StateProgressBar.StateNumber.THREE);
                         txtRegisterTitle.setText("Xác nhận thông tin");
                         currentNumber = 3;
-                        btnNext.setVisibility(View.GONE);
-                        btnConfirm.setVisibility(View.VISIBLE);
                 }
             }
         });
@@ -102,16 +84,39 @@ public class RegisterServiceActivity extends AppCompatActivity {
 
     }
 
-//    @Override
-//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-//        super.onActivityResult(requestCode, resultCode, data);
-//        switch (requestCode) {
-//            case PICK_FILE_RESULT_CODE:
-//                if (resultCode == RESULT_OK) {
-//                    String FilePath = data.getData().getPath();
-//                    textFile.setText(FilePath);
-//                }
-//                break;
-//        }
-//    }
+    private View.OnClickListener confirmRegister = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Toast.makeText(getApplicationContext(), "Đăng ký thành công", Toast.LENGTH_SHORT).show();
+        }
+    };
+
+    private View.OnClickListener clickToNextStep = new View.OnClickListener() {
+
+        @Override
+        public void onClick(View view) {
+            if (currentNumber == 1) {
+                setRegisterLayout(R.layout.register_step_2);
+                stateProgressBar.setCurrentStateNumber(StateProgressBar.StateNumber.TWO);
+                txtRegisterTitle.setText("Đăng ký thông tin");
+                currentNumber = 2;
+                btnNext2 = findViewById(R.id.btnNext2);
+                btnNext2.setOnClickListener(clickToNextStep);
+            } else if (currentNumber == 2) {
+                setRegisterLayout(R.layout.register_step_3);
+                stateProgressBar.setCurrentStateNumber(StateProgressBar.StateNumber.THREE);
+                txtRegisterTitle.setText("Xác nhận thông tin");
+                currentNumber = 3;
+                btnConfirm = findViewById(R.id.btnConfirm);
+                btnConfirm.setOnClickListener(confirmRegister);
+            }
+        }
+    };
+
+
+    private void setRegisterLayout(int layoutId) {
+        registerStep.removeAllViews();
+        View view = getLayoutInflater().inflate(layoutId, registerStep, false);
+        registerStep.addView(view);
+    }
 }

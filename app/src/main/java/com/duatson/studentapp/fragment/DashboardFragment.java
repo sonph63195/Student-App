@@ -56,6 +56,7 @@ public class DashboardFragment extends Fragment {
         gvCatOthers = view.findViewById(R.id.gvCatOthers);
 
         tvSearch = view.findViewById(R.id.tvSearch);
+
         tvSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
