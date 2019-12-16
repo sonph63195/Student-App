@@ -21,6 +21,20 @@
 
     <View style="@style/Divider" />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/form_change_class"/>
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/layoutForm"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:orientation="vertical" />-->
+
+    </ScrollView>
+
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -30,22 +44,26 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/greyLight"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:paddingHorizontal="@dimen/padding_medium"
             android:paddingVertical="@dimen/padding_small"
+
+            android:weightSum="1"
             tools:ignore="UselessParent"
             tools:targetApi="o">
 
-
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnNextSecond"
-                android:layout_width="fill_parent"
+                android:id="@+id/btnNext2"
+                android:layout_width="wrap_content"
                 android:layout_height="60sp"
+                android:layout_marginHorizontal="@dimen/padding_small"
+                android:layout_marginVertical="@dimen/padding_small"
+                android:layout_weight="1"
                 android:text="@string/btn_next"
-                android:textSize="18sp"
-                android:visibility="visible" />
+                android:textSize="18sp" />
 
         </LinearLayout>
+
     </RelativeLayout>
 
 </LinearLayout>
