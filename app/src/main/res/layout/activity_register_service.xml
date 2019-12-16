@@ -8,9 +8,9 @@
     tools:context=".RegisterServiceActivity">
 
     <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
@@ -32,6 +32,7 @@
                     android:layout_height="32sp"
                     android:layout_marginLeft="@dimen/margin_medium"
                     android:layout_marginRight="@dimen/margin_medium"
+                    android:gravity="center_vertical"
                     android:text="Đăng ký"
                     android:textAppearance="@style/TitleText"
                     android:textColor="@color/whiteColor" />
@@ -48,10 +49,19 @@
 
         </LinearLayout>
 
-        <FrameLayout
+<!--        <View style="@style/Divider" />-->
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/registerStep"/>
+            android:layout_height="@dimen/margin_medium"
+            android:background="@color/greyLight" />
+
+        <View style="@style/Divider" />
+
+        <FrameLayout
+            android:id="@+id/registerStep"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 

@@ -6,10 +6,19 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/txtRegisterTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Step 3"/>
+        android:layout_gravity="center"
+        android:background="@color/primaryColor"
+        android:paddingVertical="@dimen/padding_small"
+        android:paddingLeft="@dimen/padding_medium"
+        android:text="Xác nhận thông tin"
+        android:textColor="@color/whiteColor"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
+    <View style="@style/Divider" />
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"

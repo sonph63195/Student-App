@@ -51,14 +51,14 @@
                 <ImageView
                     android:id="@+id/ivServiceThumbnail"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:scaleType="centerCrop"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"
                     android:src="@drawable/img_helper_service_detail"
                     tools:ignore="ContentDescription" />
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:scaleType="centerCrop"
                     android:src="@drawable/img_filter"
                     tools:ignore="ContentDescription" />
@@ -125,9 +125,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:paddingVertical="@dimen/padding_extra_small"
+                android:paddingVertical="@dimen/padding_small"
                 android:paddingLeft="@dimen/padding_medium"
                 android:text="@string/service_detail_description"
+                android:textStyle="bold"
+                android:textColor="@color/primaryDarkColor"
                 android:textAppearance="?attr/textAppearanceSubtitle1"
                 tools:ignore="RtlHardcoded,RtlSymmetry,UnusedAttribute" />
 
@@ -153,9 +155,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:paddingVertical="@dimen/padding_extra_small"
+                    android:paddingVertical="@dimen/padding_small"
                     android:paddingLeft="@dimen/padding_medium"
+                    android:textColor="@color/primaryDarkColor"
                     android:text="@string/service_contact_title"
+                    android:textStyle="bold"
                     android:textAppearance="?attr/textAppearanceSubtitle1"
                     tools:ignore="RtlHardcoded,RtlSymmetry,UnusedAttribute" />
 

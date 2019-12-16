@@ -1,20 +1,16 @@
 package com.duatson.studentapp;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.fragment.app.Fragment;
 
-import com.duatson.studentapp.fragment.HistoryFragment;
 import com.kofigyan.stateprogressbar.StateProgressBar;
 import com.kofigyan.stateprogressbar.components.StateItem;
 import com.kofigyan.stateprogressbar.listeners.OnStateItemClickListener;
@@ -41,12 +37,12 @@ public class RegisterServiceActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register_service);
 
         registerStep = findViewById(R.id.registerStep);
-        setRegisterLayout(R.layout.register_step_1);
+        setRegisterLayout(R.layout.layout_register_step_1);
 
         stateProgressBar = findViewById(R.id.progressStep);
         stateProgressBar.setStateDescriptionData(descriptionData);
         txtRegisterTitle = findViewById(R.id.txtRegisterTitle);
-        btnNext1 = findViewById(R.id.btnNext1);
+        btnNext1 = findViewById(R.id.btnNextFirst);
 
         btnNext1.setOnClickListener(clickToNextStep);
 
@@ -96,14 +92,14 @@ public class RegisterServiceActivity extends AppCompatActivity {
         @Override
         public void onClick(View view) {
             if (currentNumber == 1) {
-                setRegisterLayout(R.layout.register_step_2);
+                setRegisterLayout(R.layout.layout_register_step_2);
                 stateProgressBar.setCurrentStateNumber(StateProgressBar.StateNumber.TWO);
                 txtRegisterTitle.setText("Đăng ký thông tin");
                 currentNumber = 2;
-                btnNext2 = findViewById(R.id.btnNext2);
+                btnNext2 = findViewById(R.id.btnNextSecond);
                 btnNext2.setOnClickListener(clickToNextStep);
             } else if (currentNumber == 2) {
-                setRegisterLayout(R.layout.register_step_3);
+                setRegisterLayout(R.layout.layout_register_step_3);
                 stateProgressBar.setCurrentStateNumber(StateProgressBar.StateNumber.THREE);
                 txtRegisterTitle.setText("Xác nhận thông tin");
                 currentNumber = 3;
@@ -112,7 +108,6 @@ public class RegisterServiceActivity extends AppCompatActivity {
             }
         }
     };
-
 
     private void setRegisterLayout(int layoutId) {
         registerStep.removeAllViews();

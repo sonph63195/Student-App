@@ -5,15 +5,6 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <View style="@style/Divider" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/margin_medium"
-        android:background="@color/greyLight" />
-
-    <View style="@style/Divider" />
-
     <TextView
         android:id="@+id/txtRegisterTitle"
         android:layout_width="match_parent"
@@ -119,7 +110,7 @@
             tools:targetApi="o">
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnNext1"
+                android:id="@+id/btnNextFirst"
                 android:layout_width="fill_parent"
                 android:layout_height="60sp"
                 android:text="@string/btn_next"
