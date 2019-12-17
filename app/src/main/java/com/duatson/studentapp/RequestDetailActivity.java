@@ -55,12 +55,6 @@ public class RequestDetailActivity extends AppCompatActivity {
             }
         });
 
-        btnFeedback.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivityForResult(new Intent(RequestDetailActivity.this, FeedbackActivity.class), FEEDBACK_REQUEST_CODE);
-            }
-        });
     }
 
     @Override

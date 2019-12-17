@@ -24,7 +24,6 @@
         <activity android:name=".RegisterServiceActivity" />
         <activity android:name=".ServiceListActivity" />
         <activity android:name=".fragment.DashboardFragment" />
-        <activity android:name=".FeedbackActivity" />
         <activity
             android:name=".MainActivity"
             android:windowSoftInputMode="adjustPan">
