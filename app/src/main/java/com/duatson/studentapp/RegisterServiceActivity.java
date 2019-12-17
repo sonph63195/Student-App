@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -19,10 +20,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.duatson.studentapp.fragment.DashboardFragment;
+import com.duatson.studentapp.model.Request;
 import com.duatson.studentapp.model.Service;
+import com.duatson.studentapp.network.FirebaseDb;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.database.DatabaseReference;
 import com.kofigyan.stateprogressbar.StateProgressBar;
 import com.squareup.picasso.Picasso;
 
@@ -33,14 +37,9 @@ public class RegisterServiceActivity extends AppCompatActivity {
 
     private Service service;
 
-    private StateProgressBar stateProgressBar;
+    private TextInputEditText edRegisterNote;
 
-    private ViewGroup registerStep;
-
-    private int currentNumber = 1;
-    String[] descriptionData = {"ĐĂNG KÝ", "XÁC NHẬN"};
-
-    private static final int PICK_FILE_RESULT_CODE = 1;
+    private DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,86 +47,51 @@ public class RegisterServiceActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_service);
 
-        registerStep = findViewById(R.id.registerStep);
+        //getting the reference of requests node
+        databaseReference = FirebaseDb.makeDbRef("requests");
 
-        // Show step 2 layout first
-        getServiceFromIntent();
-        setRegisterLayout(R.layout.layout_register_step_2);
-
-        stateProgressBar = findViewById(R.id.progressStep);
-        stateProgressBar.setStateDescriptionData(descriptionData);
-//        Button btnNext1 = findViewById(R.id.btnNext1);
-        Button btnNext2 = findViewById(R.id.btnNext2);
-
-        // Add back click listener
-        Toolbar toolbar = findViewById(R.id.tbrRegister);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBackPressed();
-            }
-        });
-
-        // Click to next to step 2
-        btnNext2.setOnClickListener(clickToNextStep);
-        if (currentNumber == 1) {
-            stepRegister();
-        }
+        edRegisterNote = findViewById(R.id.edRegisterNote);
     }
 
-    private void getServiceFromIntent() {
+    @Override
+    protected void onStart() {
+        super.onStart();
+
         Intent intent = getIntent();
         service = (Service) intent.getSerializableExtra(DashboardFragment.MY_SERVICE_KEY);
+        if (service == null) {
+            Toast.makeText(this, "Could not find this Service", Toast.LENGTH_SHORT).show();
+        } else {
+            TextView tvRegisterTitle = findViewById(R.id.tvRegisterTitle);
+            tvRegisterTitle.setText(service.getName());
+        }
     }
 
-    private View.OnClickListener clickToConfirmRegister = new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            Toast.makeText(getApplicationContext(), "Đăng ký thành công", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(RegisterServiceActivity.this, RegisterSuccessActivity.class);
-            startActivity(intent);
-        }
-    };
+    public void clickToRegister(View view) {
+        String note = edRegisterNote.getText().toString();
 
-    private View.OnClickListener clickToNextStep = new View.OnClickListener() {
+        // check
+        if (!TextUtils.isEmpty(note)) {
 
-        @Override
-        public void onClick(View view) {
-            if (currentNumber == 1) {
-                showLayoutStep(R.layout.layout_register_step_3, StateProgressBar.StateNumber.TWO, 2, R.id.btnConfirm, clickToConfirmRegister);
-            } else if (currentNumber == 2) {
-                showLayoutStep(R.layout.layout_register_step_2, StateProgressBar.StateNumber.ONE, 1, R.id.btnNext2, clickToNextStep);
+            //getting a unique id using push().getKey() method
+            //it will create a unique id and we will use it as the Primary Key for Request
+            String id = databaseReference.push().getKey();
 
+            if (id != null) {
+                // Create new Request
+                Request request = new Request(id, service.getId(), "12/17/2019", "Pending", note, null);
+
+                // Saving the Request
+                databaseReference.child(id).setValue(request);
+
+                //displaying a success toast
+                Toast.makeText(this, "Create successfull", Toast.LENGTH_LONG).show();
+
+                Intent intent = new Intent(this, RegisterSuccessActivity.class);
+                startActivity(intent);
             }
+        } else {
+            Toast.makeText(this, "Please enter something", Toast.LENGTH_SHORT).show();
         }
-    };
-
-    private void showLayoutStep(int layout, StateProgressBar.StateNumber state, int currentNumber, int btnId, View.OnClickListener action) {
-        setRegisterLayout(layout);
-        stateProgressBar.setCurrentStateNumber(state);
-        Button btn = findViewById(btnId);
-        btn.setOnClickListener(action);
-        this.currentNumber = currentNumber;
-        if (currentNumber == 2) {
-            stepConfirm();
-        }
-        if (currentNumber == 1) {
-            stepRegister();
-        }
-    }
-
-    private void setRegisterLayout(int layoutId) {
-        registerStep.removeAllViews();
-        View view = getLayoutInflater().inflate(layoutId, registerStep, false);
-        registerStep.addView(view);
-    }
-
-    private void stepConfirm() {
-        Button btnPrev = findViewById(R.id.btnPrev);
-        btnPrev.setOnClickListener(clickToNextStep);
-    }
-
-    private void stepRegister() {
-        // cho nay xu ly cho register step
     }
 }

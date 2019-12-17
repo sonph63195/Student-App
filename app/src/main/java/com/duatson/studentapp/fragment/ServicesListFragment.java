@@ -34,15 +34,8 @@ import java.util.List;
  */
 public class ServicesListFragment extends Fragment {
 
-    private ExpandableHeightGridView gvCatDocs;
     private ExpandableHeightGridView gvCatLearn;
-    private ExpandableHeightGridView gvCatOthers;
-    private ExpandableHeightGridView gvCatAllowance;
-
-    private static final String FB_DOCS_PATH = "Services/docs";
-    private static final String FB_LEARNS_PATH = "Services/learns";
-    private static final String FB_OTHERS_PATH = "Services/others";
-    private static final String FB_ALLOWANCE_PATH = "Services/allowance";
+    private static final String FB_LEARNS_PATH = "Services/final";
 
     public static final String MY_SERVICE_KEY = "service";
 
