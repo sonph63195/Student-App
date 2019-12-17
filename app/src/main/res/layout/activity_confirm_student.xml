@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".services.ServiceConfirmStudentActivity">
+
+    <TextView
+        android:id="@+id/txtRegisterTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/primaryColor"
+        android:paddingVertical="@dimen/padding_small"
+        android:paddingLeft="@dimen/padding_medium"
+        android:text="Đăng ký thông tin"
+        android:textColor="@color/whiteColor"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <View style="@style/Divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingVertical="@dimen/padding_small"
+            android:paddingLeft="@dimen/padding_medium"
+            android:text="Mục đích:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/padding_large">
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Vay vốn ngân hàng" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tạm hoãn nghĩa vụ quân sự" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Xét duyệt học bổng" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thay thế tạm thẻ sinh viên (bị mất)" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Khác" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/greyLight"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/padding_medium"
+            android:paddingVertical="@dimen/padding_small"
+
+            android:weightSum="1"
+            tools:ignore="UselessParent"
+            tools:targetApi="o">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnNext2"
+                android:layout_width="wrap_content"
+                android:layout_height="60sp"
+                android:layout_weight="1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                android:text="@string/btn_next" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".services.ServiceConfirmStudentActivity">
+
+    <TextView
+        android:id="@+id/txtRegisterTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/primaryColor"
+        android:paddingVertical="@dimen/padding_small"
+        android:paddingLeft="@dimen/padding_medium"
+        android:text="Xác nhận thông tin"
+        android:textColor="@color/whiteColor"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/grid_spacing">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textAppearance="?attr/textAppearanceCaption" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:text="Phạm Hoàng Sơn"
+            android:textAppearance="?attr/textAppearanceBody1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mã số sinh "
+            android:textAppearance="?attr/textAppearanceCaption" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:text="SE63195"
+            android:textAppearance="?attr/textAppearanceBody1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chứng minh nhân dân/Thẻ căn cước"
+            android:textAppearance="?attr/textAppearanceCaption" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:text="251036549"
+            android:textAppearance="?attr/textAppearanceBody1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ngày sinh"
+            android:textAppearance="?attr/textAppearanceCaption" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:text="25/05/1998"
+            android:textAppearance="?attr/textAppearanceBody1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lớp hiện tại"
+            android:textAppearance="?attr/textAppearanceCaption" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:text="SE1275"
+            android:textAppearance="?attr/textAppearanceBody1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lớp chuyển đến"
+            android:textAppearance="?attr/textAppearanceCaption" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:text="SE1276"
+            android:textAppearance="?attr/textAppearanceBody1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lý do chuyển"
+            android:textAppearance="?attr/textAppearanceCaption" />
+
+        <TextView
+            android:id="@+id/tvNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:text="Vì trùng lịch học"
+            android:textAppearance="?attr/textAppearanceBody1" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/grid_spacing" />
+
+    <View style="@style/Divider" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/greyLight"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/padding_medium"
+            android:paddingVertical="@dimen/padding_small"
+            android:weightSum="1"
+            tools:ignore="UselessParent"
+            tools:targetApi="o">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="60sp"
+                android:layout_marginHorizontal="@dimen/padding_small"
+                android:layout_marginVertical="@dimen/padding_small"
+                android:text="@string/btn_confirm"
+                android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.Html;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
@@ -22,6 +23,7 @@ import com.duatson.studentapp.fragment.DashboardFragment;
 import com.duatson.studentapp.fragment.ServicesListFragment;
 import com.duatson.studentapp.model.Contact;
 import com.duatson.studentapp.model.Service;
+import com.duatson.studentapp.services.ServiceConfirmStudentActivity;
 import com.google.android.material.button.MaterialButton;
 import com.squareup.picasso.Picasso;
 
@@ -35,6 +37,7 @@ public class ServiceDetailActivity extends AppCompatActivity {
     private ExpandableHeightListView lvContact;
     private List<Contact> contacts;
     private Service service;
+    private int id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +71,8 @@ public class ServiceDetailActivity extends AppCompatActivity {
         if (service != null) {
             TextView tvServiceTitle = findViewById(R.id.tvServiceTitle);
             tvServiceTitle.setText(service.getName());
+
+            id = Integer.parseInt(service.getId());
 
             TextView tvServiceDescription = findViewById(R.id.tvServiceDescription);
             tvServiceDescription.setText(Html.fromHtml(service.getDescription()));
@@ -105,10 +110,22 @@ public class ServiceDetailActivity extends AppCompatActivity {
     private View.OnClickListener registerCLicked = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent(getApplicationContext(), RegisterServiceActivity.class);
-            if (service != null) {
-                intent.putExtra(DashboardFragment.MY_SERVICE_KEY, service);
+            Intent intent = null;
+            switch (id) {
+                case 1:
+                    intent = new Intent(getApplicationContext(), ServiceConfirmStudentActivity.class);
+                    break;
+                case 2:
+                    intent = new Intent(getApplicationContext(), ServiceConfirmStudentActivity.class);
+                    break;
+                case 3:
+                    intent = new Intent(getApplicationContext(), ServiceConfirmStudentActivity.class);
+                    break;
+                case 4:
+                    intent = new Intent(getApplicationContext(), ServiceConfirmStudentActivity.class);
+                    break;
             }
+            intent.putExtra(DashboardFragment.MY_SERVICE_KEY, service);
             startActivity(intent);
         }
     };
