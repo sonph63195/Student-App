@@ -79,10 +79,12 @@ public class ServiceDetailActivity extends AppCompatActivity {
 
             NumberFormat formatter = new DecimalFormat("#,###");
             TextView tvServiceFee = findViewById(R.id.tvServiceFee);
+            TextView tvUnit = findViewById(R.id.tvVND);
             if (service.getFee() > 0) {
                 tvServiceFee.setText(formatter.format(service.getFee()));
             } else {
                 tvServiceFee.setText(getString(R.string.service_detail_free));
+                tvUnit.setVisibility(View.GONE);
             }
 
             ImageView ivServiceThumbnail = findViewById(R.id.ivServiceThumbnail);

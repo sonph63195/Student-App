@@ -47,6 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:textStyle="bold"
             android:paddingBottom="@dimen/padding_small"
             android:text="Mục đích cấp giấy xác nhận sinh viên:"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -61,25 +62,25 @@
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Giấy xác nhận sinh viên để tạm hoãn nghĩa vụ quân sự"
+                android:text="Xác nhận sinh viên để tạm hoãn nghĩa vụ quân sự địa phương."
                 android:textSize="16sp" />
 
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Vay vốn ngân hàng"
+                android:text="Xác nhận sinh viên xin vay vốn ngân hàng"
                 android:textSize="16sp" />
 
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Xét duyệt học bổng"
+                android:text="Xác nhận sinh viên xét duyệt trợ cấp, học bổng."
                 android:textSize="16sp" />
 
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Thay thế tạm thẻ sinh viên (bị mất)"
+                android:text="Xác nhận sinh viên dùng thay thế tạm thẻ sinh viên (bị mất)"
                 android:textSize="16sp" />
 
         </RadioGroup>

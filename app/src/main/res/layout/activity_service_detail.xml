@@ -101,9 +101,10 @@
                         android:textColor="@color/primaryColor" />
 
                     <TextView
+                        android:id="@+id/tvVND"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/service_currency"
+                        android:text="VND"
                         android:textColor="@color/primaryColor" />
 
                 </LinearLayout>
@@ -128,6 +129,7 @@
                 android:paddingVertical="@dimen/padding_small"
                 android:paddingLeft="@dimen/padding_medium"
                 android:text="@string/service_detail_description"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 android:background="@color/greyLight"
                 android:textColor="@color/primaryDarkColor"
@@ -160,6 +162,7 @@
                     android:textColor="@color/primaryDarkColor"
                     android:text="@string/service_contact_title"
                     android:textStyle="bold"
+                    android:textSize="18sp"
                     android:background="@color/greyLight"
                     android:textAppearance="?attr/textAppearanceSubtitle1"
                     tools:ignore="RtlHardcoded,RtlSymmetry,UnusedAttribute" />
