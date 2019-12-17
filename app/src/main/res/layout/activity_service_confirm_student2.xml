@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".services.ServiceConfirmStudent2Activity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tbrApp"
+            style="@style/Widget.StudentApp.Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:background="@color/primaryDarkColor"
+            android:elevation="8sp"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:titleTextColor="@color/whiteColor"
+            tools:targetApi="lollipop">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="32sp"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:gravity="center_vertical"
+                android:text="Xác nhận thông tin"
+                android:textAppearance="@style/TitleText"
+                android:textColor="@color/whiteColor" />
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/margin_medium"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/padding_large">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin_medium"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="128sp"
+                android:layout_height="wrap_content"
+                android:text="Sinh viên:"
+                android:textAppearance="@style/MediumText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="Phạm Hoàng Sơn"
+                android:textAppearance="@style/MediumText" />
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin_medium"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="128sp"
+                android:layout_height="wrap_content"
+                android:text="Ngày sinh:"
+                android:textAppearance="@style/MediumText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="25/05/1998"
+                android:textAppearance="@style/MediumText" />
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin_medium"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="128sp"
+                android:layout_height="wrap_content"
+                android:text="Mã số SV:"
+                android:textAppearance="@style/MediumText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="SE63195"
+                android:textAppearance="@style/MediumText" />
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin_medium"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="128sp"
+                android:layout_height="wrap_content"
+                android:text="Nghành:"
+                android:textAppearance="@style/MediumText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="Kỹ thuật phần mềm"
+                android:textAppearance="@style/MediumText" />
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin_medium"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="128sp"
+                android:layout_height="wrap_content"
+                android:text="Xin xác nhận \nsinh viên:"
+                android:textAppearance="@style/MediumText" />
+
+            <TextView
+                android:id="@+id/txtResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="blabla"
+                android:textAppearance="@style/MediumText" />
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin_medium"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="128sp"
+                android:layout_height="wrap_content"
+                android:text="Phí dịch vụ:"
+                android:textAppearance="@style/MediumText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="25.000 VND"
+                android:textAppearance="@style/MediumText" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/greyLight"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            tools:ignore="UselessParent"
+            tools:targetApi="o">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="56sp"
+                android:layout_marginHorizontal="@dimen/margin_medium"
+                android:layout_marginVertical="@dimen/margin_small"
+                android:onClick="clickToConfirmRegister"
+                android:text="@string/btn_confirm"
+                android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                tools:ignore="OnClick" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

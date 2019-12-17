@@ -25,7 +25,6 @@ public class RegisterSuccessActivity extends AppCompatActivity {
     public void clickToReqDetail(View view) {
         Intent intent = new Intent(this, RequestDetailActivity.class);
         Request request = new Request("1", "CB9WNML20", "25/12/2019", "Đang xử lý", "Note something", null);
-
         intent.putExtra("REQUEST", request);
         startActivity(intent);
     }

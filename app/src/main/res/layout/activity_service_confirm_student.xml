@@ -9,7 +9,8 @@
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:elevation="8sp">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/tbrApp"
@@ -17,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/toolbar_height"
             android:background="@color/primaryDarkColor"
-            android:elevation="8sp"
+            android:elevation="@dimen/margin_medium"
             app:navigationIcon="@drawable/ic_arrow_back"
             app:titleTextColor="@color/whiteColor"
             tools:targetApi="lollipop">
@@ -35,38 +36,38 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <View style="@style/Divider" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_marginVertical="@dimen/margin_medium"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/padding_large">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:paddingVertical="@dimen/padding_small"
-            android:paddingLeft="@dimen/padding_medium"
+            android:paddingBottom="@dimen/padding_small"
             android:text="Mục đích cấp giấy xác nhận sinh viên:"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="16sp" />
 
         <RadioGroup
+            android:id="@+id/rdGroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingHorizontal="@dimen/padding_large">
-
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Vay vốn ngân hàng"
-                android:textSize="16sp" />
+            android:paddingHorizontal="@dimen/padding_medium">
 
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Tạm hoãn nghĩa vụ quân sự"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Vay vốn ngân hàng"
                 android:textSize="16sp" />
 
             <RadioButton
@@ -100,19 +101,19 @@
             android:layout_height="wrap_content"
             android:background="@color/greyLight"
             android:orientation="horizontal"
-            android:paddingHorizontal="@dimen/padding_medium"
-            android:paddingVertical="@dimen/padding_small"
 
             android:weightSum="1"
             tools:ignore="UselessParent"
             tools:targetApi="o">
 
             <com.google.android.material.button.MaterialButton
-                android:onClick="clickToNext"
                 android:id="@+id/btnNext"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="56sp"
+                android:layout_marginHorizontal="@dimen/margin_medium"
+                android:layout_marginVertical="@dimen/margin_small"
                 android:layout_weight="1"
+                android:onClick="clickToNext"
                 android:text="@string/btn_next"
                 android:textAppearance="@style/TextAppearance.AppCompat.Button" />
 

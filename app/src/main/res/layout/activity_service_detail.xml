@@ -129,6 +129,7 @@
                 android:paddingLeft="@dimen/padding_medium"
                 android:text="@string/service_detail_description"
                 android:textStyle="bold"
+                android:background="@color/greyLight"
                 android:textColor="@color/primaryDarkColor"
                 android:textAppearance="?attr/textAppearanceSubtitle1"
                 tools:ignore="RtlHardcoded,RtlSymmetry,UnusedAttribute" />
@@ -159,6 +160,7 @@
                     android:textColor="@color/primaryDarkColor"
                     android:text="@string/service_contact_title"
                     android:textStyle="bold"
+                    android:background="@color/greyLight"
                     android:textAppearance="?attr/textAppearanceSubtitle1"
                     tools:ignore="RtlHardcoded,RtlSymmetry,UnusedAttribute" />
 

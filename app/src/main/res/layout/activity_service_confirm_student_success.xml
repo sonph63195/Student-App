@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".RegisterSuccessActivity">
+    tools:context=".services.ServiceConfirmStudentSuccessActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -70,16 +70,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="clickToReqDetail"
-            android:text="Xem chi tiết"
-            android:textAllCaps="false" />
+            android:text="Xem chi tiết" />
 
         <com.google.android.material.button.MaterialButton
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="clickToHomepage"
-            android:text="Về trang chủ"
-            android:textAllCaps="false" />
+            android:text="Về trang chủ" />
 
     </LinearLayout>
 
