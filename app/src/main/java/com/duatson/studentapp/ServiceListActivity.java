@@ -31,20 +31,12 @@ public class ServiceListActivity extends AppCompatActivity implements Navigation
     private Toolbar toolbar;
     private EditText edtSearch;
 
-    private ExpandableHeightGridView gvCatDocs;
+   
     private ExpandableHeightGridView gvCatLearn;
-    private ExpandableHeightGridView gvCatOthers;
-    private ExpandableHeightGridView gvCatAllowance;
-
-    private List<Service> servicesCatDocs;
     private List<Service> servicesCatLearn;
-    private List<Service> servicesCatOthers;
-    private List<Service> servicesCatAllowance;
 
     private static final String FB_DOCS_PATH = "Services/docs";
     private static final String FB_LEARNS_PATH = "Services/learns";
-    private static final String FB_OTHERS_PATH = "Services/others";
-    private static final String FB_ALLOWANCE_PATH = "Services/allowance";
 
     public static final String MY_SERVICE_KEY = "service";
 

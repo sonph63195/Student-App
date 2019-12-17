@@ -32,6 +32,9 @@ import com.squareup.picasso.Picasso;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 public class RegisterServiceActivity extends AppCompatActivity {
 
@@ -40,6 +43,8 @@ public class RegisterServiceActivity extends AppCompatActivity {
     private TextInputEditText edRegisterNote;
 
     private DatabaseReference databaseReference;
+
+    public static final String REQUEST_KEY = "requests";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +56,15 @@ public class RegisterServiceActivity extends AppCompatActivity {
         databaseReference = FirebaseDb.makeDbRef("requests");
 
         edRegisterNote = findViewById(R.id.edRegisterNote);
+
+        // add back button on top bar
+        Toolbar topToolBar = findViewById(R.id.tbrRegister);
+        topToolBar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     @Override
@@ -61,6 +75,7 @@ public class RegisterServiceActivity extends AppCompatActivity {
         service = (Service) intent.getSerializableExtra(DashboardFragment.MY_SERVICE_KEY);
         if (service == null) {
             Toast.makeText(this, "Could not find this Service", Toast.LENGTH_SHORT).show();
+            finish();
         } else {
             TextView tvRegisterTitle = findViewById(R.id.tvRegisterTitle);
             tvRegisterTitle.setText(service.getName());
@@ -79,7 +94,7 @@ public class RegisterServiceActivity extends AppCompatActivity {
 
             if (id != null) {
                 // Create new Request
-                Request request = new Request(id, service.getId(), "12/17/2019", "Pending", note, null);
+                Request request = new Request(id, service.getId(), getCurrentDate(), "Pending", note, null);
 
                 // Saving the Request
                 databaseReference.child(id).setValue(request);
@@ -88,10 +103,19 @@ public class RegisterServiceActivity extends AppCompatActivity {
                 Toast.makeText(this, "Create successfull", Toast.LENGTH_LONG).show();
 
                 Intent intent = new Intent(this, RegisterSuccessActivity.class);
+                intent.putExtra(REQUEST_KEY, request);
                 startActivity(intent);
             }
         } else {
             Toast.makeText(this, "Please enter something", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    private String getCurrentDate() {
+        Date c = Calendar.getInstance().getTime();
+//        System.out.println("Current time => " + c);
+
+        SimpleDateFormat df = new SimpleDateFormat("dd-MM-yyyy");
+        return df.format(c);
     }
 }

@@ -1,5 +1,7 @@
 package com.duatson.studentapp.model;
 
+import androidx.annotation.NonNull;
+
 import java.io.Serializable;
 import java.util.Map;
 
@@ -38,7 +40,7 @@ public class Service implements Serializable {
     }
 
     public void setId(String id) {
-        //this.id = id;
+        this.id = id;
     }
 
     public String getName() {
@@ -95,5 +97,11 @@ public class Service implements Serializable {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return String.format("%s - %s", id, name);
     }
 }
