@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "458264664552-f03c2q043qcp6qmoq030tcnuduhum920.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.duatson.studentapp",
+            "certificate_hash": "51e9b9424c2a1886d1f1a096455936db4e22e0ea"
+          }
+        },
+        {
           "client_id": "458264664552-jr86g5hd8217easovmev7vagcsmp0mur.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
