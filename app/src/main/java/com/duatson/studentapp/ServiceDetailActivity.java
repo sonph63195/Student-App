@@ -26,6 +26,7 @@ import com.duatson.studentapp.model.Service;
 import com.duatson.studentapp.services.ServiceConfirmStudentActivity;
 import com.duatson.studentapp.services.ServiceHealthInsuranceCardActivity;
 import com.duatson.studentapp.services.ServiceLibraryCardActivity;
+import com.duatson.studentapp.services.ServiceRegisterDormitoryActivity;
 import com.duatson.studentapp.services.ServiceStudentCardActivity;
 import com.google.android.material.button.MaterialButton;
 import com.squareup.picasso.Picasso;
@@ -122,10 +123,14 @@ public class ServiceDetailActivity extends AppCompatActivity {
                 case "CB9WNML52":
                     intent = new Intent(getApplicationContext(), ServiceLibraryCardActivity.class);
                     break;
+                case "CB9WNML53":
+                    intent = new Intent(getApplicationContext(), ServiceRegisterDormitoryActivity.class);
+                    break;
                 case "CB9WNML54":
                     intent = new Intent(getApplicationContext(), ServiceHealthInsuranceCardActivity.class);
                     break;
             }
+            System.out.println(service.getId());
             intent.putExtra(DashboardFragment.MY_SERVICE_KEY, service);
             startActivity(intent);
         }

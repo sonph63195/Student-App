@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".services.ServiceConfirmStudentDetailActivity"></activity>
+        <activity android:name=".services.ServiceRegisterDormitoryActivity"></activity>
+        <activity android:name=".services.ServiceConfirmStudentDetailActivity" />
         <activity android:name=".services.ServiceConfirmStudentSuccessActivity" />
         <activity android:name=".services.ServiceConfirmStudent2Activity" />
         <activity android:name=".services.ServiceHealthInsuranceCardActivity" />
@@ -31,6 +32,8 @@
         <activity android:name=".RegisterServiceActivity" />
         <activity android:name=".ServiceListActivity" />
         <activity android:name=".fragment.DashboardFragment" />
+        <activity android:name=".services.ServiceRegisterDormitoryActivity" />
+        <activity android:name=".services.ServiceRegisterDormitory2Activity" />
         <activity
             android:name=".MainActivity"
             android:windowSoftInputMode="adjustPan">
