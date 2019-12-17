@@ -64,10 +64,7 @@ public class ServiceListActivity extends AppCompatActivity implements Navigation
         edtSearch = findViewById(R.id.edtSearch);
         edtSearch.requestFocus();
 
-        gvCatDocs = findViewById(R.id.gvCatDocs);
         gvCatLearn = findViewById(R.id.gvCatLearn);
-        gvCatAllowance = findViewById(R.id.gvCatAllowance);
-        gvCatOthers = findViewById(R.id.gvCatOthers);
     }
 
     @Override
@@ -77,15 +74,10 @@ public class ServiceListActivity extends AppCompatActivity implements Navigation
     }
 
     private void initServiceData() {
-        servicesCatDocs = dataSnapshot(FB_DOCS_PATH, gvCatDocs);
-        servicesCatLearn = dataSnapshot(FB_LEARNS_PATH, gvCatLearn);
-        servicesCatOthers = dataSnapshot(FB_OTHERS_PATH, gvCatOthers);
-        servicesCatAllowance = dataSnapshot(FB_ALLOWANCE_PATH, gvCatAllowance);
 
-        gvCatDocs.setOnItemClickListener(gridItemClick(servicesCatDocs));
+        servicesCatLearn = dataSnapshot(FB_LEARNS_PATH, gvCatLearn);
+
         gvCatLearn.setOnItemClickListener(gridItemClick(servicesCatLearn));
-        gvCatOthers.setOnItemClickListener(gridItemClick(servicesCatOthers));
-        gvCatAllowance.setOnItemClickListener(gridItemClick(servicesCatAllowance));
     }
 
     private GridView.OnItemClickListener gridItemClick(final List<Service> services) {

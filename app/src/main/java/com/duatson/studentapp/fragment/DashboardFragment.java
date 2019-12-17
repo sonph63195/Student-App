@@ -41,19 +41,14 @@ public class DashboardFragment extends Fragment {
 
     public static final String MY_SERVICE_KEY = "service";
 
-    private static final String FB_DOCS_PATH = "Services/docs";
-    private static final String FB_LEARNS_PATH = "Services/learns";
-    private static final String FB_OTHERS_PATH = "Services/others";
-    private static final String FB_ALLOWANCE_PATH = "Services/allowance";
+    private static final String FB_LEARNS_PATH = "Services/final";
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_dashboard, container, false);
-        gvCatDocs = view.findViewById(R.id.gvCatDocs);
+
         gvCatLearn = view.findViewById(R.id.gvCatLearn);
-        gvCatAllowance = view.findViewById(R.id.gvCatAllowance);
-        gvCatOthers = view.findViewById(R.id.gvCatOthers);
 
         tvSearch = view.findViewById(R.id.tvSearch);
 
@@ -89,15 +84,10 @@ public class DashboardFragment extends Fragment {
     }
 
     private void initServiceData() {
-        List<Service> servicesCatDocs = dataSnapshot(FB_DOCS_PATH, gvCatDocs);
-        List<Service> servicesCatLearn = dataSnapshot(FB_LEARNS_PATH, gvCatLearn);
-        List<Service> servicesCatOthers = dataSnapshot(FB_OTHERS_PATH, gvCatOthers);
-        List<Service> servicesCatAllowance = dataSnapshot(FB_ALLOWANCE_PATH, gvCatAllowance);
 
-        gvCatDocs.setOnItemClickListener(gridItemClick(servicesCatDocs));
+        List<Service> servicesCatLearn = dataSnapshot(FB_LEARNS_PATH, gvCatLearn);
+
         gvCatLearn.setOnItemClickListener(gridItemClick(servicesCatLearn));
-        gvCatOthers.setOnItemClickListener(gridItemClick(servicesCatOthers));
-        gvCatAllowance.setOnItemClickListener(gridItemClick(servicesCatAllowance));
     }
 
     private List<Service> dataSnapshot(String firebasePath, final ExpandableHeightGridView gridView) {
