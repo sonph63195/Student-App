@@ -1,128 +1,52 @@
 [
   {
-    "description" : "Dành cho các bạn có nhu cầu đăng ký làm giấy xác nhận sinh viên",
+    "description" : "Sinh viên muốn đăng ký làm Giấy Xác nhận Sinh viên (để làm thẻ ATM, tạm hoãn nghĩa vụ quân sự, làm sổ ưu đãi giáo dục, nhận các học bổng, kê khai và giảm trừ thuế thu nhập cá nhân v.v…)<br /><br /> Thời gian giải quyết: 2-3 ngày<br /><br /> Ghi chú:<br />Sinh viên vui lòng thanh toán phí dịch vụ tại quầy Công tác sinh viên trong vòng 2 ngày sau khi đăng ký",
     "email" : "hotro.sinhvien@fu.edu.vn",
     "fee" : 20000,
     "icon" : "https://cdn0.iconfinder.com/data/icons/simply-orange-1/128/currency_copysvg-512.png",
-    "id" : "CB9WNML20",
-    "name" : "Xác nhận sinh viên",
+    "id" : "CB9WNML50",
+    "name" : "Xin xác nhận sinh viên",
     "phone" : "0334569325",
     "thumbnail" : "https://cdn.dribbble.com/users/9964/screenshots/5729647/fearless.jpg"
   },
   {
-    "description" : "Dành cho các bạn có nhu cầu đăng ký làm giấy tạm hoãn nghĩa vụ quân sự",
-    "email" : "hotro.sinhvien@fu.edu.vn",
-    "fee" : 20000,
-    "icon" : "https://cdn2.iconfinder.com/data/icons/people-91/94/Solider-256.png",
-    "id" : "CB9WNML21",
-    "name" : "Tạm hoãn nghĩa vụ",
-    "phone" : "0966106635",
-    "thumbnail" : "https://cdn2.iconfinder.com/data/icons/people-91/94/Solider-512.png"
-  },
-  {
-    "description" : "Dành cho các bạn có nhu cầu đăng ký làm giấy vây vốn ngân hàng",
-    "email" : "hotro.sinhvien@fu.edu.vn",
-    "fee" : 20000,
-    "icon" : "https://cdn0.iconfinder.com/data/icons/kameleon-free-pack-rounded/110/Money-Increase-512.png",
-    "id" : "CB9WNML22",
-    "name" : "Vay tín dụng",
-    "phone" : "0966106635",
-    "thumbnail" : "https://cdn.dribbble.com/users/257709/screenshots/7899121/media/cd9f1ef1b5ad40bb1d2e3901927e1474.png"
-  },
-  {
-    "description" : "Dành cho sinh viên có nhu cầu muốn chuyển lớp",
-    "email" : "hotro.sinhvien@fu.edu.vn",
-    "icon" : "https://cdn2.iconfinder.com/data/icons/business-vintage/614/580_-_Exchange-128.png",
-    "id" : "CB9WNML23",
-    "name" : "Đăng ký chuyển lớp học",
-    "phone" : "0966106635",
-    "thumbnail" : "https://cdn.dribbble.com/users/66135/screenshots/7157192/media/94fe7645867d37fded04bacf7c81d91c.jpg"
-  },
-  {
-    "description" : "Dành cho sinh viên muốn chuyển ngành học",
-    "email" : "hotro.sinhvien@fu.edu.vn",
-    "icon" : "https://cdn0.iconfinder.com/data/icons/fun-business-2/512/exchange-128.png",
-    "id" : "CB9WNML24",
-    "name" : "Đăng ký chuyển ngành học",
-    "phone" : "0966106635",
-    "thumbnail" : "https://cdn.dribbble.com/users/9964/screenshots/6103283/rise-pc_2x.png"
-  },
-  {
-    "description" : "Dành cho sinh viên có nhu cầu đăng ký môn học đi chậm kỳ ",
-    "email" : "hotro.sinhvien@fu.edu.vn",
-    "fee" : 500000,
-    "icon" : "https://cdn4.iconfinder.com/data/icons/school-subjects/256/English-2-128.png",
-    "id" : "CB9WNML25",
-    "name" : "Đăng ký học đi",
-    "phone" : "0966106635",
-    "thumbnail" : "https://cdn.dribbble.com/users/991154/screenshots/5582691/subject_cards_01.jpg"
-  },
-  {
-    "description" : "Dành cho sinh viên có nhu cầu đăng ký môn học lại",
-    "email" : "hotro.sinhvien@fu.edu.vn",
-    "fee" : 500000,
-    "icon" : "https://cdn4.iconfinder.com/data/icons/school-1...",
-    "id" : "CB9WNML26",
-    "name" : "Đăng ký học lại",
-    "phone" : "0966106635",
-    "thumbnail" : "https://cdn.dribbble.com/users/644900/screensho..."
-  },
-  {
-    "description" : "Dành cho sinh viên có nhu cầu đăng ký học cải thiện điểm",
-    "email" : "hotro.sinhvien@fu.edu.vn",
-    "fee" : 250000,
-    "icon" : "https://cdn0.iconfinder.com/data/icons/business-470/440/business-growth-increase-improve-analytics-statistics-commerce-128.png",
-    "id" : "CB9WNML27",
-    "name" : "Đăng ký học cải thiện",
-    "phone" : "0966106635",
-    "thumbnail" : "https://cdn.dribbble.com/users/237814/screenshots/4278415/image.png"
-  },
-  {
-    "description" : "Dành cho sinh viên có nhu cầu đăng ký tạm hoãn kỳ học",
-    "email" : "hotro.sinhvien@fu.edu.vn",
-    "icon" : "https://cdn2.iconfinder.com/data/icons/web-design-development-ui-vol-2/96/62-128.png",
-    "id" : "CB9WNML28",
-    "name" : "Tạm hoãn kỳ học",
-    "phone" : "0966106635",
-    "thumbnail" : "https://cdn.dribbble.com/users/125948/screenshots/2542369/learn-icons-dribbble.png"
-  },
-  {
-    "description" : "Dành cho sinh viên có nhu cầu đang ký làm lại thẻ sinh viên",
+    "description" : "<p>Dành cho sinh viên có nhu cầu đang ký làm lại thẻ sinh viên.</p> <p>Cung cấp họ tên, mã số sinh viên, khóa học, ngành đang học và lý do mất thẻ.</p>",
     "email" : "hotro.sinhvien@fu.edu.vn",
     "fee" : 50000,
     "icon" : "https://cdn1.iconfinder.com/data/icons/business-and-office-4-3/128/153-128.png",
-    "id" : "CB9WNML29",
+    "id" : "CB9WNML51",
     "name" : "Làm lại thẻ sinh viên",
     "phone" : "0966106635",
     "thumbnail" : "https://cdn.dribbble.com/users/1787980/screenshots/4542188/12.png"
   },
   {
-    "description" : "Dành cho sinh viên có nhu cầu làm thẻ thư viện",
+    "description" : "<p>Dành cho sinh viên có nhu cầu làm thẻ thư viện.</p> <p>Cung cấp họ tên, mã số sinh viên, khóa học và ngành đang học.</p> ",
     "email" : "hotro.sinhvien@fu.edu.vn",
     "fee" : 50000,
     "icon" : "https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/bookshelf-128.png",
-    "id" : "CB9WNML30",
+    "id" : "CB9WNML52",
     "name" : "Làm thẻ thư viện",
     "phone" : "0966106635",
     "thumbnail" : "https://cdn.dribbble.com/users/23201/screenshots/7290130/media/9c8b05197821473b8564250517467956.png"
   },
   {
-    "description" : "Dành cho sinh viên muốn đăng ký làm thẻ ký túc xá",
+    "description" : "<p>Dành cho sinh viên muốn đăng ký làm thẻ ký túc xá.</p> <p>Cung cấp họ tên, mã số sinh viên, 1 ảnh giấy xác nhận sinh viên của trường, 1 ảnh bản sao hộ khẩu có công chứng, 1 ảnh bản sao chứng minh nhân dân có công chứng và 2 hình thẻ khuôn 3x4. </p> ",
     "email" : "hotro.sinhvien@fu.edu.vn",
     "fee" : 30000,
     "icon" : "https://cdn4.iconfinder.com/data/icons/college-1/48/06--dormitory-128.png",
-    "id" : "CB9WNML31",
+    "id" : "CB9WNML53",
     "name" : "Làm thẻ ký túc xá",
     "phone" : "0966106635",
     "thumbnail" : "https://cdn.dribbble.com/users/721524/screenshots/6475691/img_0754_2x.png"
   },
   {
-    "description" : "Dành cho sinh viên có nhu cầu vay tín dụng",
-    "email" : "hotro.sinhvien@fu.edu.vn",
-    "icon" : "https://cdn4.iconfinder.com/data/icons/education-training/33/scholarship-3-128.png",
-    "id" : "CB9WNML32",
-    "name" : "Học bổng",
-    "phone" : "0966106635",
-    "thumbnail" : "https://cdn.dribbble.com/users/517584/screenshots/7012032/media/1fed8fb0ebfb8993d54dd12edf4f2b00.png"
+    "description" : "<p>Dành cho sinh viên muốn đăng ký làm thẻ ký túc xá.</p> <p>Cung cấp họ tên, mã số sinh viên, 1 ảnh giấy xác nhận sinh viên của trường, 1 ảnh bản sao hộ khẩu có công chứng, 1 ảnh bản sao chứng minh nhân dân có công chứng và 2 hình thẻ khuôn 3x4. </p> ",
+    "email" : "hotro.thuvien@fe.edu.vn",
+    "fee" : 500000,
+    "icon" : "https://image.flaticon.com/icons/png/512/1047/premium/1047843.png",
+    "id" : "CB9WNML54",
+    "name" : "Đăng ký thẻ BHYT",
+    "phone" : "0332149696",
+    "thumbnail" : "https://cdn.dribbble.com/users/1355613/screenshots/6637974/doctor.jpg"
   }
 ]
