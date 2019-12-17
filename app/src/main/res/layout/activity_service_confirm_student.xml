@@ -61,7 +61,7 @@
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Tạm hoãn nghĩa vụ quân sự"
+                android:text="Giấy xác nhận sinh viên để tạm hoãn nghĩa vụ quân sự"
                 android:textSize="16sp" />
 
             <RadioButton

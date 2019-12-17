@@ -8,9 +8,11 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.duatson.studentapp.MainActivity;
 import com.duatson.studentapp.R;
+import com.google.android.material.chip.Chip;
 
 public class ServiceConfirmStudentDetailActivity extends Activity {
 
@@ -27,26 +29,10 @@ public class ServiceConfirmStudentDetailActivity extends Activity {
     private View.OnClickListener cancelRequest = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-//
-//            AlertDialog.Builder alertDialog2 = new AlertDialog.Builder(
-//                    getApplicationContext());
-            new AlertDialog.Builder(getApplicationContext())
-//            alertDialog2
-                    .setTitle("Thông báo")
-                    .setMessage("Xác nhận hủy yêu cầu")
-                    .setNegativeButton("Xác nhận", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
-                            startActivity(new MainActivity().getIntent());
-                        }
-                    })
-                    .setPositiveButton("Hủy", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
-
-                        }
-                    })
-                    .show();
+            Toast.makeText(ServiceConfirmStudentDetailActivity.this, "Hủy thành công", Toast.LENGTH_SHORT).show();
+            Chip chipConfirmStatus = findViewById(R.id.chipConfirmStatus);
+            chipConfirmStatus.setText("Đã hủy");
+            btnCancel.setVisibility(View.INVISIBLE);
         }
     };
 }
