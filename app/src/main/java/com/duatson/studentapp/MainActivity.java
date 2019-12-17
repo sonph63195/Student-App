@@ -88,4 +88,9 @@ public class MainActivity extends AppCompatActivity implements NavigationHost {
         Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
     }
+
+    public void clickToViewNote1(View view) {
+        Intent intent = new Intent(this, Notification1DetailActivity.class);
+        startActivity(intent);
+    }
 }
