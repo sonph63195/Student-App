@@ -6,42 +6,20 @@
     android:orientation="vertical"
     android:padding="@dimen/padding_medium">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginVertical="@dimen/margin_small"
-        android:hint="Họ và tên"
-        app:boxBackgroundColor="@color/whiteColor">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginVertical="@dimen/margin_small"
-        android:hint="Mã số sinh viên"
+        android:hint="Lớp hiện tại"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         app:boxBackgroundColor="@color/whiteColor">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edCurrentClass"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginVertical="@dimen/margin_small"
-        android:hint="Lớp đang học"
-        app:boxBackgroundColor="@color/whiteColor">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:singleLine="true"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -50,24 +28,40 @@
         android:layout_height="wrap_content"
         android:layout_marginVertical="@dimen/margin_small"
         android:hint="Lớp chuyển đến"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         app:boxBackgroundColor="@color/whiteColor">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edNewClass"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:singleLine="true"/>
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?attr/textAppearanceCaption"
+        android:text="Lý do chuyển đến"
+        android:layout_marginTop="@dimen/grid_spacing"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginVertical="@dimen/margin_small"
-        android:hint="Lí do chuyển lớp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         app:boxBackgroundColor="@color/whiteColor">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edRegNote"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="100dp"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:overScrollMode="always"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="vertical"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 

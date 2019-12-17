@@ -1,5 +1,6 @@
 package com.duatson.studentapp;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
@@ -13,11 +14,13 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.duatson.studentapp.fragment.DashboardFragment;
 import com.duatson.studentapp.model.Service;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.kofigyan.stateprogressbar.StateProgressBar;
@@ -81,6 +84,8 @@ public class RegisterServiceActivity extends AppCompatActivity {
         @Override
         public void onClick(View view) {
             Toast.makeText(getApplicationContext(), "Đăng ký thành công", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(RegisterServiceActivity.this, RegisterSuccessActivity.class);
+            startActivity(intent);
         }
     };
 
