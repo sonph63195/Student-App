@@ -13,6 +13,12 @@ import com.duatson.studentapp.model.Request;
 
 public class ServiceConfirmStudentSuccessActivity extends AppCompatActivity {
 
+    public static final int CONFIRM_STUDENT = 1;
+    public static final int STUDENT_CARD = 2;
+    public static final int LIBRARY_CARD = 3;
+    public static final int HOSTEL_CARD = 4;
+    public static final int HOSPITAL_CARD = 5;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,9 +31,27 @@ public class ServiceConfirmStudentSuccessActivity extends AppCompatActivity {
     }
 
     public void clickToReqDetail(View view) {
-        Intent intent = new Intent(this, ServiceConfirmStudentDetailActivity.class);
-//        Request request = new Request("1", "CB9WNML20", "28/12/2019", "Đang xử lý", "", null);
-//        intent.putExtra("REQUEST", request);
-        startActivity(intent);
+        Intent intent = getIntent();
+
+        int service = (int) intent.getSerializableExtra("SERVICE");
+
+        Intent intent1 = null;
+        switch (service) {
+            case 1:
+                intent1 = new Intent(this, ServiceConfirmStudentDetailActivity.class);
+                break;
+            case 2:
+                intent1 = new Intent(this, ServiceConfirmStudentDetailActivity.class);
+                break;
+            case 3:
+                intent1 = new Intent(this, ServiceConfirmStudentDetailActivity.class);
+                break;
+            case 4:
+                break;
+            default:
+                intent1 = new Intent(this, ServiceConfirmStudentDetailActivity.class);
+        }
+
+        startActivity(intent1);
     }
 }

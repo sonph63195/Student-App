@@ -44,6 +44,7 @@ public class ServiceConfirmStudent2Activity extends AppCompatActivity {
         @Override
         public void onClick(View view) {
             Intent intent = new Intent(getApplicationContext(), ServiceConfirmStudentSuccessActivity.class);
+            intent.putExtra("SERVICE", ServiceConfirmStudentSuccessActivity.CONFIRM_STUDENT);
             startActivity(intent);
         }
     };
