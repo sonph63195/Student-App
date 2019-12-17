@@ -51,4 +51,10 @@
     <string name="btn_next">Tiếp tục</string>
     <string name="btn_confirm">Xác nhận</string>
     <string name="btn_reg_prev">Trở về</string>
+    <string name="noti_1">Thông báo nộp bản sao bằng tốt nghiệp trung học phổ thông của sinh viên hệ Chính quy bậc Đại học, Cao đẳng - Nhập học năm 2018 (18D, 18C) và các khóa trước chưa nộp bản sao bằng tốt nghiệp THPT</string>
+    <string name="noti_3">Thông báo khám sức khỏe năm học 2019 - 2020</string>
+    <string name="noti_2">Thông báo đóng tiền bảo hiểm y tế, bảo hiểm tai nạn cho sinh viên bậc Cao đẳng, Đại học hệ Chính quy năm 2020 (Đợt 2)</string>
+    <string name="noti_4">Thông báo số 2 về việc nhận lễ phục tốt nghiệp và chi phí tham gia Lễ tổng kết và trao bằng tiến sĩ, thạc sĩ, cử nhân năm 2019</string>
+    <string name="noti_5">HB trao đổi sinh viên “NUS Enterprise Summer Programme on Entrepreneurship 2019 ” của Đại học Quốc gia Singapore</string>
+    <string name="noti_6">Hội thảo khoa học với chủ đề: “Ứng dụng công nghệ số trong Nghiên cứu Marketing và Giải pháp nâng cao chất lượng nguồn nhân lực Nghiên cứu Marketing cho doanh nghiệp”</string>
 </resources>
