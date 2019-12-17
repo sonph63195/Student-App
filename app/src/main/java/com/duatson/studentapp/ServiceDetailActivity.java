@@ -37,7 +37,6 @@ public class ServiceDetailActivity extends AppCompatActivity {
     private ExpandableHeightListView lvContact;
     private List<Contact> contacts;
     private Service service;
-    private int id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,8 +70,6 @@ public class ServiceDetailActivity extends AppCompatActivity {
         if (service != null) {
             TextView tvServiceTitle = findViewById(R.id.tvServiceTitle);
             tvServiceTitle.setText(service.getName());
-
-            id = Integer.parseInt(service.getId());
 
             TextView tvServiceDescription = findViewById(R.id.tvServiceDescription);
             tvServiceDescription.setText(Html.fromHtml(service.getDescription()));
@@ -111,17 +108,17 @@ public class ServiceDetailActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             Intent intent = null;
-            switch (id) {
-                case 1:
+            switch (service.getId()) {
+                case "CB9WNML50":
                     intent = new Intent(getApplicationContext(), ServiceConfirmStudentActivity.class);
                     break;
-                case 2:
+                case "CB9WNML51":
                     intent = new Intent(getApplicationContext(), ServiceConfirmStudentActivity.class);
                     break;
-                case 3:
+                case "CB9WNML52":
                     intent = new Intent(getApplicationContext(), ServiceConfirmStudentActivity.class);
                     break;
-                case 4:
+                case "CB9WNML53":
                     intent = new Intent(getApplicationContext(), ServiceConfirmStudentActivity.class);
                     break;
             }
