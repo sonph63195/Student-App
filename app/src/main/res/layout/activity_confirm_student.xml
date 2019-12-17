@@ -1,23 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".services.ServiceConfirmStudentActivity">
 
-    <TextView
-        android:id="@+id/txtRegisterTitle"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:background="@color/primaryColor"
-        android:paddingVertical="@dimen/padding_small"
-        android:paddingLeft="@dimen/padding_medium"
-        android:text="Đăng ký thông tin"
-        android:textColor="@color/whiteColor"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tbrApp"
+            style="@style/Widget.StudentApp.Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:background="@color/primaryDarkColor"
+            android:elevation="8sp"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:titleTextColor="@color/whiteColor"
+            tools:targetApi="lollipop">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="32sp"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:gravity="center_vertical"
+                android:text="Đăng ký"
+                android:textAppearance="@style/TitleText"
+                android:textColor="@color/whiteColor" />
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
 
     <View style="@style/Divider" />
 
@@ -32,8 +48,9 @@
             android:layout_gravity="center"
             android:paddingVertical="@dimen/padding_small"
             android:paddingLeft="@dimen/padding_medium"
-            android:text="Mục đích:"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+            android:text="Mục đích cấp giấy xác nhận sinh viên:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="16sp" />
 
         <RadioGroup
             android:layout_width="match_parent"
@@ -43,27 +60,32 @@
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Vay vốn ngân hàng" />
+                android:text="Vay vốn ngân hàng"
+                android:textSize="16sp" />
 
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Tạm hoãn nghĩa vụ quân sự" />
+                android:text="Tạm hoãn nghĩa vụ quân sự"
+                android:textSize="16sp" />
 
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Xét duyệt học bổng" />
+                android:text="Xét duyệt học bổng"
+                android:textSize="16sp" />
 
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Thay thế tạm thẻ sinh viên (bị mất)" />
+                android:text="Thay thế tạm thẻ sinh viên (bị mất)"
+                android:textSize="16sp" />
 
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Khác" />
+                android:text="Khác"
+                android:textSize="16sp" />
         </RadioGroup>
 
     </LinearLayout>
@@ -86,12 +108,13 @@
             tools:targetApi="o">
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnNext2"
+                android:onClick="clickToNext"
+                android:id="@+id/btnNext"
                 android:layout_width="wrap_content"
-                android:layout_height="60sp"
+                android:layout_height="56sp"
                 android:layout_weight="1"
-                android:textAppearance="@style/TextAppearance.AppCompat.Button"
-                android:text="@string/btn_next" />
+                android:text="@string/btn_next"
+                android:textAppearance="@style/TextAppearance.AppCompat.Button" />
 
         </LinearLayout>
 

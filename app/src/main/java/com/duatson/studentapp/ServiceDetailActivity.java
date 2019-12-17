@@ -24,6 +24,9 @@ import com.duatson.studentapp.fragment.ServicesListFragment;
 import com.duatson.studentapp.model.Contact;
 import com.duatson.studentapp.model.Service;
 import com.duatson.studentapp.services.ServiceConfirmStudentActivity;
+import com.duatson.studentapp.services.ServiceHealthInsuranceCardActivity;
+import com.duatson.studentapp.services.ServiceLibraryCardActivity;
+import com.duatson.studentapp.services.ServiceStudentCardActivity;
 import com.google.android.material.button.MaterialButton;
 import com.squareup.picasso.Picasso;
 
@@ -37,7 +40,7 @@ public class ServiceDetailActivity extends AppCompatActivity {
     private ExpandableHeightListView lvContact;
     private List<Contact> contacts;
     private Service service;
-    private int id;
+    private String id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,7 +75,7 @@ public class ServiceDetailActivity extends AppCompatActivity {
             TextView tvServiceTitle = findViewById(R.id.tvServiceTitle);
             tvServiceTitle.setText(service.getName());
 
-            id = Integer.parseInt(service.getId());
+            id = service.getId();
 
             TextView tvServiceDescription = findViewById(R.id.tvServiceDescription);
             tvServiceDescription.setText(Html.fromHtml(service.getDescription()));
@@ -112,17 +115,17 @@ public class ServiceDetailActivity extends AppCompatActivity {
         public void onClick(View v) {
             Intent intent = null;
             switch (id) {
-                case 1:
+                case "CB9WNML50":
                     intent = new Intent(getApplicationContext(), ServiceConfirmStudentActivity.class);
                     break;
-                case 2:
-                    intent = new Intent(getApplicationContext(), ServiceConfirmStudentActivity.class);
+                case "CB9WNML51":
+                    intent = new Intent(getApplicationContext(), ServiceStudentCardActivity.class);
                     break;
-                case 3:
-                    intent = new Intent(getApplicationContext(), ServiceConfirmStudentActivity.class);
+                case "CB9WNML52":
+                    intent = new Intent(getApplicationContext(), ServiceLibraryCardActivity.class);
                     break;
-                case 4:
-                    intent = new Intent(getApplicationContext(), ServiceConfirmStudentActivity.class);
+                case "CB9WNML54":
+                    intent = new Intent(getApplicationContext(), ServiceHealthInsuranceCardActivity.class);
                     break;
             }
             intent.putExtra(DashboardFragment.MY_SERVICE_KEY, service);
