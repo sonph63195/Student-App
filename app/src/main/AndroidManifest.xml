@@ -14,6 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+        <activity android:name=".services.ServiceRegisterDormitoryDetailActivity" />
+        <activity android:name=".RequestDetail5Activity" />
         <activity android:name=".RequestDetail4Activity"></activity>
         <activity android:name=".RequestDetail3Activity" />
         <activity android:name=".RequestDetail2Activity" />
