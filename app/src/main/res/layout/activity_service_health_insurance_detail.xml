@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".services.ServiceHealthInsuranceDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/app_top_bar"
+                style="@style/Widget.StudentApp.Toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/toolbar_height"
+                android:background="@color/primaryDarkColor"
+                android:elevation="8sp"
+                app:titleTextColor="@color/whiteColor"
+                tools:ignore="UnusedAttribute">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="32sp"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="Chi tiết yêu cầu"
+                    android:textAppearance="@style/TitleText"
+                    android:textColor="@color/whiteColor" />
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/grid_spacing"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_student"
+                        tools:ignore="ContentDescription" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <TextView
+                            android:id="@+id/txtTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Đăng ký làm thẻ BHYT"
+                            android:textAppearance="?attr/textAppearanceHeadline5"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chipConfirmStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40sp"
+                            android:layout_gravity="center"
+                            android:backgroundTint="@color/faceColor"
+                            android:text="Đang xủ lý"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View style="@style/Divider" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/grid_spacing"
+                    android:layout_marginTop="@dimen/grid_spacing"
+                    android:text="Chi phí"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    android:textSize="16sp"
+                    tools:ignore="UnusedAttribute" />
+
+                <TextView
+                    android:id="@+id/txtFee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/grid_spacing"
+                    android:text="564.000 VND"
+                    android:textAppearance="?attr/textAppearanceHeadline5"
+                    android:textSize="18sp"
+                    tools:ignore="UnusedAttribute" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/grid_spacing"
+                    android:layout_marginTop="@dimen/grid_spacing"
+                    android:text="Nội dung"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    android:textSize="16sp"
+                    tools:ignore="UnusedAttribute" />
+
+                <TextView
+                    android:id="@+id/txtReason"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/grid_spacing"
+                    android:text="Chưa có, muốn đăng ký làm thẻ."
+                    android:textAppearance="?attr/textAppearanceHeadline5"
+                    android:textSize="18sp"
+                    tools:ignore="UnusedAttribute" />
+
+                <View
+                    style="@style/Divider"
+                    android:layout_marginTop="@dimen/grid_spacing" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/greyLight"
+                    android:paddingVertical="@dimen/padding_small"
+                    android:paddingLeft="@dimen/padding_medium"
+                    android:text="@string/req_detail_title_More_Info"
+                    android:textAppearance="?attr/textAppearanceHeadline5"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <View style="@style/Divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/padding_medium">
+
+                    <LinearLayout
+                        android:id="@+id/lnId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/margin_medium"
+                        android:visibility="gone"
+                        android:orientation="horizontal">
+
+                        <TextView
+
+                            android:layout_width="128sp"
+                            android:layout_height="wrap_content"
+                            android:text="Mã thẻ:"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/txtId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="123"
+                            android:textAppearance="@style/MediumText" />
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/line"
+                        android:visibility="gone"
+                        style="@style/Divider"
+                        android:layout_marginTop="@dimen/grid_spacing" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/margin_medium"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="128sp"
+                            android:layout_height="wrap_content"
+                            android:text="Ngày đăng ký:"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:id="@+id/txtDate"
+                            android:text="18/12/2019"
+                            android:textAppearance="@style/MediumText" />
+                    </LinearLayout>
+
+                    <View style="@style/Divider" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/margin_medium"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="128sp"
+                            android:layout_height="wrap_content"
+                            android:text="Người gửi:"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="Phạm Hoàng Sơn"
+                            android:textAppearance="@style/MediumText" />
+                    </LinearLayout>
+
+                    <View style="@style/Divider" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/margin_medium"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="128sp"
+                            android:layout_height="wrap_content"
+                            android:text="Nhân viên xử lý:"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="Đang chờ tiếp nhận"
+                            android:textAppearance="@style/MediumText" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View style="@style/Divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/grid_spacing"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_marginRight="@dimen/margin_medium"
+                        android:id="@+id/btnCancel"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="150sp"
+                        android:layout_height="wrap_content"
+                        android:onClick="clickToCancel"
+                        android:text="Hủy yêu cầu" />
+
+                    <com.google.android.material.button.MaterialButton
+                        style="@style/Widget.MaterialComponents.Button"
+                        android:layout_width="150sp"
+                        android:layout_height="wrap_content"
+                        android:onClick="clickToHomepage"
+                        android:text="Trang chủ" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

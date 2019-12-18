@@ -142,9 +142,10 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/txtService"
                 android:layout_width="128sp"
                 android:layout_height="wrap_content"
-                android:text="Cấp lại thẻ \nký túc xá"
+                android:text="Đăng ký thẻ\nbảo hiểm"
                 android:textAppearance="@style/MediumText" />
 
             <TextView
@@ -153,11 +154,15 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="end"
-                android:text="Cấp lại thẻ ký túc xá "
+                android:text="Chưa có, muốn đăng ký làm thẻ"
                 android:textAppearance="@style/MediumText" />
         </LinearLayout>
+
         <View style="@style/Divider" />
+
         <LinearLayout
+            android:id="@+id/lnId"
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="@dimen/margin_medium"
@@ -175,7 +180,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="end"
-                android:text="Id"
+                android:text="ABC"
                 android:textAppearance="@style/MediumText" />
         </LinearLayout>
 
@@ -194,11 +199,12 @@
                 android:textAppearance="@style/MediumText" />
 
             <TextView
+                android:id="@+id/txtFee"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="end"
-                android:text="30.000 VND"
+                android:text="564.000 VND"
                 android:textAppearance="@style/MediumText" />
         </LinearLayout>
 
@@ -225,7 +231,7 @@
                 android:layout_marginHorizontal="@dimen/margin_medium"
                 android:layout_marginVertical="@dimen/margin_small"
                 android:onClick="clickToConfirmRegister"
-                android:text="Đăng ký"
+                android:text="ĐĂng ký"
                 android:textAppearance="@style/TextAppearance.AppCompat.Button"
                 tools:ignore="OnClick" />
 
