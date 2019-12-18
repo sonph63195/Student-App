@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".services.ServiceConfirmStudentActivity">
+    tools:context=".services.ServiceRegisterDormitory2Activity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -38,99 +38,149 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/margin_medium"
         android:orientation="vertical"
-        android:padding="@dimen/grid_spacing">
+        android:paddingHorizontal="@dimen/padding_large">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Name"
-            android:textAppearance="?attr/textAppearanceCaption" />
+            android:layout_marginVertical="@dimen/margin_medium"
+            android:orientation="horizontal">
 
-        <TextView
+            <TextView
+                android:layout_width="128sp"
+                android:layout_height="wrap_content"
+                android:text="Sinh viên:"
+                android:textAppearance="@style/MediumText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="Phạm Hoàng Sơn"
+                android:textAppearance="@style/MediumText" />
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_small"
-            android:text="Phạm Hoàng Sơn"
-            android:textAppearance="?attr/textAppearanceBody1" />
+            android:layout_marginVertical="@dimen/margin_medium"
+            android:orientation="horizontal">
 
-        <TextView
+            <TextView
+                android:layout_width="128sp"
+                android:layout_height="wrap_content"
+                android:text="Ngày sinh:"
+                android:textAppearance="@style/MediumText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="25/05/1998"
+                android:textAppearance="@style/MediumText" />
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mã số sinh "
-            android:textAppearance="?attr/textAppearanceCaption" />
+            android:layout_marginVertical="@dimen/margin_medium"
+            android:orientation="horizontal">
 
-        <TextView
+            <TextView
+                android:layout_width="128sp"
+                android:layout_height="wrap_content"
+                android:text="Mã số SV:"
+                android:textAppearance="@style/MediumText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="SE63195"
+                android:textAppearance="@style/MediumText" />
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_small"
-            android:text="SE63195"
-            android:textAppearance="?attr/textAppearanceBody1" />
+            android:layout_marginVertical="@dimen/margin_medium"
+            android:orientation="horizontal">
 
-        <TextView
+            <TextView
+                android:layout_width="128sp"
+                android:layout_height="wrap_content"
+                android:text="Nghành:"
+                android:textAppearance="@style/MediumText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="Kỹ thuật phần mềm"
+                android:textAppearance="@style/MediumText" />
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Chứng minh nhân dân/Thẻ căn cước"
-            android:textAppearance="?attr/textAppearanceCaption" />
+            android:layout_marginVertical="@dimen/margin_medium"
+            android:orientation="horizontal">
 
-        <TextView
+            <TextView
+                android:layout_width="128sp"
+                android:layout_height="wrap_content"
+                android:text="Cấp lại thẻ \nký túc xá"
+                android:textAppearance="@style/MediumText" />
+
+            <TextView
+                android:id="@+id/txtResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="Cấp lại thẻ ký túc xá "
+                android:textAppearance="@style/MediumText" />
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_small"
-            android:text="251036549"
-            android:textAppearance="?attr/textAppearanceBody1" />
+            android:layout_marginVertical="@dimen/margin_medium"
+            android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Ngày sinh"
-            android:textAppearance="?attr/textAppearanceCaption" />
+            <TextView
+                android:layout_width="128sp"
+                android:layout_height="wrap_content"
+                android:text="Phí dịch vụ:"
+                android:textAppearance="@style/MediumText" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_small"
-            android:text="25/05/1998"
-            android:textAppearance="?attr/textAppearanceBody1" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Phòng ở hiện tại"
-            android:textAppearance="?attr/textAppearanceCaption" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_small"
-            android:text="R125"
-            android:textAppearance="?attr/textAppearanceBody1" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Lý do cấp lại thẻ ký túc xá"
-            android:textAppearance="?attr/textAppearanceCaption" />
-
-        <TextView
-            android:id="@+id/txtResult"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_small"
-            android:text="Mất thẻ"
-            android:textAppearance="?attr/textAppearanceBody1" />
-
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="30.000 VND"
+                android:textAppearance="@style/MediumText" />
+        </LinearLayout>
 
     </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearConfirm"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="@dimen/grid_spacing" />
-
-    <View style="@style/Divider" />
 
     <RelativeLayout
         android:layout_width="fill_parent"
@@ -149,11 +199,13 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnConfirm"
                 android:layout_width="match_parent"
-                android:layout_height="60sp"
-                android:layout_marginHorizontal="@dimen/padding_small"
-                android:layout_marginVertical="@dimen/padding_small"
+                android:layout_height="56sp"
+                android:layout_marginHorizontal="@dimen/margin_medium"
+                android:layout_marginVertical="@dimen/margin_small"
+                android:onClick="clickToConfirmRegister"
                 android:text="@string/btn_confirm"
-                android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                tools:ignore="OnClick" />
 
         </LinearLayout>
 
