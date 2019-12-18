@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:orientation="vertical"
     tools:context=".services.ServiceStudentCardActivity">
 
@@ -34,8 +34,9 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent" android:layout_height="100dp"
+        android:layout_weight="1.0" android:fadingEdge="none">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -46,11 +47,11 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_spacing"
                 android:text="Lý do cấp thẻ (bắt buộc)"
-                android:textStyle="bold"
-                android:textSize="16sp"
                 android:textAppearance="?attr/textAppearanceCaption"
-                android:layout_marginTop="@dimen/grid_spacing"/>
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -59,62 +60,63 @@
                 <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Làm lại thẻ sinh viên (Thẻ sinh viên liên kết với ngân hàng)"/>
+                    android:text="Làm lại thẻ sinh viên (Thẻ sinh viên liên kết với ngân hàng)" />
 
                 <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Thẻ quá cũ không thể nhận diện được"/>
+                    android:text="Thẻ quá cũ không thể nhận diện được" />
 
                 <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Thẻ bị mờ ảnh, mờ thông tin"/>
+                    android:text="Thẻ bị mờ ảnh, mờ thông tin" />
 
                 <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Thẻ bị sai thông tin"/>
+                    android:text="Thẻ bị sai thông tin" />
 
                 <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Bị mất thẻ "/>
+                    android:text="Bị mất thẻ " />
 
                 <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Lý do khác"/>
+                    android:text="Lý do khác" />
 
             </RadioGroup>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Đính kèm ảnh thẻ 3x4  (bắt buộc)"
                 android:layout_marginTop="@dimen/margin_medium"
-                android:textStyle="bold"
-                android:textSize="16sp"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:text="Đính kèm ảnh thẻ 3x4  (bắt buộc)"
                 android:textAppearance="?attr/textAppearanceCaption"
-                android:layout_marginBottom="@dimen/margin_small"/>
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:cardCornerRadius="10dp"
                 app:cardElevation="0dp"
-                app:strokeWidth="1dp"
                 app:strokeColor="@color/outlineColor"
-                app:cardCornerRadius="10dp">
+                app:strokeWidth="1dp">
 
                 <ImageView
-                    android:onClick="clickToChoosePhoto"
+                    android:id="@+id/ivLibphoto"
                     android:layout_width="150dp"
                     android:layout_height="200dp"
-                    android:src="@drawable/profile_photo"
-                    android:scaleType="centerCrop"
                     android:layout_gravity="center"
-                    android:id="@+id/ivLibphoto"
-                    android:layout_margin="@dimen/margin_medium"/>
+                    android:layout_margin="@dimen/margin_medium"
+                    android:onClick="clickToChoosePhoto"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/profile_photo" />
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -122,19 +124,42 @@
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="182dp"
                 android:layout_height="wrap_content"
-                android:text="Chọn ảnh"
+                android:layout_gravity="center"
                 android:onClick="clickToChoosePhoto"
-                />
+                android:text="Chọn ảnh" />
 
-            <com.google.android.material.button.MaterialButton
-                android:layout_marginTop="48dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Đăng ký"
-                android:onClick="clickToReg"/>
 
         </LinearLayout>
 
     </ScrollView>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent" android:layout_height="70dip">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/greyLight"
+            android:orientation="horizontal"
+
+            android:weightSum="1"
+            tools:ignore="UselessParent"
+            tools:targetApi="o">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnNext"
+                android:layout_width="match_parent"
+                android:layout_height="56sp"
+                android:layout_marginHorizontal="@dimen/margin_medium"
+                android:layout_marginVertical="@dimen/margin_small"
+                android:layout_weight="1"
+                android:onClick="clickToReg"
+                android:text="Đăng ký"
+                android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
 
 </LinearLayout>

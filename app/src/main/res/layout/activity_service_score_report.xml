@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:orientation="vertical"
     tools:context=".services.ServiceScoreReportActivity">
 
@@ -34,8 +34,9 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent" android:layout_height="100dp"
+        android:layout_weight="1.0" android:fadingEdge="none">
 
         <LinearLayout
             android:id="@+id/linearScore"
@@ -101,15 +102,37 @@
 
             </RadioGroup>
 
-            <com.google.android.material.button.MaterialButton
-                android:layout_marginTop="48dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Đăng ký"
-                android:onClick="clickToReg"/>
-
         </LinearLayout>
 
     </ScrollView>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent" android:layout_height="70dip">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/greyLight"
+            android:orientation="horizontal"
+
+            android:weightSum="1"
+            tools:ignore="UselessParent"
+            tools:targetApi="o">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnNext"
+                android:layout_width="match_parent"
+                android:layout_height="56sp"
+                android:layout_marginHorizontal="@dimen/margin_medium"
+                android:layout_marginVertical="@dimen/margin_small"
+                android:layout_weight="1"
+                android:onClick="clickToReg"
+                android:text="Đăng ký"
+                android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
 
 </LinearLayout>
