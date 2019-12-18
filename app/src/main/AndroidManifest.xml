@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".services.ScoreReportDetailActivity"></activity>
+        <activity android:name=".services.ScoreReportDetailActivity" />
         <activity android:name=".services.ServiceScoreReportActivity" />
         <activity android:name=".services.ServiceRegisterDormitoryActivity" />
         <activity android:name=".services.HospitalDetailActivity" />
@@ -37,7 +37,6 @@
         <activity android:name=".RegisterServiceActivity" />
         <activity android:name=".ServiceListActivity" />
         <activity android:name=".fragment.DashboardFragment" />
-        <activity android:name=".services.ServiceRegisterDormitoryActivity" />
         <activity android:name=".services.ServiceRegisterDormitory2Activity" />
         <activity
             android:name=".MainActivity"
