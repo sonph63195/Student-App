@@ -26,7 +26,7 @@
                 android:layout_height="32sp"
                 android:layout_marginLeft="@dimen/margin_medium"
                 android:layout_marginRight="@dimen/margin_medium"
-                android:text="Cấp thẻ sinh viên"
+                android:text="Cấp thẻ thư viện"
                 android:textAppearance="@style/TitleText"
                 android:textColor="@color/whiteColor" />
         </androidx.appcompat.widget.Toolbar>
@@ -49,6 +49,7 @@
                 android:text="Đính kèm ảnh thẻ 3x4"
                 android:layout_marginTop="@dimen/margin_medium"
                 android:textAppearance="?attr/textAppearanceCaption"
+                android:textSize="16sp"
                 android:layout_marginBottom="@dimen/margin_small"/>
 
             <com.google.android.material.card.MaterialCardView
@@ -83,6 +84,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Lý do cấp thẻ (Tùy chọn)"
+                android:textSize="16sp"
                 android:textAppearance="?attr/textAppearanceCaption"
                 android:layout_marginTop="@dimen/grid_spacing"/>
 

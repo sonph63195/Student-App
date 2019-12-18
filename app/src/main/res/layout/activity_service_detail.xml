@@ -52,7 +52,7 @@
                     android:id="@+id/ivServiceThumbnail"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:scaleType="fitCenter"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/img_helper_service_detail"
                     tools:ignore="ContentDescription" />
 
@@ -81,32 +81,43 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="@dimen/grid_spacing">
+                android:padding="@dimen/grid_spacing"
+                android:weightSum="1">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal">
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_weight="0.5"
+                   android:layout_gravity="center">
 
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Chi phí"
+                       android:textSize="16sp"/>
+                   <LinearLayout
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/tvServiceFee"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="5dp"
-                        android:text="20,000"
-                        android:textAppearance="?attr/textAppearanceHeadline5"
-                        android:textColor="@color/primaryColor" />
+                       <TextView
+                           android:id="@+id/tvServiceFee"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="20,000"
+                           android:textAppearance="?attr/textAppearanceHeadline5"
+                           android:textColor="@color/primaryColor" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/service_currency"
-                        android:textColor="@color/primaryColor" />
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="@string/service_currency"
+                           android:textColor="@color/primaryColor" />
 
-                </LinearLayout>
+                   </LinearLayout>
+
+               </LinearLayout>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnRegister"
@@ -143,6 +154,7 @@
                 android:layout_margin="@dimen/grid_spacing"
                 android:text="@string/app_name"
                 android:textAppearance="?attr/textAppearanceBody1" />
+
 
             <LinearLayout
                 android:layout_width="match_parent"

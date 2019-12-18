@@ -51,11 +51,12 @@
         android:textColor="@color/primaryColor" />
 
     <TextView
+        android:id="@+id/successMsg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/padding_extra_large"
         android:gravity="center"
-        android:text="Yêu cầu xin xác nhận sinh viên của bạn đã được đăng ký."
+        android:text="Yêu cầu của bạn đã được đăng ký thành công."
         android:textAppearance="?attr/textAppearanceBody1" />
 
     <LinearLayout

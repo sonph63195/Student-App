@@ -48,6 +48,7 @@
                 android:layout_height="wrap_content"
                 android:text="Đính kèm ảnh thẻ 3x4"
                 android:layout_marginTop="@dimen/margin_medium"
+                android:textSize="16sp"
                 android:textAppearance="?attr/textAppearanceCaption"
                 android:layout_marginBottom="@dimen/margin_small"/>
 
@@ -83,6 +84,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Lý do cấp thẻ (Tùy chọn)"
+                android:textSize="16sp"
                 android:textAppearance="?attr/textAppearanceCaption"
                 android:layout_marginTop="@dimen/grid_spacing"/>
 
