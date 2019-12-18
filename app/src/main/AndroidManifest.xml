@@ -17,6 +17,12 @@
         <activity android:name=".RequestDetail3Activity" />
         <activity android:name=".RequestDetail2Activity" />
         <activity android:name=".RequestDetail1Activity" />
+        <activity android:name=".services.ScoreReportDetailActivity" />
+        <activity android:name=".services.ServiceScoreReportActivity" />
+        <activity android:name=".services.ServiceRegisterDormitoryActivity" />
+        <activity android:name=".services.HospitalDetailActivity" />
+        <activity android:name=".services.StudentCardDetailActivity" />
+        <activity android:name=".services.LibraryCardDetailActivity" />
         <activity android:name=".services.ServiceConfirmStudentDetailActivity" />
         <activity android:name=".services.ServiceConfirmStudentSuccessActivity" />
         <activity android:name=".services.ServiceConfirmStudent2Activity" />
@@ -35,6 +41,7 @@
         <activity android:name=".RegisterServiceActivity" />
         <activity android:name=".ServiceListActivity" />
         <activity android:name=".fragment.DashboardFragment" />
+        <activity android:name=".services.ServiceRegisterDormitory2Activity" />
         <activity
             android:name=".MainActivity"
             android:windowSoftInputMode="adjustPan">

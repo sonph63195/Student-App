@@ -5,10 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import com.duatson.studentapp.MainActivity;
 import com.duatson.studentapp.R;
-import com.duatson.studentapp.RequestDetailActivity;
 import com.duatson.studentapp.model.Request;
 
 public class ServiceConfirmStudentSuccessActivity extends AppCompatActivity {
@@ -18,6 +18,7 @@ public class ServiceConfirmStudentSuccessActivity extends AppCompatActivity {
     public static final int LIBRARY_CARD = 3;
     public static final int HOSTEL_CARD = 4;
     public static final int HOSPITAL_CARD = 5;
+    public static final int SCORE_REPORT = 6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,16 +38,23 @@ public class ServiceConfirmStudentSuccessActivity extends AppCompatActivity {
 
         Intent intent1 = null;
         switch (service) {
-            case 1:
+            case CONFIRM_STUDENT:
                 intent1 = new Intent(this, ServiceConfirmStudentDetailActivity.class);
                 break;
-            case 2:
-                intent1 = new Intent(this, ServiceConfirmStudentDetailActivity.class);
+            case STUDENT_CARD:
+                intent1 = new Intent(this, StudentCardDetailActivity.class);
                 break;
-            case 3:
-                intent1 = new Intent(this, ServiceConfirmStudentDetailActivity.class);
+            case LIBRARY_CARD:
+                intent1 = new Intent(this, LibraryCardDetailActivity.class);
                 break;
-            case 4:
+            case HOSTEL_CARD:
+                intent1 = new Intent(this, ServiceConfirmStudentDetailActivity.class);
+                Request request = new Request("4", "CB9WNML53", "18/12/2019", "Đang xử lý", "Làm lại thẻ ký túc xá", null);
+                intent1.putExtra("FEE", "30.000 VND");
+                intent1.putExtra("REQUEST", request);
+                break;
+            case SCORE_REPORT:
+                intent1 = new Intent(this, ScoreReportDetailActivity.class);
                 break;
             default:
                 intent1 = new Intent(this, ServiceConfirmStudentDetailActivity.class);

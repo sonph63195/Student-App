@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".services.ServiceConfirmStudentDetailActivity">
+    tools:context=".services.LibraryCardDetailActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -70,12 +70,11 @@
                         tools:ignore="UseCompoundDrawables">
 
                         <TextView
-                            android:id="@+id/txtTitle"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:gravity="center"
-                            android:text="Xin xác nhận sinh viên"
+                            android:text="Xin cấp thẻ thư viện"
                             android:textSize="20sp"
                             android:textStyle="bold" />
 
@@ -99,19 +98,66 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/grid_spacing"
                     android:layout_marginTop="@dimen/grid_spacing"
-                    android:text="Lệ phí"
+                    android:text="Chi phí"
                     android:textAppearance="?attr/textAppearanceCaption"
                     android:textSize="16sp"
                     tools:ignore="UnusedAttribute" />
 
                 <TextView
-                    android:id="@+id/txtFee"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/grid_spacing"
-                    android:text="25.000 VND"
+                    android:text="50.000 VND"
                     android:textAppearance="?attr/textAppearanceHeadline5"
                     android:textColor="@color/primaryColor"
+                    tools:ignore="UnusedAttribute" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/grid_spacing"
+                    android:layout_marginTop="@dimen/grid_spacing"
+                    android:text="Ảnh 3x4"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    android:textSize="16sp"
+                    tools:ignore="UnusedAttribute" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/outlineColor"
+                    android:layout_marginHorizontal="@dimen/grid_spacing"
+                    app:cardCornerRadius="10dp">
+
+                    <ImageView
+                        android:layout_width="75dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/profile_photo"
+                        android:scaleType="centerCrop"
+                        android:layout_gravity="center"
+                        android:id="@+id/ivLibphoto"
+                        android:layout_margin="@dimen/margin_medium"/>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/grid_spacing"
+                    android:layout_marginTop="@dimen/grid_spacing"
+                    android:text="@string/note"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    android:textSize="16sp"
+                    tools:ignore="UnusedAttribute" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/grid_spacing"
+                    android:layout_marginTop="@dimen/grid_spacing"
+                    android:text="@string/lorem_ipsum_default_1"
+                    android:textAppearance="?attr/textAppearanceBody1"
                     tools:ignore="UnusedAttribute" />
 
                 <View
@@ -215,6 +261,7 @@
                     android:gravity="center">
 
                     <com.google.android.material.button.MaterialButton
+                        android:onClick="clickToCancel"
                         android:id="@+id/btnCancel"
                         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                         android:layout_width="150sp"
