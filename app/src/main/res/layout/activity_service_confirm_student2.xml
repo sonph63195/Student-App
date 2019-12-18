@@ -191,7 +191,7 @@
             <TextView
                 android:layout_width="128sp"
                 android:layout_height="wrap_content"
-                android:text="Lệ phí cấp giấy:"
+                android:text="Chi phí cấp giấy:"
                 android:textAppearance="@style/MediumText" />
 
             <TextView
@@ -226,7 +226,7 @@
                 android:layout_marginHorizontal="@dimen/margin_medium"
                 android:layout_marginVertical="@dimen/margin_small"
                 android:onClick="clickToConfirmRegister"
-                android:text="@string/btn_confirm"
+                android:text="Đăng ký"
                 android:textAppearance="@style/TextAppearance.AppCompat.Button"
                 tools:ignore="OnClick" />
 

@@ -28,16 +28,9 @@ public class ServiceConfirmStudentDetailActivity extends Activity {
         setContentView(R.layout.activity_service_confirm_student_detail);
         btnCancel = findViewById(R.id.btnCancel);
         btnCancel.setOnClickListener(cancelRequest);
-        Intent intent = this.getIntent();
-        Request request = (Request) intent.getSerializableExtra("REQUEST");
-        String fee = intent.getStringExtra("FEE");
-        txtTitle = findViewById(R.id.txtTitle);
-        txtFee = findViewById(R.id.txtFee);
-        if(request.getNote() != null && !"".equals(request.getNote()))
-            txtTitle.setText(request.getNote());
-        if(fee != null){
-            txtFee.setText(fee);
-        }
+//        Intent intent = this.getIntent();
+//        txtTitle = findViewById(R.id.txtTitle);
+//        txtFee = findViewById(R.id.txtFee);
 
     }
 
@@ -47,7 +40,15 @@ public class ServiceConfirmStudentDetailActivity extends Activity {
             Toast.makeText(ServiceConfirmStudentDetailActivity.this, "Hủy thành công", Toast.LENGTH_SHORT).show();
             Chip chipConfirmStatus = findViewById(R.id.chipConfirmStatus);
             chipConfirmStatus.setText("Đã hủy");
-            btnCancel.setVisibility(View.INVISIBLE);
+            btnCancel.setClickable(false);
+//            btnCancel.setVisibility(View.INVISIBLE);
         }
     };
+
+    public void clickToHomepage(View view) {
+        this.finish();
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+    }
 }
