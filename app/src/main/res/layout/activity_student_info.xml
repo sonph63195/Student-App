@@ -263,15 +263,15 @@
             </LinearLayout>
         </ScrollView>
 
-        <!--Edit Button-->
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/margin_extra_large"
-            android:layout_marginVertical="@dimen/margin_small"
-            android:onClick="clickToEditProfile"
-            android:text="Chỉnh sửa thông tin"
-            tools:ignore="OnClick" />
+<!--        &lt;!&ndash;Edit Button&ndash;&gt;-->
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginHorizontal="@dimen/margin_extra_large"-->
+<!--            android:layout_marginVertical="@dimen/margin_small"-->
+<!--            android:onClick="clickToEditProfile"-->
+<!--            android:text="Chỉnh sửa thông tin"-->
+<!--            tools:ignore="OnClick" />-->
 
     </LinearLayout>
 

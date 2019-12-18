@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".RequestDetailActivity">
+    tools:context=".RequestDetail4Activity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -59,7 +59,7 @@
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:scaleType="fitXY"
-                        android:src="@drawable/ic_student"
+                        android:src="@drawable/ic_library"
                         tools:ignore="ContentDescription" />
 
                     <LinearLayout
@@ -76,7 +76,8 @@
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:text="Đăng ký thẻ BHYT"
-                            android:textSize="20sp"
+                            android:textAppearance="?attr/textAppearanceHeadline5"
+                            android:textSize="22sp"
                             android:textStyle="bold" />
 
                         <com.google.android.material.chip.Chip
@@ -98,7 +99,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/grid_spacing"
                     android:layout_marginTop="@dimen/grid_spacing"
-                    android:text="Lệ phí"
+                    android:text="Chi phí"
                     android:textAppearance="?attr/textAppearanceCaption"
                     android:textSize="16sp"
                     tools:ignore="UnusedAttribute" />
@@ -107,9 +108,29 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/grid_spacing"
-                    android:text="500.000 VND"
+                    android:text="50.000 VND"
                     android:textAppearance="?attr/textAppearanceHeadline5"
-                    android:textColor="@color/primaryColor"
+                    android:textSize="18sp"
+                    tools:ignore="UnusedAttribute" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/grid_spacing"
+                    android:layout_marginTop="@dimen/grid_spacing"
+                    android:text="Lý do cấp thẻ"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    android:textSize="16sp"
+                    tools:ignore="UnusedAttribute" />
+
+                <TextView
+                    android:id="@+id/txtGoal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/grid_spacing"
+                    android:text="Thẻ thư viện bị mờ thông tin do ẩm ướt"
+                    android:textAppearance="?attr/textAppearanceHeadline5"
+                    android:textSize="18sp"
                     tools:ignore="UnusedAttribute" />
 
                 <View
@@ -124,6 +145,7 @@
                     android:paddingVertical="@dimen/padding_small"
                     android:paddingLeft="@dimen/padding_medium"
                     android:text="@string/req_detail_title_More_Info"
+                    android:textAppearance="?attr/textAppearanceHeadline5"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -133,7 +155,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingHorizontal="@dimen/padding_large">
+                    android:paddingHorizontal="@dimen/padding_medium">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -153,7 +175,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="end"
-                            android:text="16/12/2019"
+                            android:text="17/12/2019"
                             android:textAppearance="@style/MediumText" />
                     </LinearLayout>
 
@@ -201,7 +223,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="end"
-                            android:text="Nguyễn Thị Vân Anh"
+                            android:text="Châu Thị Tuyết Vân"
                             android:textAppearance="@style/MediumText" />
                     </LinearLayout>
                 </LinearLayout>
@@ -217,11 +239,11 @@
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/btnCancel"
                         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                        android:layout_width="wrap_content"
+                        android:layout_width="150sp"
                         android:layout_height="wrap_content"
                         android:text="Hủy Yêu cầu"
-                        android:textColor="@color/tongueColor"
                         android:visibility="gone"
+                        android:textColor="@color/tongueColor"
                         app:rippleColor="@color/tongueColor"
                         app:strokeColor="@color/tongueColor" />
 

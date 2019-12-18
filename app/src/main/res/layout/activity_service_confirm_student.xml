@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:paddingBottom="@dimen/padding_small"
-            android:text="Mục đích cấp giấy xác nhận sinh viên:"
+            android:text="Mục đích cấp giấy xác nhận sinh viên: (bắt buộc)"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -90,7 +90,7 @@
             <RadioButton
                 android:id="@+id/rd5"
                 android:layout_width="match_parent"
-                android:layout_height="40sp"
+                android:layout_height="50sp"
                 android:text="Mục đích khác"
                 android:textSize="16sp" />
         </RadioGroup>

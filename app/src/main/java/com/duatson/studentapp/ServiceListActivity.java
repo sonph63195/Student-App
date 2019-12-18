@@ -35,7 +35,7 @@ public class ServiceListActivity extends AppCompatActivity implements Navigation
 
     private List<Service> servicesCatLearn;
 
-    private static final String FB_LEARNS_PATH = "Services/learns";
+    private static final String FB_LEARNS_PATH = "Services/final";
 
     public static final String MY_SERVICE_KEY = "service";
 

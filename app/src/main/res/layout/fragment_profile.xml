@@ -232,7 +232,7 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:gravity="center"
-                android:onClick="clickToSignOut"
+                android:onClick="clickToViewApplication"
                 android:orientation="horizontal"
                 android:paddingHorizontal="@dimen/padding_large"
                 android:paddingVertical="@dimen/padding_small"

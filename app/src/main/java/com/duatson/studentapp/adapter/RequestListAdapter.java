@@ -59,7 +59,7 @@ public class RequestListAdapter extends ArrayAdapter<Request> {
                 tvRequestItemStatus.setTextColor(context.getResources().getColor(R.color.faceColor));
                 break;
             case "Đã hoàn thành":
-                tvRequestItemStatus.setTextColor(Color.GREEN);
+                tvRequestItemStatus.setTextColor(context.getResources().getColor(R.color.primaryLightColor));
                 break;
             case "Đã hủy":
                 tvRequestItemStatus.setTextColor(context.getResources().getColor(R.color.amaranth));

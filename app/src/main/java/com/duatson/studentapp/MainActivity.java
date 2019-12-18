@@ -93,4 +93,18 @@ public class MainActivity extends AppCompatActivity implements NavigationHost {
         Intent intent = new Intent(this, Notification1DetailActivity.class);
         startActivity(intent);
     }
+
+    public void clickToViewApplication(View view) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        builder.setTitle("Thông tin ứng dụng");
+        builder.setMessage("Tên: CTSV App\nĐặc điểm: Ứng dụng hỗ trợ Phòng Công tác Sinh viên trong công tác phục vụ các nhu cầu, hoạt động sinh viên\nPhiên bản: 19.12.18.11");
+        builder.setNegativeButton("ok", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
 }
