@@ -23,11 +23,11 @@
             tools:ignore="UnusedAttribute">
 
             <TextView
-                android:gravity="center_vertical"
                 android:layout_width="fill_parent"
                 android:layout_height="32sp"
                 android:layout_marginLeft="@dimen/margin_medium"
                 android:layout_marginRight="@dimen/margin_medium"
+                android:gravity="center_vertical"
                 android:text="@string/serviceDetail_title"
                 android:textAppearance="@style/TitleText"
                 android:textColor="@color/whiteColor" />
@@ -84,40 +84,41 @@
                 android:padding="@dimen/grid_spacing"
                 android:weightSum="1">
 
-               <LinearLayout
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:orientation="vertical"
-                   android:layout_weight="0.5"
-                   android:layout_gravity="center">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
 
-                   <TextView
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:text="Chi phí"
-                       android:textSize="16sp"/>
-                   <LinearLayout
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chi phí"
+                        android:textSize="16sp" />
 
-                       <TextView
-                           android:id="@+id/tvServiceFee"
-                           android:layout_width="wrap_content"
-                           android:layout_height="wrap_content"
-                           android:text="20,000"
-                           android:textAppearance="?attr/textAppearanceHeadline5"
-                           android:textColor="@color/primaryColor" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
-                       <TextView
-                           android:layout_width="wrap_content"
-                           android:layout_height="wrap_content"
-                           android:text="@string/service_currency"
-                           android:textColor="@color/primaryColor" />
+                        <TextView
+                            android:id="@+id/tvServiceFee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="20,000"
+                            android:textAppearance="?attr/textAppearanceHeadline5"
+                            android:textColor="@color/primaryColor" />
 
-                   </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/service_currency"
+                            android:textColor="@color/primaryColor" />
 
-               </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnRegister"
@@ -136,13 +137,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:background="@color/greyLight"
                 android:paddingVertical="@dimen/padding_small"
                 android:paddingLeft="@dimen/padding_medium"
                 android:text="@string/service_detail_description"
-                android:textStyle="bold"
-                android:background="@color/greyLight"
-                android:textColor="@color/primaryDarkColor"
                 android:textAppearance="?attr/textAppearanceSubtitle1"
+                android:textColor="@color/primaryDarkColor"
+                android:textSize="18sp"
+                android:textStyle="bold"
                 tools:ignore="RtlHardcoded,RtlSymmetry,UnusedAttribute" />
 
             <View style="@style/Divider" />
@@ -167,13 +169,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:background="@color/greyLight"
                     android:paddingVertical="@dimen/padding_small"
                     android:paddingLeft="@dimen/padding_medium"
-                    android:textColor="@color/primaryDarkColor"
                     android:text="@string/service_contact_title"
-                    android:textStyle="bold"
-                    android:background="@color/greyLight"
                     android:textAppearance="?attr/textAppearanceSubtitle1"
+                    android:textColor="@color/primaryDarkColor"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
                     tools:ignore="RtlHardcoded,RtlSymmetry,UnusedAttribute" />
 
                 <View style="@style/Divider" />

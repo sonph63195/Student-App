@@ -27,7 +27,9 @@ public class ServiceConfirmStudentSuccessActivity extends AppCompatActivity {
     }
 
     public void clickToHomepage(View view) {
+        this.finish();
         Intent intent = new Intent(this, MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }
 
@@ -48,18 +50,16 @@ public class ServiceConfirmStudentSuccessActivity extends AppCompatActivity {
                 intent1 = new Intent(this, LibraryCardDetailActivity.class);
                 break;
             case HOSTEL_CARD:
-                intent1 = new Intent(this, ServiceConfirmStudentDetailActivity.class);
-                Request request = new Request("4", "CB9WNML53", "18/12/2019", "Đang xử lý", "Làm lại thẻ ký túc xá", null);
-                intent1.putExtra("FEE", "30.000 VND");
-                intent1.putExtra("REQUEST", request);
+//                intent1 = new Intent(this, ServiceConfirmStudentDetailActivity.class);
+//                Request request = new Request("4", "CB9WNML53", "18/12/2019", "Đang xử lý", "Làm lại thẻ ký túc xá", null);
+//                intent1.putExtra("FEE", "30.000 VND");
+//                intent1.putExtra("REQUEST", request);
                 break;
             case SCORE_REPORT:
                 intent1 = new Intent(this, ScoreReportDetailActivity.class);
                 break;
-            default:
-                intent1 = new Intent(this, ServiceConfirmStudentDetailActivity.class);
         }
-
+        this.finish();
         startActivity(intent1);
     }
 }

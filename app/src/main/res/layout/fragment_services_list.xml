@@ -16,54 +16,53 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <LinearLayout
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:orientation="vertical">-->
+
+            <!--                <LinearLayout-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:background="@color/primaryColor"-->
+            <!--                    android:paddingVertical="@dimen/padding_small"-->
+            <!--                    android:paddingLeft="@dimen/padding_medium"-->
+            <!--                    tools:ignore="RtlSymmetry,UnusedAttribute"-->
+            <!--                    android:paddingStart="@dimen/padding_medium"-->
+            <!--                    android:orientation="vertical">-->
+
+            <!--                    <TextView-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:layout_gravity="center"-->
+            <!--                        android:text="Các dịch vụ"-->
+            <!--                        android:textAppearance="@style/MediumText"-->
+            <!--                        android:textColor="@color/whiteColor"-->
+            <!--                        android:textStyle="bold"-->
+            <!--                        />-->
+            <!--                    <TextView-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:text=""-->
+            <!--                        android:textColor="@color/whiteColor"-->
+            <!--                        android:textAppearance="?attr/textAppearanceCaption"/>-->
+
+            <!--                </LinearLayout>-->
+
+            <com.duatson.studentapp.application.ExpandableHeightGridView
+                android:id="@+id/gvCatLearn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/primaryColor"
-                    android:paddingVertical="@dimen/padding_small"
-                    android:paddingLeft="@dimen/padding_medium"
-                    tools:ignore="RtlSymmetry,UnusedAttribute"
-                    android:paddingStart="@dimen/padding_medium"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="Các dịch vụ"
-                        android:textAppearance="@style/MediumText"
-                        android:textColor="@color/whiteColor"
-                        android:textStyle="bold"
-                        />
-<!--                    <TextView-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:text=""-->
-<!--                        android:textColor="@color/whiteColor"-->
-<!--                        android:textAppearance="?attr/textAppearanceCaption"/>-->
-
-                </LinearLayout>
-
-                <com.duatson.studentapp.application.ExpandableHeightGridView
-                    android:id="@+id/gvCatLearn"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/grid_spacing"
-                    android:columnWidth="128dp"
-                    android:gravity="center"
-                    android:horizontalSpacing="@dimen/grid_spacing"
-                    android:numColumns="auto_fit"
-                    android:verticalSpacing="@dimen/grid_spacing" />
-
-
-            </LinearLayout>
+                android:layout_margin="@dimen/grid_spacing"
+                android:columnWidth="128dp"
+                android:gravity="center"
+                android:horizontalSpacing="@dimen/grid_spacing"
+                android:numColumns="auto_fit"
+                android:verticalSpacing="@dimen/grid_spacing" />
         </ScrollView>
 
+
     </LinearLayout>
+
 
 </FrameLayout>

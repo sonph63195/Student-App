@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".services.ServiceConfirmStudentDetailActivity">
+    tools:context=".RequestDetailActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,6 +24,7 @@
                 android:layout_height="@dimen/toolbar_height"
                 android:background="@color/primaryDarkColor"
                 android:elevation="8sp"
+                app:navigationIcon="@drawable/ic_arrow_back"
                 app:titleTextColor="@color/whiteColor"
                 tools:ignore="UnusedAttribute">
 
@@ -32,8 +33,7 @@
                     android:layout_height="32sp"
                     android:layout_marginLeft="@dimen/margin_medium"
                     android:layout_marginRight="@dimen/margin_medium"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:text="Chi tiết yêu cầu"
+                    android:text="@string/title_request_detail"
                     android:textAppearance="@style/TitleText"
                     android:textColor="@color/whiteColor" />
             </androidx.appcompat.widget.Toolbar>
@@ -70,14 +70,13 @@
                         tools:ignore="UseCompoundDrawables">
 
                         <TextView
-                            android:id="@+id/txtTitle"
+                            android:id="@+id/tvRequestTitle"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:gravity="center"
-                            android:text="Xin xác nhận sinh viên"
-                            android:textAppearance="?attr/textAppearanceHeadline5"
-                            android:textSize="22sp"
+                            android:text="Làm thẻ sinh viên"
+                            android:textSize="20sp"
                             android:textStyle="bold" />
 
                         <com.google.android.material.chip.Chip
@@ -88,7 +87,6 @@
                             android:backgroundTint="@color/faceColor"
                             android:text="Đang xủ lý"
                             android:textSize="14sp" />
-
                     </LinearLayout>
 
                 </LinearLayout>
@@ -96,43 +94,22 @@
                 <View style="@style/Divider" />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/grid_spacing"
                     android:layout_marginTop="@dimen/grid_spacing"
-                    android:text="Chi phí"
+                    android:text="Lệ phí"
                     android:textAppearance="?attr/textAppearanceCaption"
                     android:textSize="16sp"
                     tools:ignore="UnusedAttribute" />
 
                 <TextView
-                    android:id="@+id/txtFee"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/grid_spacing"
                     android:text="25.000 VND"
                     android:textAppearance="?attr/textAppearanceHeadline5"
-                    android:textSize="18sp"
-                    tools:ignore="UnusedAttribute" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/grid_spacing"
-                    android:layout_marginTop="@dimen/grid_spacing"
-                    android:text="Nội dung"
-                    android:textAppearance="?attr/textAppearanceCaption"
-                    android:textSize="16sp"
-                    tools:ignore="UnusedAttribute" />
-
-                <TextView
-                    android:id="@+id/txtGoal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/grid_spacing"
-                    android:text="Xác nhận sinh viên để tạm hoãn nghĩa vụ quân sự địa phương."
-                    android:textAppearance="?attr/textAppearanceHeadline5"
-                    android:textSize="18sp"
+                    android:textColor="@color/primaryColor"
                     tools:ignore="UnusedAttribute" />
 
                 <View
@@ -147,7 +124,6 @@
                     android:paddingVertical="@dimen/padding_small"
                     android:paddingLeft="@dimen/padding_medium"
                     android:text="@string/req_detail_title_More_Info"
-                    android:textAppearance="?attr/textAppearanceHeadline5"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -157,7 +133,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingHorizontal="@dimen/padding_medium">
+                    android:paddingHorizontal="@dimen/padding_large">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -225,7 +201,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="end"
-                            android:text="Đang chờ tiếp nhận"
+                            android:text="Nguyễn Thị Vân Anh"
                             android:textAppearance="@style/MediumText" />
                     </LinearLayout>
                 </LinearLayout>
@@ -236,23 +212,27 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/grid_spacing"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+                    android:gravity="center">
 
                     <com.google.android.material.button.MaterialButton
-                        android:layout_marginRight="@dimen/margin_medium"
                         android:id="@+id/btnCancel"
                         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                        android:layout_width="150sp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Hủy yêu cầu" />
+                        android:text="Hủy Yêu cầu"
+                        android:textColor="@color/tongueColor"
+                        app:rippleColor="@color/tongueColor"
+                        app:strokeColor="@color/tongueColor" />
 
                     <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnFeedback"
                         style="@style/Widget.MaterialComponents.Button"
-                        android:layout_width="150sp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:onClick="clickToHomepage"
-                        android:text="Trang chủ" />
+                        android:layout_marginLeft="10dp"
+                        android:text="Đánh giá"
+                        android:visibility="gone" />
+
                 </LinearLayout>
 
             </LinearLayout>

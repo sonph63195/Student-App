@@ -24,11 +24,11 @@
             app:titleTextColor="@color/whiteColor">
 
             <TextView
-                android:gravity="center_vertical"
                 android:layout_width="fill_parent"
                 android:layout_height="32sp"
                 android:layout_marginLeft="@dimen/margin_medium"
                 android:layout_marginRight="@dimen/margin_medium"
+                android:gravity="center_vertical"
                 android:text="Thông tin sinh viên"
                 android:textAppearance="@style/TitleText"
                 android:textColor="@color/whiteColor" />
@@ -124,7 +124,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="SE130001"
+                        android:text="SE63195"
                         android:textAppearance="@style/MediumText" />
                 </LinearLayout>
 
@@ -161,6 +161,29 @@
                     <TextView
                         android:layout_width="128sp"
                         android:layout_height="wrap_content"
+                        android:text="Niên khóa:"
+                        android:textAppearance="@style/MediumText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="2016 - 2020"
+                        android:textAppearance="@style/MediumText" />
+                </LinearLayout>
+
+                <View style="@style/Divider" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/margin_small"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="128sp"
+                        android:layout_height="wrap_content"
                         android:text="Ngày sinh:"
                         android:textAppearance="@style/MediumText" />
 
@@ -168,7 +191,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="01/01/1998"
+                        android:text="25/05/1998"
                         android:textAppearance="@style/MediumText" />
                 </LinearLayout>
 
@@ -244,8 +267,8 @@
         <com.google.android.material.button.MaterialButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="@dimen/margin_small"
             android:layout_marginHorizontal="@dimen/margin_extra_large"
+            android:layout_marginVertical="@dimen/margin_small"
             android:onClick="clickToEditProfile"
             android:text="Chỉnh sửa thông tin"
             tools:ignore="OnClick" />

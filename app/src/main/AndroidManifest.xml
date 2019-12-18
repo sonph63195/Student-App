@@ -13,6 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+        <activity android:name=".RequestDetail4Activity"></activity>
+        <activity android:name=".RequestDetail3Activity" />
+        <activity android:name=".RequestDetail2Activity" />
+        <activity android:name=".RequestDetail1Activity" />
         <activity android:name=".services.ScoreReportDetailActivity" />
         <activity android:name=".services.ServiceScoreReportActivity" />
         <activity android:name=".services.ServiceRegisterDormitoryActivity" />

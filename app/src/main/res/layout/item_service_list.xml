@@ -10,15 +10,16 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
+        android:layout_marginBottom="@dimen/margin_medium"
         android:orientation="vertical">
 
         <com.google.android.material.card.MaterialCardView
             android:layout_marginHorizontal="@dimen/margin_medium"
             style="@style/Widget.MaterialComponents.CardView"
-            android:layout_width="128sp"
-            android:layout_height="128sp"
+            android:layout_width="120sp"
+            android:layout_height="120sp"
             android:background="?selectableItemBackground"
-            app:cardCornerRadius="24sp"
+            app:cardCornerRadius="32sp"
             app:cardElevation="0sp"
             app:strokeColor="@color/outlineColor"
             app:strokeWidth="1dp">
@@ -40,7 +41,9 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:text="@string/welcome"
-            android:textSize="14sp" />
+            android:layout_marginTop="@dimen/margin_small"
+            android:textStyle="bold"
+            android:textSize="17sp" />
 
     </LinearLayout>
 

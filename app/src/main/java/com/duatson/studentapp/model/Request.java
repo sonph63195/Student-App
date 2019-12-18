@@ -9,6 +9,15 @@ public class Request implements Serializable {
     private String status;
     private String note;
     private String[] attachments;
+    private int num;
+
+    public int getNum() {
+        return num;
+    }
+
+    public void setNum(int num) {
+        this.num = num;
+    }
 
     public Request() {
     }
@@ -20,6 +29,16 @@ public class Request implements Serializable {
         this.status = status;
         this.note = note;
         this.attachments = attachments;
+    }
+
+    public Request(String id, String serviceId, String time, String status, String note, String[] attachments, int num) {
+        this.id = id;
+        this.serviceId = serviceId;
+        this.time = time;
+        this.status = status;
+        this.note = note;
+        this.attachments = attachments;
+        this.num = num;
     }
 
     public String getId() {

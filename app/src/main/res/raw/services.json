@@ -2,7 +2,7 @@
   {
     "description" : "Sinh viên muốn đăng ký làm Giấy Xác nhận Sinh viên (để làm thẻ ATM, tạm hoãn nghĩa vụ quân sự, làm sổ ưu đãi giáo dục, nhận các học bổng, kê khai và giảm trừ thuế thu nhập cá nhân v.v…)<br /><br /> Thời gian giải quyết: 2-3 ngày<br /><br /> Ghi chú:<br />Sinh viên vui lòng thanh toán phí dịch vụ tại quầy Công tác sinh viên trong vòng 2 ngày sau khi đăng ký",
     "email" : "hotro.sinhvien@fu.edu.vn",
-    "fee" : 20000,
+    "fee" : 25000,
     "icon" : "https://cdn0.iconfinder.com/data/icons/simply-orange-1/128/currency_copysvg-512.png",
     "id" : "CB9WNML50",
     "name" : "Xin xác nhận sinh viên",
@@ -15,7 +15,7 @@
     "fee" : 50000,
     "icon" : "https://cdn1.iconfinder.com/data/icons/business-and-office-4-3/128/153-128.png",
     "id" : "CB9WNML51",
-    "name" : "Làm lại thẻ sinh viên",
+    "name" : "Làm thẻ sinh viên",
     "phone" : "0966106635",
     "thumbnail" : "https://cdn.dribbble.com/users/1787980/screenshots/4542188/12.png"
   },

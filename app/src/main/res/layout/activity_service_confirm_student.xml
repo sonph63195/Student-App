@@ -41,7 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_marginVertical="@dimen/margin_medium"
         android:orientation="vertical"
-        android:paddingHorizontal="@dimen/padding_large">
+        android:paddingHorizontal="@dimen/padding_medium">
 
         <TextView
             android:layout_width="match_parent"
@@ -50,39 +50,51 @@
             android:paddingBottom="@dimen/padding_small"
             android:text="Mục đích cấp giấy xác nhận sinh viên:"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="16sp" />
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <RadioGroup
             android:id="@+id/rdGroup"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingHorizontal="@dimen/padding_medium">
+            android:paddingLeft="@dimen/padding_medium">
 
             <RadioButton
+                android:id="@+id/rd1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Giấy xác nhận sinh viên để tạm hoãn nghĩa vụ quân sự"
+                android:layout_height="50sp"
+                android:text="Xác nhận sinh viên để tạm hoãn nghĩa vụ quân sự địa phương."
                 android:textSize="16sp" />
 
             <RadioButton
+                android:id="@+id/rd2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Vay vốn ngân hàng"
+                android:layout_height="50sp"
+                android:text="Xác nhận sinh viên xin vay vốn ngân hàng"
                 android:textSize="16sp" />
 
             <RadioButton
+                android:id="@+id/rd3"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Xét duyệt học bổng"
+                android:layout_height="50sp"
+                android:text="Xác nhận sinh viên xét duyệt trợ cấp, học bổng."
                 android:textSize="16sp" />
 
             <RadioButton
+                android:id="@+id/rd4"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Thay thế tạm thẻ sinh viên (bị mất)"
+                android:layout_height="50sp"
+                android:text="Xác nhận sinh viên dùng thay thế tạm thẻ sinh viên (bị mất)"
                 android:textSize="16sp" />
 
+            <RadioButton
+                android:id="@+id/rd5"
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:text="Mục đích khác"
+                android:textSize="16sp" />
         </RadioGroup>
+
 
     </LinearLayout>
 

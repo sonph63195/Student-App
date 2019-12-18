@@ -134,6 +134,29 @@
 
         <View style="@style/Divider" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin_medium"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="128sp"
+                android:layout_height="wrap_content"
+                android:text="Niên khóa:"
+                android:textAppearance="@style/MediumText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="2016 - 2020"
+                android:textAppearance="@style/MediumText" />
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -144,7 +167,7 @@
             <TextView
                 android:layout_width="128sp"
                 android:layout_height="wrap_content"
-                android:text="Xin xác nhận \nsinh viên:"
+                android:text="Mục đích xác nhận sinh viên:"
                 android:textAppearance="@style/MediumText" />
 
             <TextView
@@ -168,7 +191,7 @@
             <TextView
                 android:layout_width="128sp"
                 android:layout_height="wrap_content"
-                android:text="Phí dịch vụ:"
+                android:text="Chi phí cấp giấy:"
                 android:textAppearance="@style/MediumText" />
 
             <TextView
@@ -203,7 +226,7 @@
                 android:layout_marginHorizontal="@dimen/margin_medium"
                 android:layout_marginVertical="@dimen/margin_small"
                 android:onClick="clickToConfirmRegister"
-                android:text="@string/btn_confirm"
+                android:text="Đăng ký"
                 android:textAppearance="@style/TextAppearance.AppCompat.Button"
                 tools:ignore="OnClick" />
 
