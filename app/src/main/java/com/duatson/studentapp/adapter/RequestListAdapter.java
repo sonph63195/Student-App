@@ -2,6 +2,7 @@ package com.duatson.studentapp.adapter;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.graphics.Color;
 import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -53,6 +54,17 @@ public class RequestListAdapter extends ArrayAdapter<Request> {
         }
 
         TextView tvRequestItemStatus = view.findViewById(R.id.tvRequestItemStatus);
+        switch (request.getStatus()) {
+            case "Đang xử lý":
+                tvRequestItemStatus.setTextColor(context.getResources().getColor(R.color.faceColor));
+                break;
+            case "Đã hoàn thành":
+                tvRequestItemStatus.setTextColor(Color.GREEN);
+                break;
+            case "Đã hủy":
+                tvRequestItemStatus.setTextColor(context.getResources().getColor(R.color.amaranth));
+                break;
+        }
         tvRequestItemStatus.setText(request.getStatus());
 
         TextView tvRequestItemTime = view.findViewById(R.id.tvRequestItemTime);

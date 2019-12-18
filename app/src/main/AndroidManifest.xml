@@ -13,7 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".services.ServiceConfirmStudentDetailActivity"></activity>
+        <activity android:name=".RequestDetail4Activity"></activity>
+        <activity android:name=".RequestDetail3Activity" />
+        <activity android:name=".RequestDetail2Activity" />
+        <activity android:name=".RequestDetail1Activity" />
+        <activity android:name=".services.ServiceConfirmStudentDetailActivity" />
         <activity android:name=".services.ServiceConfirmStudentSuccessActivity" />
         <activity android:name=".services.ServiceConfirmStudent2Activity" />
         <activity android:name=".services.ServiceHealthInsuranceCardActivity" />
