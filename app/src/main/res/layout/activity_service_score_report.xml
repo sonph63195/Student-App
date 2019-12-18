@@ -47,8 +47,41 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Chọn loại cấp bảng điểm"
+                android:text="Lý do cấp bảng điểm (bắt buộc)"
                 android:layout_marginTop="@dimen/margin_medium"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textAppearance="?attr/textAppearanceCaption"
+                android:layout_marginBottom="@dimen/margin_small"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Làm hồ sơ xin việc"/>
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Xét duyệt học bổng - trợ cấp"/>
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lý do khác"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chọn loại cấp bảng điểm (bắt buộc)"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 android:textAppearance="?attr/textAppearanceCaption"
                 android:layout_marginBottom="@dimen/margin_small"/>
 
