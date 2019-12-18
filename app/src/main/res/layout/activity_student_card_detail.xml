@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".services.StudentCardDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/app_top_bar"
+                style="@style/Widget.StudentApp.Toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/toolbar_height"
+                android:background="@color/primaryDarkColor"
+                android:elevation="8sp"
+                app:titleTextColor="@color/whiteColor"
+                tools:ignore="UnusedAttribute">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="32sp"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="Chi tiết yêu cầu"
+                    android:textAppearance="@style/TitleText"
+                    android:textColor="@color/whiteColor" />
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/grid_spacing"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_student"
+                        tools:ignore="ContentDescription" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Xin cấp thẻ sinh viên"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chipConfirmStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40sp"
+                            android:layout_gravity="center"
+                            android:backgroundTint="@color/faceColor"
+                            android:text="Đang xủ lý"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View style="@style/Divider" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/grid_spacing"
+                    android:layout_marginTop="@dimen/grid_spacing"
+                    android:text="Chi phí"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    android:textSize="16sp"
+                    tools:ignore="UnusedAttribute" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/grid_spacing"
+                    android:text="50.000 VND"
+                    android:textAppearance="?attr/textAppearanceHeadline5"
+                    android:textColor="@color/primaryColor"
+                    tools:ignore="UnusedAttribute" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/grid_spacing"
+                    android:layout_marginTop="@dimen/grid_spacing"
+                    android:text="Ảnh 3x4"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    android:textSize="16sp"
+                    tools:ignore="UnusedAttribute" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/outlineColor"
+                    android:layout_marginHorizontal="@dimen/grid_spacing"
+                    app:cardCornerRadius="10dp">
+
+                    <ImageView
+                        android:layout_width="75dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/profile_photo"
+                        android:scaleType="centerCrop"
+                        android:layout_gravity="center"
+                        android:id="@+id/ivLibphoto"
+                        android:layout_margin="@dimen/margin_medium"/>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/grid_spacing"
+                    android:layout_marginTop="@dimen/grid_spacing"
+                    android:text="@string/note"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    android:textSize="16sp"
+                    tools:ignore="UnusedAttribute" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/grid_spacing"
+                    android:layout_marginTop="@dimen/grid_spacing"
+                    android:text="@string/lorem_ipsum_default_1"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    tools:ignore="UnusedAttribute" />
+
+                <View
+                    style="@style/Divider"
+                    android:layout_marginTop="@dimen/grid_spacing" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/greyLight"
+                    android:paddingVertical="@dimen/padding_small"
+                    android:paddingLeft="@dimen/padding_medium"
+                    android:text="@string/req_detail_title_More_Info"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <View style="@style/Divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/padding_large">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/margin_medium"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="128sp"
+                            android:layout_height="wrap_content"
+                            android:text="Ngày đăng ký:"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="18/12/2019"
+                            android:textAppearance="@style/MediumText" />
+                    </LinearLayout>
+
+                    <View style="@style/Divider" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/margin_medium"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="128sp"
+                            android:layout_height="wrap_content"
+                            android:text="Người gửi:"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="Phạm Hoàng Sơn"
+                            android:textAppearance="@style/MediumText" />
+                    </LinearLayout>
+
+                    <View style="@style/Divider" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/margin_medium"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="128sp"
+                            android:layout_height="wrap_content"
+                            android:text="Nhân viên xử lý:"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="Đang chờ tiếp nhận"
+                            android:textAppearance="@style/MediumText" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/grid_spacing"
+                    android:gravity="center">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:onClick="clickToCancel"
+                        android:id="@+id/btnCancel"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="150sp"
+                        android:layout_height="wrap_content"
+                        android:text="Hủy yêu cầu"
+                        android:textColor="@color/tongueColor"
+                        app:rippleColor="@color/tongueColor"
+                        app:strokeColor="@color/tongueColor" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

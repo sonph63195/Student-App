@@ -9,8 +9,6 @@ import android.widget.Button;
 
 import com.duatson.studentapp.MainActivity;
 import com.duatson.studentapp.R;
-import com.duatson.studentapp.RequestDetailActivity;
-import com.duatson.studentapp.model.Request;
 
 public class ServiceConfirmStudentSuccessActivity extends AppCompatActivity {
 
@@ -41,10 +39,10 @@ public class ServiceConfirmStudentSuccessActivity extends AppCompatActivity {
                 intent1 = new Intent(ServiceConfirmStudentSuccessActivity.this, ServiceConfirmStudentDetailActivity.class);
                 break;
             case 2:
-                intent1 = new Intent(ServiceConfirmStudentSuccessActivity.this, ServiceConfirmStudentDetailActivity.class);
+                intent1 = new Intent(this, StudentCardDetailActivity.class);
                 break;
             case 3:
-
+                intent1 = new Intent(this, LibraryCardDetailActivity.class);
                 break;
             case ServiceConfirmStudentSuccessActivity.HOSTEL_CARD:
                 intent1 = new Intent(ServiceConfirmStudentSuccessActivity.this, ServiceConfirmStudentDetailActivity.class);
