@@ -1,13 +1,21 @@
 package com.duatson.studentapp.services;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.database.Cursor;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
 
 import com.duatson.studentapp.R;
 
@@ -25,6 +33,8 @@ public class ServiceRegisterDormitory2Activity extends AppCompatActivity {
         toolbar = findViewById(R.id.tbrApp);
         tvResult = findViewById(R.id.txtResult);
         btnConfirm = findViewById(R.id.btnConfirm);
+
+
 
         initData();
 
@@ -53,4 +63,5 @@ public class ServiceRegisterDormitory2Activity extends AppCompatActivity {
             finish();
         }
     };
+
 }
