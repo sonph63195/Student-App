@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtRegisterTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/primaryColor"
+        android:paddingVertical="@dimen/padding_small"
+        android:paddingLeft="@dimen/padding_medium"
+        android:text="Thông tin chi tiết"
+        android:textColor="@color/whiteColor"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <View style="@style/Divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/whiteColor">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_medium">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:id="@+id/reg_info_icon"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:padding="8dp"
+                            android:src="@drawable/ic_user_regis"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:id="@+id/txtTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="8dp"
+                            android:text="Cấp thẻ lại thẻ sinh viên"
+                            android:textAppearance="?attr/textAppearanceSubtitle1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:padding="8dp"
+                            android:src="@drawable/ic_money"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:id="@+id/txtFee"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="8dp"
+                            android:text="Phí dịch vụ: 50.000 đ"
+                            android:textAppearance="?attr/textAppearanceHeadline6" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:padding="8dp"
+                            android:src="@drawable/ic_description"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:id="@+id/txtDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="8dp"
+                            android:text="Dành cho các bạn sinh viên làm mất hoặc muốn thay mới"
+                            android:textAppearance="?attr/textAppearanceBody2" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="bottom">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/greyLight"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/padding_medium"
+                android:paddingVertical="@dimen/padding_small"
+                android:weightSum="1"
+                tools:ignore="UselessParent"
+                tools:targetApi="o">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnNext1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60sp"
+                    android:layout_marginHorizontal="@dimen/padding_small"
+                    android:layout_marginVertical="@dimen/padding_small"
+                    android:layout_weight="1"
+                    android:text="@string/btn_next"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

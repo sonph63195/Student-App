@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginBottom="56sp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primaryDarkColor"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/tbrDashboard"
+                style="@style/Widget.StudentApp.Toolbar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/primaryDarkColor"
+                android:paddingHorizontal="@dimen/padding_small"
+                android:paddingVertical="@dimen/padding_medium"
+                android:scrollbarStyle="insideInset"
+                app:menu="@menu/top_app_bar_menu_dashboard"
+                app:titleTextColor="@color/whiteColor">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_extra_small"
+                        android:text="Phòng Công tác Sinh viên"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvDateTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Thứ 2, ngày 16 tháng 12 năm 2019"
+                        android:textAppearance="@style/MediumText"
+                        android:textColor="@color/whiteColor" />
+                </LinearLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="40sp"
+                    android:background="@drawable/rounded_search_textview_dashboard"
+                    android:drawableRight="@drawable/ic_search_24px"
+                    android:drawableTint="@color/whiteColor"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/padding_medium"
+                    android:paddingRight="@dimen/padding_medium"
+                    android:text="Tìm kiếm thông tin..."
+                    android:textAppearance="@style/NormalText"
+                    android:textColor="@color/whiteColor" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+
+        <include layout="@layout/fragment_services_list" />
+
+    </LinearLayout>
+</LinearLayout>

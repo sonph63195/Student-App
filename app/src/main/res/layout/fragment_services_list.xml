@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.ServicesListFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/primaryColor"
+                    android:paddingVertical="@dimen/padding_small"
+                    android:paddingLeft="@dimen/padding_medium"
+                    tools:ignore="RtlSymmetry,UnusedAttribute"
+                    android:paddingStart="@dimen/padding_medium"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Các dịch vụ"
+                        android:textAppearance="@style/MediumText"
+                        android:textColor="@color/whiteColor"
+                        android:textStyle="bold"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/whiteColor"
+                        android:textAppearance="?attr/textAppearanceCaption"/>
+
+                </LinearLayout>
+
+                <com.duatson.studentapp.application.ExpandableHeightGridView
+                    android:id="@+id/gvCatLearn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/grid_spacing"
+                    android:columnWidth="60dp"
+                    android:gravity="center"
+                    android:horizontalSpacing="@dimen/grid_spacing"
+                    android:numColumns="auto_fit"
+                    android:verticalSpacing="@dimen/grid_spacing" />
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,3 +1,60 @@
 <resources>
-    <string name="app_name">Student App</string>
+    <string name="app_name">CTSV</string>
+    <string name="welcome">Welcome</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="register">Đăng ký</string>
+    <string name="service_currency">đ</string>
+    <string name="service_contact_title">Mọi thắc mắc xin liên hệ</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="services_list">Danh sách các dịch vụ</string>
+    <string name="search">Tìm kiếm</string>
+    <string name="register_service">Đăng ký dịch vụ</string>
+    <string name="send">Gửi</string>
+    <string name="cat_docs">Văn Bản</string>
+    <string name="cat_learn">Học Tập</string>
+    <string name="cat_others">Mục khác</string>
+    <string name="service_detail_description">Mô tả</string>
+    <string name="cat_allowance">Trợ cấp</string>
+    <string name="note">Ghi chú</string>
+    <string name="request_default_status">Đang xử lý</string>
+    <string name="request_done_status">Đã hoàn thành</string>
+    <string name="request_default_time">19/12/2019</string>
+    <string name="service_detail_free">Miễn phí</string>
+    <string name="title_History">Lịch sử</string>
+    <string name="title_request_detail">Xem chi tiết yêu cầu</string>
+    <string name="btn_send_feedback">Đánh giá</string>
+    <string name="requestDetail_title_default">Xin cấp bảng điểm</string>
+    <string name="req_detail_title_Note">Note</string>
+    <string name="lorem_ipsum_default_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia quis metus quis condimentum. Integer tincidunt rutrum risus, non luctus felis vestibulum non.</string>
+    <string name="req_detail_title_More_Info">Thông tin thêm</string>
+    <string name="settings">Cài đặt</string>
+    <string name="help_contact">Trung tâm hỗ trợ</string>
+    <string name="student_infomation">Thông tin sinh viên</string>
+    <string name="sign_out">Đăng xuất</string>
+    <string name="application_infomation">Thông tin ứng dụng</string>
+    <string name="profile">Cá nhân</string>
+    <string name="hello_text">Xin chào</string>
+    <string name="today_text">Thứ 7, ngày 30 tháng 11 năm 2019</string>
+    <string name="serviceDetail_title">Chi tiết dịch vụ</string>
+    <string name="menu_home">Trang Chủ</string>
+    <string name="menu_history">Lịch Sử</string>
+    <string name="menu_account">Cá Nhân</string>
+    <string name="menu_notification">Thông Báo</string>
+    <string name="cat_decs_learn">Các vấn đề liên quan tới học tập</string>
+    <string name="cat_decs_docs">Những vấn đề liên quan tới văn bản, giấy tờ</string>
+    <string name="cat_decs_allowance">Đăng ký nhận trợ cấp</string>
+    <string name="cat_decs_others">Những danh mục khác</string>
+    <string name="search_hint">Tìm kiếm dịch vụ...</string>
+    <string name="btn_next">Tiếp tục</string>
+    <string name="btn_confirm">Xác nhận</string>
+    <string name="btn_reg_prev">Trở về</string>
+    <string name="noti_1">Thông báo nộp bản sao bằng tốt nghiệp trung học phổ thông của sinh viên hệ Chính quy bậc Đại học, Cao đẳng - Nhập học năm 2018 (18D, 18C) và các khóa trước chưa nộp bản sao bằng tốt nghiệp THPT</string>
+    <string name="noti_3">Thông báo khám sức khỏe năm học 2019 - 2020</string>
+    <string name="noti_2">Thông báo đóng tiền bảo hiểm y tế, bảo hiểm tai nạn cho sinh viên bậc Cao đẳng, Đại học hệ Chính quy năm 2020 (Đợt 2)</string>
+    <string name="noti_4">Thông báo số 2 về việc nhận lễ phục tốt nghiệp và chi phí tham gia Lễ tổng kết và trao bằng tiến sĩ, thạc sĩ, cử nhân năm 2019</string>
+    <string name="noti_5">HB trao đổi sinh viên “NUS Enterprise Summer Programme on Entrepreneurship 2019 ” của Đại học Quốc gia Singapore</string>
+    <string name="noti_6">Hội thảo khoa học với chủ đề: “Ứng dụng công nghệ số trong Nghiên cứu Marketing và Giải pháp nâng cao chất lượng nguồn nhân lực Nghiên cứu Marketing cho doanh nghiệp”</string>
 </resources>

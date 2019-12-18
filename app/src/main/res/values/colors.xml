@@ -1,6 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="primaryColor">#00a8f9</color>
+    <color name="primaryLightColor">#33aefc</color>
+    <color name="primaryDarkColor">#006fff</color>
+    <color name="secondaryColor">#546e7a</color>
+    <color name="secondaryLightColor">#819ca9</color>
+    <color name="secondaryDarkColor">#29434e</color>
+    <color name="primaryTextColor">#000000</color>
+    <color name="secondaryTextColor">#ffffff</color>
+
+    <!-- Ripple Effect -->
+    <color name="colorPressed">#666666</color>
+    <color name="colorNotPress">#999999</color>
+
+    <color name="faceColor">#f6b93c</color>
+    <color name="eyesColor">#000000</color>
+    <color name="tongueColor">#c32925</color>
+    <color name="mouthColor">#000000</color>
+
+    <color name="rating_inactive">#929292</color>
+    <color name="rating_active">#006fff</color>
+    <color name="input_background">#F3F2F2</color>
+
+    <color name="whiteColor">#ffffff</color>
+    <color name="outlineColor">#DDDCDC</color>
+
+    <color name="hex1">#0099CC</color>
+    <color name="hex2">#CCFFCC</color>
+    <color name="hex3">#66CCFF</color>
+    <color name="hex4">#003399</color>
+    
+    <color name="bluePigment">#3626A7</color>
+    <color name="blueBerry">#4392F1</color>
+    <color name="orangeCadmium">#EE8434</color>
+    <color name="amaranth">#ED2D54</color>
+
+    <color name="greyLight">#f7f7f7</color>
+    <color name="bottom_nav">#efefef</color>
 </resources>

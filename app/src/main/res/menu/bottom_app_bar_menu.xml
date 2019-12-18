@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/icDashboard"
+        android:icon="@drawable/ic_home_outlined_24px"
+        android:title="@string/menu_home"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/icHistory"
+        android:icon="@drawable/ic_history_black_24dp"
+        android:title="@string/menu_history"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/icNotification"
+        android:icon="@drawable/ic_notifications_24px"
+        android:title="@string/menu_notification"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/icProfile"
+        android:icon="@drawable/ic_account_circle_outlined_24px"
+        android:title="@string/menu_account"
+        app:showAsAction="always" />
+</menu>

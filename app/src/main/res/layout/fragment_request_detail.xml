@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RequestDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/app_top_bar"
+                style="@style/Widget.StudentApp.Toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/toolbar_height"
+                android:background="@color/primaryDarkColor"
+                android:elevation="8sp"
+                app:navigationIcon="@drawable/ic_arrow_back"
+                app:titleTextColor="@color/whiteColor"
+                tools:ignore="UnusedAttribute">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="32sp"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:text="@string/title_request_detail"
+                    android:textAppearance="@style/TitleText"
+                    android:textColor="@color/whiteColor" />
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/grid_spacing"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivRequestIcon"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_student"
+                        tools:ignore="ContentDescription" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <TextView
+                            android:id="@+id/tvRequestTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="@string/requestDetail_title_default"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/tvRequestStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.75"
+                            android:text="@string/request_default_status"
+                            android:textAppearance="?attr/textAppearanceLargePopupMenu"
+                            android:textColor="@color/faceColor"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View style="@style/Divider" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/grid_spacing"
+                    android:layout_marginTop="@dimen/grid_spacing"
+                    android:text="Chi phí"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    tools:ignore="UnusedAttribute" />
+
+                <TextView
+                    android:id="@+id/tvRequestFee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/grid_spacing"
+                    android:text="50,000"
+                    android:textAppearance="?attr/textAppearanceHeadline5"
+                    android:textColor="@color/primaryColor"
+                    tools:ignore="UnusedAttribute" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/grid_spacing">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/grid_spacing">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/req_detail_title_Note"
+                            android:textAppearance="?attr/textAppearanceCaption" />
+
+                        <TextView
+                            android:id="@+id/tvRequestNote"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lorem_ipsum_default_1"
+                            android:textAppearance="?attr/textAppearanceBody1" />
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/grid_spacing"
+                    android:text="Đính kèm"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    tools:ignore="UnusedAttribute" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/grid_spacing"
+                    tools:targetApi="o">
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:text="Attachment_1"
+                        app:chipIcon="@drawable/ic_student" />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:clickable="false"
+                        android:text="Attachment_2"
+                        app:chipIcon="@drawable/ic_student" />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:clickable="false"
+                        android:text="Attachment_3"
+                        app:chipIcon="@drawable/ic_student" />
+
+                </LinearLayout>
+
+                <View
+                    style="@style/Divider"
+                    android:layout_marginTop="@dimen/grid_spacing" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingVertical="@dimen/padding_extra_small"
+                    android:paddingLeft="@dimen/padding_medium"
+                    android:text="@string/req_detail_title_More_Info"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <View style="@style/Divider" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dip"
+                            android:text="Ngày gửi yêu cầu"
+                            android:textAppearance="?attr/textAppearanceCaption" />
+
+                        <TextView
+                            android:id="@+id/tvRequestDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="25 - 12 - 2019"
+                            android:textAppearance="?attr/textAppearanceBody1" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dip"
+                            android:text="Người gửi"
+                            android:textAppearance="?attr/textAppearanceCaption" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Phạm Hoàng Sơn"
+                            android:textAppearance="?attr/textAppearanceBody1" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dip"
+                            android:text="Người xử lý yêu cầu"
+                            android:textAppearance="?attr/textAppearanceCaption" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Trần Thị Mỹ Hạnh"
+                            android:textAppearance="?attr/textAppearanceBody1" />
+
+                    </TableRow>
+
+                </TableLayout>
+
+                <View style="@style/Divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/grid_spacing"
+                    android:gravity="center">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnCancel"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hủy Yêu cầu"
+                        android:textColor="@color/tongueColor"
+                        app:rippleColor="@color/tongueColor"
+                        app:strokeColor="@color/tongueColor" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnFeedback"
+                        style="@style/Widget.MaterialComponents.Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Đánh giá"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

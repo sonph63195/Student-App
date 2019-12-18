@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "458264664552",
+    "firebase_url": "https://student-app-ee149.firebaseio.com",
+    "project_id": "student-app-ee149",
+    "storage_bucket": "student-app-ee149.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:458264664552:android:9a23eb7d304190a2a1ac5d",
+        "android_client_info": {
+          "package_name": "com.duatson.studentapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "458264664552-f03c2q043qcp6qmoq030tcnuduhum920.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.duatson.studentapp",
+            "certificate_hash": "51e9b9424c2a1886d1f1a096455936db4e22e0ea"
+          }
+        },
+        {
+          "client_id": "458264664552-jr86g5hd8217easovmev7vagcsmp0mur.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.duatson.studentapp",
+            "certificate_hash": "97f0d5b979c663e0de35ecff9645ea3d3f8bd221"
+          }
+        },
+        {
+          "client_id": "458264664552-il1fdbun3ck3jfl6sg9dqc1krpad5c6m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEco6dhNds_DjTaaEyjLeuqnDmK_044EY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "458264664552-il1fdbun3ck3jfl6sg9dqc1krpad5c6m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
