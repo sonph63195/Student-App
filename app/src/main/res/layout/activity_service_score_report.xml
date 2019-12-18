@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".services.ServiceScoreReportActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/app_top_bar"
+            style="@style/Widget.StudentApp.Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:background="@color/primaryDarkColor"
+            android:elevation="8sp"
+            app:titleTextColor="@color/whiteColor"
+            tools:ignore="UnusedAttribute">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="32sp"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:text="Xin Cấp Bảng Điểm"
+                android:textAppearance="@style/TitleText"
+                android:textColor="@color/whiteColor" />
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/linearScore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/grid_spacing">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chọn loại cấp bảng điểm"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:textAppearance="?attr/textAppearanceCaption"
+                android:layout_marginBottom="@dimen/margin_small"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cấp qua file (PDF, Word)" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cấp qua giấy (Có dấu mộc đỏ)" />
+
+            </RadioGroup>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_marginTop="48dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Đăng ký"
+                android:onClick="clickToReg"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

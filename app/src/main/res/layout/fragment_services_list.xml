@@ -40,12 +40,12 @@
                         android:textColor="@color/whiteColor"
                         android:textStyle="bold"
                         />
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text=""
-                        android:textColor="@color/whiteColor"
-                        android:textAppearance="?attr/textAppearanceCaption"/>
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text=""-->
+<!--                        android:textColor="@color/whiteColor"-->
+<!--                        android:textAppearance="?attr/textAppearanceCaption"/>-->
 
                 </LinearLayout>
 
@@ -54,7 +54,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/grid_spacing"
-                    android:columnWidth="60dp"
+                    android:columnWidth="128dp"
                     android:gravity="center"
                     android:horizontalSpacing="@dimen/grid_spacing"
                     android:numColumns="auto_fit"

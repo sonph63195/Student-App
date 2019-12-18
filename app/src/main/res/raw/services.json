@@ -48,5 +48,15 @@
     "name" : "Đăng ký thẻ BHYT",
     "phone" : "0332149696",
     "thumbnail" : "https://cdn.dribbble.com/users/1355613/screenshots/6637974/doctor.jpg"
+  },
+  {
+    "description" : "Đối tượng đăng ký:<br />Tất cả sinh viên có nhu cầu cấp bảng điểm để làm hồ sơ xin việc, xét duyệt học bổng - trợ cấp,... <br /><br /> Thời gian giải quyết:<br />5-7 ngày<br /><br /> Ghi chú:<br />Sinh viên thanh toán lệ phí tại quầy Công tác sinh viên trong vòng 3 ngày sau khi đăng ký trên hệ thống.<br /><br /> Trân trọng,<br /> Phòng Công Tác Sinh Viên",
+    "email" : "hotro.sinhvien@fu.edu.vn",
+    "fee" : 30000,
+    "icon" : "https://image.flaticon.com/icons/png/512/201/201635.png",
+    "id" : "CB9WNML55",
+    "name" : "Xin bảng điểm",
+    "phone" : "0332149696",
+    "thumbnail" : "https://postmediatorontosun.files.wordpress.com/2019/12/gettyimages-1131756963-e1576600206327.jpg"
   }
 ]

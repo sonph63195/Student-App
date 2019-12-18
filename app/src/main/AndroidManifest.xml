@@ -13,8 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".services.ServiceRegisterDormitoryActivity"></activity>
-        <activity android:name=".services.HospitalDetailActivity"></activity>
+        <activity android:name=".services.ScoreReportDetailActivity"></activity>
+        <activity android:name=".services.ServiceScoreReportActivity" />
+        <activity android:name=".services.ServiceRegisterDormitoryActivity" />
+        <activity android:name=".services.HospitalDetailActivity" />
         <activity android:name=".services.StudentCardDetailActivity" />
         <activity android:name=".services.LibraryCardDetailActivity" />
         <activity android:name=".services.ServiceConfirmStudentDetailActivity" />
