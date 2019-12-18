@@ -1,4 +1,4 @@
-package com.duatson.studentapp;
+package com.duatson.studentapp.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.duatson.studentapp.MainActivity;
+import com.duatson.studentapp.R;
 import com.duatson.studentapp.model.Request;
 
 public class RegisterSuccessActivity extends AppCompatActivity {

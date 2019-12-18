@@ -1,4 +1,4 @@
-package com.duatson.studentapp;
+package com.duatson.studentapp.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +13,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.duatson.studentapp.NavigationHost;
+import com.duatson.studentapp.R;
 import com.duatson.studentapp.adapter.CategoryGridAdapter;
 import com.duatson.studentapp.application.ExpandableHeightGridView;
 import com.duatson.studentapp.model.Service;

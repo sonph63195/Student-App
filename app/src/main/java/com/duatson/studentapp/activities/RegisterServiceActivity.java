@@ -1,33 +1,20 @@
-package com.duatson.studentapp;
+package com.duatson.studentapp.activities;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Html;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.duatson.studentapp.R;
 import com.duatson.studentapp.fragment.DashboardFragment;
 import com.duatson.studentapp.model.Service;
-import com.google.android.material.dialog.MaterialAlertDialogBuilder;
-import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
 import com.kofigyan.stateprogressbar.StateProgressBar;
-import com.squareup.picasso.Picasso;
-
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
 
 public class RegisterServiceActivity extends AppCompatActivity {
 

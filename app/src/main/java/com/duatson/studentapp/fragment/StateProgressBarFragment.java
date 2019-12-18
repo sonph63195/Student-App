@@ -1,4 +1,4 @@
-package com.duatson.studentapp;
+package com.duatson.studentapp.fragment;
 
 
 import android.os.Bundle;
@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.duatson.studentapp.R;
 import com.kofigyan.stateprogressbar.StateProgressBar;
 
 

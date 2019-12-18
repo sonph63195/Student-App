@@ -1,4 +1,4 @@
-package com.duatson.studentapp;
+package com.duatson.studentapp.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -6,19 +6,20 @@ import androidx.appcompat.widget.Toolbar;
 import android.os.Bundle;
 import android.view.View;
 
-public class HelpContactActivity extends AppCompatActivity {
+import com.duatson.studentapp.R;
 
+public class Notification1DetailActivity extends AppCompatActivity {
     private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_help);
-        toolbar = findViewById(R.id.tbrHelpContact);
+        setContentView(R.layout.activity_notification1_detail);
+        toolbar = findViewById(R.id.tbrNotificationDetail);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onBackPressed();
+                finish();
             }
         });
     }

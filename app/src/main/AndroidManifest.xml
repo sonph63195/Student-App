@@ -4,6 +4,10 @@
     package="com.duatson.studentapp">
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -13,16 +17,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".Notification1DetailActivity"></activity>
-        <activity android:name=".RegisterSuccessActivity"></activity>
-        <activity android:name=".HelpContactActivity" />
-        <activity android:name=".SettingsActivity" />
-        <activity android:name=".StudentInfoActivity" />
-        <activity android:name=".NotificationActivity" />
-        <activity android:name=".RequestDetailActivity" />
-        <activity android:name=".ServiceDetailActivity" />
-        <activity android:name=".RegisterServiceActivity" />
-        <activity android:name=".ServiceListActivity" />
+        <activity android:name=".activities.Notification1DetailActivity"></activity>
+        <activity android:name=".activities.RegisterSuccessActivity"></activity>
+        <activity android:name=".activities.HelpContactActivity" />
+        <activity android:name=".activities.SettingsActivity" />
+        <activity android:name=".activities.StudentInfoActivity" />
+        <activity android:name=".activities.NotificationActivity" />
+        <activity android:name=".activities.RequestDetailActivity" />
+        <activity android:name=".activities.ServiceDetailActivity" />
+        <activity android:name=".activities.RegisterServiceActivity" />
+        <activity android:name=".activities.ServiceListActivity" />
         <activity android:name=".fragment.DashboardFragment" />
         <activity
             android:name=".MainActivity"
@@ -33,6 +37,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- cache directory file provider paths -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
     </application>
 
 </manifest>

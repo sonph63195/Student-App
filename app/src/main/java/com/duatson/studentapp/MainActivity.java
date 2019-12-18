@@ -11,6 +11,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.duatson.studentapp.activities.HelpContactActivity;
+import com.duatson.studentapp.activities.Notification1DetailActivity;
+import com.duatson.studentapp.activities.SettingsActivity;
+import com.duatson.studentapp.activities.StudentInfoActivity;
 import com.duatson.studentapp.fragment.DashboardFragment;
 
 public class MainActivity extends AppCompatActivity implements NavigationHost {

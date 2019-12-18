@@ -1,4 +1,4 @@
-package com.duatson.studentapp;
+package com.duatson.studentapp.activities;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -14,6 +14,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.duatson.studentapp.R;
 import com.duatson.studentapp.model.Request;
 
 public class RequestDetailActivity extends AppCompatActivity {

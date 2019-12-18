@@ -14,8 +14,8 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.duatson.studentapp.R;
-import com.duatson.studentapp.ServiceDetailActivity;
-import com.duatson.studentapp.ServiceListActivity;
+import com.duatson.studentapp.activities.ServiceDetailActivity;
+import com.duatson.studentapp.activities.ServiceListActivity;
 import com.duatson.studentapp.adapter.CategoryGridAdapter;
 import com.duatson.studentapp.application.ExpandableHeightGridView;
 import com.duatson.studentapp.model.Service;
@@ -26,8 +26,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 

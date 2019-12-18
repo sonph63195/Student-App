@@ -10,10 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.Toast;
 
 import com.duatson.studentapp.R;
-import com.duatson.studentapp.RequestDetailActivity;
+import com.duatson.studentapp.activities.RequestDetailActivity;
 import com.duatson.studentapp.adapter.RequestListAdapter;
 import com.duatson.studentapp.application.ExpandableHeightListView;
 import com.duatson.studentapp.model.Request;

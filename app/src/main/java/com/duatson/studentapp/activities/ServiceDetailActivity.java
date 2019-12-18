@@ -1,4 +1,4 @@
-package com.duatson.studentapp;
+package com.duatson.studentapp.activities;
 
 import android.Manifest;
 import android.content.Intent;
@@ -16,10 +16,10 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.duatson.studentapp.R;
 import com.duatson.studentapp.adapter.ContactAdapter;
 import com.duatson.studentapp.application.ExpandableHeightListView;
 import com.duatson.studentapp.fragment.DashboardFragment;
-import com.duatson.studentapp.fragment.ServicesListFragment;
 import com.duatson.studentapp.model.Contact;
 import com.duatson.studentapp.model.Service;
 import com.google.android.material.button.MaterialButton;

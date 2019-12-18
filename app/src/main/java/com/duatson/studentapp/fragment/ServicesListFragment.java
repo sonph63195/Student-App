@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -14,9 +13,8 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
 
-import com.duatson.studentapp.NavigationHost;
 import com.duatson.studentapp.R;
-import com.duatson.studentapp.ServiceDetailActivity;
+import com.duatson.studentapp.activities.ServiceDetailActivity;
 import com.duatson.studentapp.adapter.CategoryGridAdapter;
 import com.duatson.studentapp.application.ExpandableHeightGridView;
 import com.duatson.studentapp.model.Service;
