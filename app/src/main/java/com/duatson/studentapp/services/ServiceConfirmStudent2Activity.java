@@ -45,12 +45,6 @@ public class ServiceConfirmStudent2Activity extends AppCompatActivity {
 
     private void initData() {
         Intent intent = getIntent();
-        String name = intent.getStringExtra("NAME");
-        tvStdName.setText(name);
-        String number = intent.getStringExtra("NUMBER");
-        tvMSSV.setText(number);
-        String major = intent.getStringExtra("MAJOR");
-        tvMajor.setText(major);
         String purpose = intent.getStringExtra("PURPOSE");
         tvPurpose.setText(purpose);
     }

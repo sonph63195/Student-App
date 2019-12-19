@@ -34,8 +34,9 @@
         <activity android:name=".services.ServiceConfirmStudentDetailActivity" />
         <activity android:name=".services.ServiceConfirmStudentSuccessActivity" />
         <activity android:name=".services.ServiceConfirmStudent2Activity" />
-        <activity android:name=".services.ServiceHealthInsuranceCardActivity"
-            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".services.ServiceHealthInsuranceCardActivity"
+            android:windowSoftInputMode="adjustPan" />
         <activity android:name=".services.ServiceLibraryCardActivity" />
         <activity android:name=".services.ServiceStudentCardActivity" />
         <activity android:name=".services.ServiceConfirmStudentActivity" />

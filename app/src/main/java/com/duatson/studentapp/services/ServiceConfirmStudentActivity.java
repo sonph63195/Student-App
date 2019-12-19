@@ -42,27 +42,14 @@ public class ServiceConfirmStudentActivity extends AppCompatActivity {
 
     public void clickToNext(View view) {
         Intent intent = new Intent(this, ServiceConfirmStudent2Activity.class);
-        name = edtStdName.getText().toString().trim();
-        number = edtMSSV.getText().toString().trim();
-        major = edtMajor.getText().toString().trim();
-
-        if (name.length() > 0) {
-            intent.putExtra("NAME", name);
-        }
-        if (number.length() > 0) {
-            intent.putExtra("NUMBER", number);
-        }
-        if (major.length() > 0) {
-            intent.putExtra("MAJOR", major);
-        }
         if (rdOther.isChecked()) {
             purpose = edtOther.getText().toString().trim();
         }
         if (purpose.length() > 0) {
             intent.putExtra("PURPOSE", purpose);
         }
-        if (name.length() == 0 || number.length() == 0 || purpose.length() == 0 || major.length() == 0) {
-            Toast.makeText(this, "Vui lòng điền đầy đủ thông tin theo yêu cầu", Toast.LENGTH_SHORT).show();
+        if (purpose.length() == 0) {
+            Toast.makeText(this, "Vui lòng điền chọn mục đích cấp giấy", Toast.LENGTH_SHORT).show();
         } else {
             startActivity(intent);
         }
@@ -95,10 +82,7 @@ public class ServiceConfirmStudentActivity extends AppCompatActivity {
     private void findView() {
         toolbar = findViewById(R.id.tbrApp);
         radioGroup = findViewById(R.id.rdGroup);
-        edtStdName = findViewById(R.id.edtStdName);
-        edtMSSV = findViewById(R.id.edtMSSV);
         edtOther = findViewById(R.id.edtOther);
-        edtMajor = findViewById(R.id.edtMajor);
         rdOther= findViewById(R.id.rd5);
     }
 

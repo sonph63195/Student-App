@@ -35,8 +35,8 @@ public class ServiceConfirmStudentDetailActivity extends Activity {
         Intent intent = this.getIntent();
 //        txtTitle = findViewById(R.id.txtTitle);
 //        txtFee = findViewById(R.id.txtFee);
-        edtStdName = findViewById(R.id.edtStdName);
-        edtMSSV = findViewById(R.id.edtMSSV);
+//        edtStdName = findViewById(R.id.edtStdName);
+//        edtMSSV = findViewById(R.id.edtMSSV);
         edtOther = findViewById(R.id.edtOther);
     }
 

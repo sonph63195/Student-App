@@ -2,6 +2,7 @@ package com.duatson.studentapp.services;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -19,11 +20,15 @@ import java.io.IOException;
 public class ServiceStudentCardActivity extends AppCompatActivity {
 
     private static final int PICK_IMAGE_REQUEST = 3798;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.form_student_card);
+        toolbar = findViewById(R.id.tbrApp);
+        toolbar.setNavigationOnClickListener(backPress);
+
     }
 
     public void clickToReg(View view) {
@@ -62,4 +67,11 @@ public class ServiceStudentCardActivity extends AppCompatActivity {
             }
         }
     }
+
+    private View.OnClickListener backPress = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            finish();
+        }
+    };
 }

@@ -33,8 +33,8 @@ public class ServiceRegisterDormitory2Activity extends AppCompatActivity {
         toolbar = findViewById(R.id.tbrApp);
         tvResult = findViewById(R.id.txtResult);
         btnConfirm = findViewById(R.id.btnConfirm);
-        txtId = findViewById(R.id.txtId);
-        txtId.setText(this.getIntent().getStringExtra("ID"));
+//        txtId = findViewById(R.id.txtId);
+//        txtId.setText(this.getIntent().getStringExtra("ID"));
         initData();
 
         btnConfirm.setOnClickListener(clickToConfirmRegister);
@@ -53,7 +53,7 @@ public class ServiceRegisterDormitory2Activity extends AppCompatActivity {
             Intent intent = new Intent(getApplicationContext(), ServiceConfirmStudentSuccessActivity.class);
             intent.putExtra("SERVICE", ServiceConfirmStudentSuccessActivity.HOSTEL_CARD);
             intent.putExtra("RESULT", tvResult.getText().toString());
-            intent.putExtra("ID", txtId.getText().toString());
+//            intent.putExtra("ID", txtId.getText().toString());
             startActivity(intent);
         }
     };

@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     android:orientation="vertical"
     tools:context=".services.ServiceLibraryCardActivity">
 
@@ -12,12 +14,13 @@
         android:layout_height="wrap_content">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/app_top_bar"
+            android:id="@+id/tbrApp"
             style="@style/Widget.StudentApp.Toolbar"
             android:layout_width="match_parent"
             android:layout_height="@dimen/toolbar_height"
             android:background="@color/primaryDarkColor"
             android:elevation="8sp"
+            app:navigationIcon="@drawable/ic_arrow_back"
             app:titleTextColor="@color/whiteColor"
             tools:ignore="UnusedAttribute">
 
@@ -26,17 +29,17 @@
                 android:layout_height="32sp"
                 android:layout_marginLeft="@dimen/margin_medium"
                 android:layout_marginRight="@dimen/margin_medium"
-                android:text="Cấp thẻ thư viện"
+                android:text="Làm thẻ thư viện"
                 android:textAppearance="@style/TitleText"
                 android:textColor="@color/whiteColor" />
         </androidx.appcompat.widget.Toolbar>
-
     </com.google.android.material.appbar.AppBarLayout>
 
-    <ScrollView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="fill_parent" android:layout_height="100dp"
-        android:layout_weight="1.0" android:fadingEdge="none">
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_weight="1.0"
+        android:fadingEdge="none">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -48,70 +51,72 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Tên"
-                android:textSize="16sp"
                 android:textAppearance="?attr/textAppearanceCaption"
-                android:layout_marginTop="@dimen/grid_spacing"/>
+                android:textSize="16sp" />
+
             <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+                android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Phạm Hoàng Sơn"
-                    android:enabled="false"/>
+                    android:enabled="false"
+                    android:text="Phạm Hoàng Sơn" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_spacing"
                 android:text="MSSV"
-                android:textSize="16sp"
                 android:textAppearance="?attr/textAppearanceCaption"
-                android:layout_marginTop="@dimen/grid_spacing"/>
+                android:textSize="16sp" />
+
             <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+                android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="SE63195"
-                    android:enabled="false"/>
+                    android:enabled="false"
+                    android:text="SE63195" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_spacing"
                 android:text="Ngành học"
-                android:textSize="16sp"
                 android:textAppearance="?attr/textAppearanceCaption"
-                android:layout_marginTop="@dimen/grid_spacing"/>
+                android:textSize="16sp" />
+
             <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+                android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Kỹ Thuật Phần Mềm"
-                    android:enabled="false"/>
+                    android:enabled="false"
+                    android:text="Kỹ Thuật Phần Mềm" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_spacing"
                 android:text="Lý do cấp thẻ (bắt buộc)"
-                android:textStyle="bold"
-                android:textSize="16sp"
                 android:textAppearance="?attr/textAppearanceCaption"
-                android:layout_marginTop="@dimen/grid_spacing"/>
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -120,48 +125,48 @@
                 <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Làm mới thẻ thư viện"/>
+                    android:text="Làm mới thẻ thư viện" />
 
                 <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Làm lại thẻ thư viện"/>
+                    android:text="Làm lại thẻ thư viện" />
 
                 <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Lý do khác"/>
+                    android:text="Lý do khác" />
 
             </RadioGroup>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Đính kèm ảnh thẻ 3x4  (bắt buộc)"
                 android:layout_marginTop="@dimen/margin_medium"
-                android:textStyle="bold"
-                android:textSize="16sp"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:text="Đính kèm ảnh thẻ 3x4  (bắt buộc)"
                 android:textAppearance="?attr/textAppearanceCaption"
-                android:layout_marginBottom="@dimen/margin_small"/>
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cardElevation="0dp"
-                app:strokeWidth="1dp"
                 android:layout_gravity="center"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp"
                 app:strokeColor="@color/outlineColor"
-                app:cardCornerRadius="10dp">
+                app:strokeWidth="1dp">
 
                 <ImageView
-                    android:onClick="clickToChoosePhoto"
+                    android:id="@+id/ivLibphoto"
                     android:layout_width="150dp"
                     android:layout_height="200dp"
-                    android:src="@drawable/profile_photo"
-                    android:scaleType="centerCrop"
                     android:layout_gravity="center"
-                    android:id="@+id/ivLibphoto"
-                    android:layout_margin="@dimen/margin_medium"/>
+                    android:layout_margin="@dimen/margin_medium"
+                    android:onClick="clickToChoosePhoto"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/profile_photo" />
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -170,16 +175,16 @@
                 android:layout_width="182dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Chọn ảnh"
                 android:onClick="clickToChoosePhoto"
-                />
+                android:text="Chọn ảnh" />
         </LinearLayout>
 
     </ScrollView>
 
     <RelativeLayout
-        android:orientation="horizontal"
-        android:layout_width="fill_parent" android:layout_height="70dip">
+        android:layout_width="fill_parent"
+        android:layout_height="70dip"
+        android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="match_parent"
