@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".services.ServiceConfirmStudent2Activity">
+    tools:context=".services.ServiceRegisterDormitory2Activity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -55,7 +55,6 @@
                 android:textAppearance="@style/MediumText" />
 
             <TextView
-                android:id="@+id/tvStdName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -64,28 +63,28 @@
                 android:textAppearance="@style/MediumText" />
         </LinearLayout>
 
-<!--        <View style="@style/Divider" />-->
+        <View style="@style/Divider" />
 
-<!--        <LinearLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginVertical="@dimen/margin_medium"-->
-<!--            android:orientation="horizontal">-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin_medium"
+            android:orientation="horizontal">
 
-<!--            <TextView-->
-<!--                android:layout_width="128sp"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="Ngày sinh:"-->
-<!--                android:textAppearance="@style/MediumText" />-->
+            <TextView
+                android:layout_width="128sp"
+                android:layout_height="wrap_content"
+                android:text="Ngày sinh:"
+                android:textAppearance="@style/MediumText" />
 
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_weight="1"-->
-<!--                android:gravity="end"-->
-<!--                android:text="25/05/1998"-->
-<!--                android:textAppearance="@style/MediumText" />-->
-<!--        </LinearLayout>-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="25/05/1998"
+                android:textAppearance="@style/MediumText" />
+        </LinearLayout>
 
         <View style="@style/Divider" />
 
@@ -102,7 +101,6 @@
                 android:textAppearance="@style/MediumText" />
 
             <TextView
-                android:id="@+id/tvMSSV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -126,7 +124,6 @@
                 android:textAppearance="@style/MediumText" />
 
             <TextView
-                android:id="@+id/tvMajor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -135,29 +132,6 @@
                 android:textAppearance="@style/MediumText" />
         </LinearLayout>
 
-<!--        <View style="@style/Divider" />-->
-
-<!--        <LinearLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginVertical="@dimen/margin_medium"-->
-<!--            android:orientation="horizontal">-->
-
-<!--            <TextView-->
-<!--                android:layout_width="128sp"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="Niên khóa:"-->
-<!--                android:textAppearance="@style/MediumText" />-->
-
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_weight="1"-->
-<!--                android:gravity="end"-->
-<!--                android:text="2016 - 2020"-->
-<!--                android:textAppearance="@style/MediumText" />-->
-<!--        </LinearLayout>-->
-
         <View style="@style/Divider" />
 
 
@@ -168,18 +142,45 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/txtService"
                 android:layout_width="128sp"
                 android:layout_height="wrap_content"
-                android:text="Mục đích xác nhận sinh viên:"
+                android:text="Đăng ký thẻ\nbảo hiểm"
                 android:textAppearance="@style/MediumText" />
 
             <TextView
-                android:id="@+id/tvPurpose"
+                android:id="@+id/txtResult"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="end"
-                android:text="blabla"
+                android:text="Chưa có, muốn đăng ký làm thẻ"
+                android:textAppearance="@style/MediumText" />
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+
+        <LinearLayout
+            android:id="@+id/lnId"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin_medium"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="128sp"
+                android:layout_height="wrap_content"
+                android:text="Mã thẻ"
+                android:textAppearance="@style/MediumText" />
+
+            <TextView
+                android:id="@+id/txtId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="ABC"
                 android:textAppearance="@style/MediumText" />
         </LinearLayout>
 
@@ -194,15 +195,16 @@
             <TextView
                 android:layout_width="128sp"
                 android:layout_height="wrap_content"
-                android:text="Chi phí cấp giấy:"
+                android:text="Phí dịch vụ:"
                 android:textAppearance="@style/MediumText" />
 
             <TextView
+                android:id="@+id/txtFee"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="end"
-                android:text="25.000 VND"
+                android:text="564.000 VND"
                 android:textAppearance="@style/MediumText" />
         </LinearLayout>
 
@@ -229,7 +231,7 @@
                 android:layout_marginHorizontal="@dimen/margin_medium"
                 android:layout_marginVertical="@dimen/margin_small"
                 android:onClick="clickToConfirmRegister"
-                android:text="Đăng ký"
+                android:text="ĐĂng ký"
                 android:textAppearance="@style/TextAppearance.AppCompat.Button"
                 tools:ignore="OnClick" />
 

@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,6 +22,9 @@ public class ServiceConfirmStudentDetailActivity extends Activity {
 
     private Button btnCancel;
     private TextView txtTitle, txtFee;
+    private EditText edtStdName;
+    private EditText edtMSSV;
+    private EditText edtOther;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,10 +32,12 @@ public class ServiceConfirmStudentDetailActivity extends Activity {
         setContentView(R.layout.activity_service_confirm_student_detail);
         btnCancel = findViewById(R.id.btnCancel);
         btnCancel.setOnClickListener(cancelRequest);
-//        Intent intent = this.getIntent();
+        Intent intent = this.getIntent();
 //        txtTitle = findViewById(R.id.txtTitle);
 //        txtFee = findViewById(R.id.txtFee);
-
+        edtStdName = findViewById(R.id.edtStdName);
+        edtMSSV = findViewById(R.id.edtMSSV);
+        edtOther = findViewById(R.id.edtOther);
     }
 
     private View.OnClickListener cancelRequest = new View.OnClickListener() {

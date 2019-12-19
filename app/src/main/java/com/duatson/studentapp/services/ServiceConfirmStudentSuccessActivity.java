@@ -50,11 +50,25 @@ public class ServiceConfirmStudentSuccessActivity extends AppCompatActivity {
                 intent1 = new Intent(this, LibraryCardDetailActivity.class);
                 break;
             case HOSTEL_CARD:
-               intent1 = new Intent(this, ServiceRegisterDormitoryDetailActivity.class);
+                intent1 = new Intent(this, ServiceDormitoryDetailActivity.class);
+                intent1.putExtra("RESULT", this.getIntent().getStringExtra("RESULT"));
+                intent1.putExtra("ID", this.getIntent().getStringExtra("ID"));
                 break;
             case SCORE_REPORT:
                 intent1 = new Intent(this, ScoreReportDetailActivity.class);
                 break;
+            case HOSPITAL_CARD:
+            {
+                intent1 = new Intent(this, ServiceHealthInsuranceDetailActivity.class);
+                if(intent.getStringExtra("SERVICE_TYPE").equals("Cấp lại thẻ")){
+                    intent1.putExtra("SERVICE_TYPE", intent.getStringExtra("SERVICE_TYPE"));
+                    intent1.putExtra("REASON", intent.getStringExtra("REASON"));
+                    intent1.putExtra("ID", intent.getStringExtra("ID"));
+                }else {
+                    intent1.putExtra("SERVICE_TYPE", "Chưa có, muốn đăng ký làm thẻ");
+                }
+                break;
+            }
         }
         this.finish();
         startActivity(intent1);

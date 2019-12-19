@@ -6,18 +6,29 @@ import androidx.appcompat.widget.Toolbar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.duatson.studentapp.R;
 
+import java.util.ArrayList;
+
 public class ServiceConfirmStudentActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
     private RadioGroup radioGroup;
     private RadioButton radioButton;
-    private String result = "";
+    private RadioButton rdOther;
+    private EditText edtStdName;
+    private EditText edtMSSV;
+    private EditText edtOther;
+    private EditText edtMajor;
+    private String name;
+    private String number;
+    private String major;
+    private String purpose;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,13 +42,30 @@ public class ServiceConfirmStudentActivity extends AppCompatActivity {
 
     public void clickToNext(View view) {
         Intent intent = new Intent(this, ServiceConfirmStudent2Activity.class);
-        if (result.length() > 0) {
-            intent.putExtra("RESULT", result);
-            startActivity(intent);
-        } else {
-            Toast.makeText(this, "Vui lòng chọn mục đích bạn muốn yêu cầu", Toast.LENGTH_SHORT).show();
-        }
+        name = edtStdName.getText().toString().trim();
+        number = edtMSSV.getText().toString().trim();
+        major = edtMajor.getText().toString().trim();
 
+        if (name.length() > 0) {
+            intent.putExtra("NAME", name);
+        }
+        if (number.length() > 0) {
+            intent.putExtra("NUMBER", number);
+        }
+        if (major.length() > 0) {
+            intent.putExtra("MAJOR", major);
+        }
+        if (rdOther.isChecked()) {
+            purpose = edtOther.getText().toString().trim();
+        }
+        if (purpose.length() > 0) {
+            intent.putExtra("PURPOSE", purpose);
+        }
+        if (name.length() == 0 || number.length() == 0 || purpose.length() == 0 || major.length() == 0) {
+            Toast.makeText(this, "Vui lòng điền đầy đủ thông tin theo yêu cầu", Toast.LENGTH_SHORT).show();
+        } else {
+            startActivity(intent);
+        }
     }
 
     private void clickToBack() {
@@ -54,7 +82,12 @@ public class ServiceConfirmStudentActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 radioButton = findViewById(i);
-                result = radioButton.getText().toString();
+                if (radioButton.getText().equals("Mục đích khác")) {
+//                    purpose = edtOther.getText().toString().trim();
+                } else {
+                    purpose = radioButton.getText().toString();
+                }
+
             }
         });
     }
@@ -62,6 +95,11 @@ public class ServiceConfirmStudentActivity extends AppCompatActivity {
     private void findView() {
         toolbar = findViewById(R.id.tbrApp);
         radioGroup = findViewById(R.id.rdGroup);
+        edtStdName = findViewById(R.id.edtStdName);
+        edtMSSV = findViewById(R.id.edtMSSV);
+        edtOther = findViewById(R.id.edtOther);
+        edtMajor = findViewById(R.id.edtMajor);
+        rdOther= findViewById(R.id.rd5);
     }
 
 }
