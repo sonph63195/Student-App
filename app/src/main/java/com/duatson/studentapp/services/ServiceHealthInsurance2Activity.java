@@ -33,7 +33,7 @@ public class ServiceHealthInsurance2Activity extends AppCompatActivity {
         if(service != null){
             reason = intent.getStringExtra("RESULT");
             if(service.equals("Cấp lại thẻ")){
-                txtService.setText(service);
+                txtService.setText(service + ":");
                 lnId.setVisibility(View.VISIBLE);
                 txtFee.setText("30.000 VND");
                 txtId.setText(intent.getStringExtra("ID"));
@@ -64,7 +64,7 @@ public class ServiceHealthInsurance2Activity extends AppCompatActivity {
             intent.putExtra("SERVICE", ServiceConfirmStudentSuccessActivity.HOSPITAL_CARD);
             intent.putExtra("SERVICE_TYPE", service);
             if(service.equals("Cấp lại thẻ")) {
-                intent.putExtra("ID", txtId.getText().toString());
+//                intent.putExtra("ID", txtId.getText().toString());
                 intent.putExtra("REASON", txtResult.getText().toString());
             }
             startActivity(intent);

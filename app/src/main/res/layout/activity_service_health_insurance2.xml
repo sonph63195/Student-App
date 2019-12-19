@@ -145,7 +145,7 @@
                 android:id="@+id/txtService"
                 android:layout_width="128sp"
                 android:layout_height="wrap_content"
-                android:text="Đăng ký thẻ\nbảo hiểm"
+                android:text="Đăng ký thẻ\nbảo hiểm:"
                 android:textAppearance="@style/MediumText" />
 
             <TextView
@@ -171,7 +171,7 @@
             <TextView
                 android:layout_width="128sp"
                 android:layout_height="wrap_content"
-                android:text="Mã thẻ"
+                android:text="Mã thẻ: "
                 android:textAppearance="@style/MediumText" />
 
             <TextView

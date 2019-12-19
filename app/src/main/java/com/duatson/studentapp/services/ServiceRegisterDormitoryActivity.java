@@ -25,7 +25,7 @@ public class ServiceRegisterDormitoryActivity extends AppCompatActivity {
     private RadioButton radioButton;
     private String result = "";
     private EditText edtOther;
-    private EditText edtId;
+//    private EditText edtId;
     private ImageView imgSelectConfirmStudent, imgSelectPicture, imgSelectFront, imgSelectBack;
     private Button btnConfirmStudent, btnPicture, btnFront, btnBack;
     private final int CONFIRM_IMG = 1;
@@ -101,26 +101,26 @@ public class ServiceRegisterDormitoryActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.tbrApp);
         radioGroup = findViewById(R.id.rdGroup);
         edtOther = findViewById(R.id.edtOther);
-        edtId = findViewById(R.id.edtId);
+//        edtId = findViewById(R.id.edtId);
     }
 
     public void clickToNext(View view) {
         Intent intent = new Intent(this, ServiceRegisterDormitory2Activity.class);
         String toast = "";
-        if(edtId.getText().toString().trim().length() == 0){
-            edtId.setError("Mã thẻ không được để trống");
-        }
+//        if(edtId.getText().toString().trim().length() == 0){
+//            edtId.setError("Mã thẻ không được để trống");
+//        }
         if ((!result.equals("Lý do khác: ") || edtOther.getText().toString().trim().length()> 0) && result.length() > 0
                 && isStudent && isFront && isBack && isPicture)
          {
              if(result.equals("Lý do khác: ")){
                  result = edtOther.getText().toString().trim();
              }
-             if(edtId.getText().toString().trim().length() > 0) {
-                 intent.putExtra("ID", edtId.getText().toString().trim());
+//             if(edtId.getText().toString().trim().length() > 0) {
+//                 intent.putExtra("ID", edtId.getText().toString().trim());
                  intent.putExtra("RESULT", result);
                  startActivity(intent);
-             }
+//             }
         } else if(result.length() == 0 || result.equals("Lý do khác: ")) {
 
                 if(result.equals("Lý do khác: ") && edtOther.getText().length() == 0){

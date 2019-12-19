@@ -2,7 +2,9 @@ package com.duatson.studentapp.services;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
+import android.app.DialogFragment;
+import android.app.DatePickerDialog;
+import android.widget.DatePicker;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.BitmapFactory;
@@ -20,7 +22,7 @@ import android.widget.Toast;
 
 import com.duatson.studentapp.R;
 
-public class ServiceHealthInsuranceCardActivity extends AppCompatActivity {
+public class ServiceHealthInsuranceCardActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
 
     private ImageView imgSelectFront, imgSelectBack, imgSelectPicture;
     private Button btnFront, btnBack, btnPicture;
@@ -33,6 +35,7 @@ public class ServiceHealthInsuranceCardActivity extends AppCompatActivity {
     private LinearLayout lnLose;
     private EditText edtOther;
     private EditText edtId;
+    private EditText edtEnd;
     private String result1 = "", result2 = "";
     private boolean isPicture = false, isFront = false, isBack = false;
     @Override
@@ -93,6 +96,7 @@ public class ServiceHealthInsuranceCardActivity extends AppCompatActivity {
         radioGroup2 = findViewById(R.id.rdGroup2);
         edtId = findViewById(R.id.edtId);
         edtOther = findViewById(R.id.edtOther);
+        edtEnd = findViewById(R.id.edtEnd);
     }
 
     private void clickToBack() {
@@ -138,17 +142,20 @@ public class ServiceHealthInsuranceCardActivity extends AppCompatActivity {
         Intent intent;
         if (edtId.getText().toString().trim().length() == 0 && lnLose.getVisibility() == View.VISIBLE){
             edtId.setError("Mã thẻ không được để trống");
-        }else if(lnLose.getVisibility() == View.GONE && result1.length() > 0 && isFront && isBack && isPicture){
+        }else
+        if(lnLose.getVisibility() == View.GONE && result1.length() > 0 && isFront && isBack && isPicture){
             intent = new Intent(this, ServiceHealthInsurance2Activity.class);
             intent.putExtra("SERVICE", result1);
             startActivity(intent);
 
         } else if(result2.length() > 0 && !result2.equals("Lý do khác: ") && isFront && isBack && isPicture){
-            intent = new Intent(this, ServiceHealthInsurance2Activity.class);
-            intent.putExtra("SERVICE", result1);
-            intent.putExtra("RESULT", result2);
+            if(edtEnd.getText().toString().length() > 0) {
+                intent = new Intent(this, ServiceHealthInsurance2Activity.class);
+                intent.putExtra("SERVICE", result1);
+                intent.putExtra("RESULT", result2);
             intent.putExtra("ID", edtId.getText().toString().trim());
-            startActivity(intent);
+                startActivity(intent);
+            }
         } else if(result2.length() > 0 && result2.equals("Lý do khác: ") && edtOther.getText().toString().trim().length() > 0 && isFront && isBack && isPicture){
             intent = new Intent(this, ServiceHealthInsurance2Activity.class);
             intent.putExtra("SERVICE", result1);
@@ -173,6 +180,11 @@ public class ServiceHealthInsuranceCardActivity extends AppCompatActivity {
         if(result2.equals("Lý do khác: ") && edtOther.getText().toString().trim().length() == 0){
             edtOther.setError("Bạn đã chọn lý do khác nên vui lòng nhập lý do.");
         }
+
+        if(edtEnd.getText().toString().trim().length() == 0 && radioGroup2.getVisibility() == View.VISIBLE){
+            edtEnd.setError("Bạn không được để trống mục này.");
+        }
+
         if(toast.length() > 0)
         Toast.makeText(this, toast, Toast.LENGTH_LONG).show();
     }
@@ -206,5 +218,16 @@ public class ServiceHealthInsuranceCardActivity extends AppCompatActivity {
         }
 
 
+    }
+
+    @Override
+    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+        String date = dayOfMonth + "/" + (month + 1) + "/" +  year;
+        edtEnd.setText(date);
+    }
+
+    public void clickToGetDate(View view) {
+        DialogFragment dateFragment = new DatePickerFragment();
+        dateFragment.show(getFragmentManager(), "Date picker");
     }
 }
