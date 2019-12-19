@@ -121,7 +121,6 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:gravity="center"
-                android:onClick="clickToViewProfile"
                 android:orientation="horizontal"
                 android:paddingHorizontal="@dimen/padding_medium"
                 android:paddingVertical="@dimen/padding_medium"
@@ -131,6 +130,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
+                    android:onClick="clickToChangePwd"
                     android:text="Đổi mật khẩu"
                     android:textAppearance="@style/MediumText" />
 
@@ -151,7 +151,6 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:gravity="center"
-                android:onClick="clickToViewProfile"
                 android:orientation="horizontal"
                 android:paddingHorizontal="@dimen/padding_medium"
                 android:paddingVertical="@dimen/padding_medium"
@@ -161,6 +160,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
+                    android:onClick="clickToForgotPwd"
                     android:text="Quên mật khẩu"
                     android:textAppearance="@style/MediumText" />
 
@@ -184,7 +184,6 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:gravity="center"
-                android:onClick="clickToViewProfile"
                 android:orientation="horizontal"
                 android:paddingHorizontal="@dimen/padding_medium"
                 android:paddingVertical="@dimen/padding_medium"
@@ -194,6 +193,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
+                    android:onClick="clickToLang"
                     android:text="Ngôn ngữ"
                     android:textAppearance="@style/MediumText" />
 
@@ -206,34 +206,6 @@
             </RelativeLayout>
 
             <View style="@style/Divider" />
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="?selectableItemBackground"
-                android:clickable="true"
-                android:focusable="true"
-                android:gravity="center"
-                android:onClick="clickToViewProfile"
-                android:orientation="horizontal"
-                android:paddingHorizontal="@dimen/padding_medium"
-                android:paddingVertical="@dimen/padding_medium"
-                tools:ignore="OnClick">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:text="Thông tin ứng dụng CTSV"
-                    android:textAppearance="@style/MediumText" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/ic_navigate_next_black_24dp" />
-            </RelativeLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"

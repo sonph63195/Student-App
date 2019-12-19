@@ -30,8 +30,8 @@ public class ServiceConfirmStudentDetailActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_service_confirm_student_detail);
-        btnCancel = findViewById(R.id.btnCancel);
-        btnCancel.setOnClickListener(cancelRequest);
+//        btnCancel = findViewById(R.id.btnCancel);
+//        btnCancel.setOnClickListener(cancelRequest);
         Intent intent = this.getIntent();
 //        txtTitle = findViewById(R.id.txtTitle);
 //        txtFee = findViewById(R.id.txtFee);

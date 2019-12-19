@@ -133,6 +133,29 @@
                     android:textSize="18sp"
                     tools:ignore="UnusedAttribute" />
 
+                <TextView
+                    android:id="@+id/txtTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/grid_spacing"
+                    android:layout_marginTop="@dimen/grid_spacing"
+                    android:text="Lý do hủy yêu cầu"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    tools:ignore="UnusedAttribute" />
+
+                <TextView
+                    android:id="@+id/txtReason"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/grid_spacing"
+                    android:text="Lý do hủy nè"
+                    android:textAppearance="?attr/textAppearanceHeadline5"
+                    android:textSize="18sp"
+                    android:visibility="gone"
+                    tools:ignore="UnusedAttribute" />
+
                 <View
                     style="@style/Divider"
                     android:layout_marginTop="@dimen/grid_spacing" />
@@ -153,6 +176,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_medium"
                     android:orientation="vertical"
                     android:paddingHorizontal="@dimen/padding_medium">
 
@@ -225,37 +249,57 @@
                             android:text="Nguyễn Thị Vân Anh"
                             android:textAppearance="@style/MediumText" />
                     </LinearLayout>
+
+                    <View style="@style/Divider" />
+
+                    <LinearLayout
+                        android:id="@+id/lyCancel"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/margin_medium"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="128sp"
+                            android:layout_height="wrap_content"
+                            android:text="Ngày hủy:"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="19/12/2019"
+                            android:textAppearance="@style/MediumText" />
+                    </LinearLayout>
                 </LinearLayout>
 
                 <View style="@style/Divider" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCancel"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/grid_spacing"
-                    android:gravity="center">
+                    android:layout_gravity="center"
+                    android:text="Hủy Yêu cầu"
+                    android:textColor="@color/tongueColor"
+                    app:rippleColor="@color/tongueColor"
+                    app:strokeColor="@color/tongueColor" />
 
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btnCancel"
-                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                        android:layout_width="150sp"
-                        android:layout_height="wrap_content"
-                        android:text="Hủy Yêu cầu"
-                        android:textColor="@color/tongueColor"
-                        app:rippleColor="@color/tongueColor"
-                        app:strokeColor="@color/tongueColor" />
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btnFeedback"
-                        style="@style/Widget.MaterialComponents.Button"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:text="Đánh giá"
-                        android:visibility="gone" />
-
-                </LinearLayout>
-
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSend"
+                    style="@style/Widget.MaterialComponents.Button"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="Gửi lý do"
+                    android:visibility="gone" />
             </LinearLayout>
 
         </ScrollView>

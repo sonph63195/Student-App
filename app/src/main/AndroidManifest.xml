@@ -14,10 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+        <activity android:name=".CancelRequest2Activity"></activity>
+        <activity android:name=".CancelRequest1Activity" />
         <activity android:name=".services.ServiceRegisterDormitoryDetailActivity" />
         <activity android:name=".RequestDetail5Activity" />
-        <activity android:name=".RequestDetail4Activity"></activity>
-        <activity android:name=".services.ServiceHealthInsuranceDetailActivity"></activity>
+        <activity android:name=".RequestDetail4Activity" />
+        <activity android:name=".services.ServiceHealthInsuranceDetailActivity" />
         <activity android:name=".services.ServiceDormitoryDetailActivity" />
         <activity android:name=".services.ServiceHealthInsurance2Activity" />
         <activity android:name=".RequestDetail3Activity" />

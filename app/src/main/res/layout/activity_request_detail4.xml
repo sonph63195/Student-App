@@ -113,6 +113,25 @@
                     android:textSize="18sp"
                     tools:ignore="UnusedAttribute" />
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/grid_spacing"
+                    android:layout_marginTop="@dimen/grid_spacing"
+                    android:text="Lý do hủy yêu cầu"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    android:textSize="16sp"
+                    tools:ignore="UnusedAttribute" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/grid_spacing"
+                    android:text="Phụ huynh đã mua thẻ bảo hiểm theo hộ gia đình tại phường."
+                    android:textAppearance="?attr/textAppearanceHeadline5"
+                    android:textSize="18sp"
+                    tools:ignore="UnusedAttribute" />
+
                 <View
                     style="@style/Divider"
                     android:layout_marginTop="@dimen/grid_spacing" />
@@ -204,6 +223,30 @@
                             android:layout_weight="1"
                             android:gravity="end"
                             android:text="Châu Thị Tuyết Vân"
+                            android:textAppearance="@style/MediumText" />
+                    </LinearLayout>
+
+                    <View style="@style/Divider" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/margin_medium"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="128sp"
+                            android:layout_height="wrap_content"
+                            android:text="Ngày hủy:"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="18/12/2019"
                             android:textAppearance="@style/MediumText" />
                     </LinearLayout>
                 </LinearLayout>

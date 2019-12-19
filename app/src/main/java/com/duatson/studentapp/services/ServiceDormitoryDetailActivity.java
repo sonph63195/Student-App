@@ -29,13 +29,13 @@ public class ServiceDormitoryDetailActivity extends AppCompatActivity {
 
     }
 
-    public void clickToCancel(View view) {
-        Toast.makeText(this, "Hủy thành công", Toast.LENGTH_SHORT).show();
-        Chip chipConfirmStatus = findViewById(R.id.chipConfirmStatus);
-        chipConfirmStatus.setText("Đã hủy");
-        Button btnCancel = findViewById(R.id.btnCancel);
-        btnCancel.setVisibility(View.INVISIBLE);
-    }
+//    public void clickToCancel(View view) {
+//        Toast.makeText(this, "Hủy thành công", Toast.LENGTH_SHORT).show();
+//        Chip chipConfirmStatus = findViewById(R.id.chipConfirmStatus);
+//        chipConfirmStatus.setText("Đã hủy");
+//        Button btnCancel = findViewById(R.id.btnCancel);
+//        btnCancel.setVisibility(View.INVISIBLE);
+//    }
 
     private void findView(){
         txtResult = findViewById(R.id.txtReason);

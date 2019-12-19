@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CancelRequest1Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/app_top_bar"
+                style="@style/Widget.StudentApp.Toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/toolbar_height"
+                android:background="@color/primaryDarkColor"
+                android:elevation="8sp"
+                app:navigationIcon="@drawable/ic_arrow_back"
+                app:titleTextColor="@color/whiteColor"
+                tools:ignore="UnusedAttribute">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="32sp"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:text="Hủy yêu cầu"
+                    android:textAppearance="@style/TitleText"
+                    android:textColor="@color/whiteColor" />
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_margin="@dimen/grid_spacing"-->
+            <!--                android:orientation="horizontal">-->
+
+            <!--                <ImageView-->
+            <!--                    android:layout_width="64dp"-->
+            <!--                    android:layout_height="64dp"-->
+            <!--                    android:scaleType="fitXY"-->
+            <!--                    android:src="@drawable/ic_contact_form"-->
+            <!--                    tools:ignore="ContentDescription" />-->
+
+            <!--                <LinearLayout-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_gravity="center"-->
+            <!--                    android:orientation="vertical"-->
+            <!--                    tools:ignore="UseCompoundDrawables">-->
+
+            <!--                    <TextView-->
+            <!--                        android:id="@+id/tvRequestTitle"-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:layout_gravity="center"-->
+            <!--                        android:gravity="center"-->
+            <!--                        android:text="Xin giấy xác nhận sinh viên"-->
+            <!--                        android:textAppearance="?attr/textAppearanceHeadline5"-->
+            <!--                        android:textSize="22sp"-->
+            <!--                        android:textStyle="bold" />-->
+
+            <!--                    <com.google.android.material.chip.Chip-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="40sp"-->
+            <!--                        android:layout_gravity="center"-->
+            <!--                        android:backgroundTint="@color/faceColor"-->
+            <!--                        android:text="Đang xủ lý"-->
+            <!--                        android:textSize="14sp" />-->
+            <!--                </LinearLayout>-->
+
+            <!--            </LinearLayout>-->
+
+            <!--            <View style="@style/Divider" />-->
+
+            <LinearLayout
+                android:id="@+id/layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_medium"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/padding_large">
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/padding_extra_small"
+                    android:text="Vui lòng điền lý do mà bạn muốn hủy yêu cầu: "
+                    android:textAppearance="?attr/textAppearanceHeadline5"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_small">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tvReason"
+                        android:layout_width="match_parent"
+                        android:layout_height="80sp"
+                        android:gravity="start"
+                        android:textSize="16sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSend"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="150sp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Gửi lý do" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -2,6 +2,7 @@ package com.duatson.studentapp;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -80,7 +81,13 @@ public class MainActivity extends AppCompatActivity implements NavigationHost {
     }
 
     public void clickToHelp(View view) {
-        Intent intent = new Intent(this, HelpContactActivity.class);
+        Intent intent = null;
+        String pageId = "CTSV.FU";
+        try {
+            intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/" + pageId));
+        } catch (Exception e) {
+            intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/" + pageId));
+        }
         startActivity(intent);
     }
 

@@ -270,14 +270,14 @@
                     android:gravity="center"
                     android:orientation="horizontal">
 
-                    <com.google.android.material.button.MaterialButton
-                        android:layout_marginRight="@dimen/margin_medium"
-                        android:id="@+id/btnCancel"
-                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                        android:layout_width="150sp"
-                        android:layout_height="wrap_content"
-                        android:onClick="clickToCancel"
-                        android:text="Hủy yêu cầu" />
+<!--                    <com.google.android.material.button.MaterialButton-->
+<!--                        android:layout_marginRight="@dimen/margin_medium"-->
+<!--                        android:id="@+id/btnCancel"-->
+<!--                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"-->
+<!--                        android:layout_width="150sp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:onClick="clickToCancel"-->
+<!--                        android:text="Hủy yêu cầu" />-->
 
                     <com.google.android.material.button.MaterialButton
                         style="@style/Widget.MaterialComponents.Button"

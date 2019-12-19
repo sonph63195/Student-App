@@ -127,20 +127,20 @@
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:cardElevation="0dp"
-                    app:strokeWidth="1dp"
-                    app:strokeColor="@color/outlineColor"
                     android:layout_marginHorizontal="@dimen/grid_spacing"
-                    app:cardCornerRadius="10dp">
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="@color/outlineColor"
+                    app:strokeWidth="1dp">
 
                     <ImageView
+                        android:id="@+id/ivLibphoto"
                         android:layout_width="75dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/profile_photo"
-                        android:scaleType="centerCrop"
                         android:layout_gravity="center"
-                        android:id="@+id/ivLibphoto"
-                        android:layout_margin="@dimen/margin_medium"/>
+                        android:layout_margin="@dimen/margin_medium"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/profile_photo" />
 
                 </com.google.android.material.card.MaterialCardView>
 
@@ -263,16 +263,22 @@
                     android:layout_marginTop="@dimen/grid_spacing"
                     android:gravity="center">
 
+                    <!--                    <com.google.android.material.button.MaterialButton-->
+                    <!--                        android:onClick="clickToCancel"-->
+                    <!--                        android:id="@+id/btnCancel"-->
+                    <!--                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"-->
+                    <!--                        android:layout_width="150sp"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:text="Hủy yêu cầu"-->
+                    <!--                        android:textColor="@color/tongueColor"-->
+                    <!--                        app:rippleColor="@color/tongueColor"-->
+                    <!--                        app:strokeColor="@color/tongueColor" />-->
                     <com.google.android.material.button.MaterialButton
-                        android:onClick="clickToCancel"
-                        android:id="@+id/btnCancel"
-                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        style="@style/Widget.MaterialComponents.Button"
                         android:layout_width="150sp"
                         android:layout_height="wrap_content"
-                        android:text="Hủy yêu cầu"
-                        android:textColor="@color/tongueColor"
-                        app:rippleColor="@color/tongueColor"
-                        app:strokeColor="@color/tongueColor" />
+                        android:onClick="clickToHomepage"
+                        android:text="Trang chủ" />
 
                 </LinearLayout>
 

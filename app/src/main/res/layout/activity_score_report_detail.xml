@@ -250,17 +250,22 @@
                     android:layout_marginTop="@dimen/grid_spacing"
                     android:gravity="center">
 
+<!--                    <com.google.android.material.button.MaterialButton-->
+<!--                        android:onClick="clickToCancel"-->
+<!--                        android:id="@+id/btnCancel"-->
+<!--                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"-->
+<!--                        android:layout_width="150sp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Hủy yêu cầu"-->
+<!--                        android:textColor="@color/tongueColor"-->
+<!--                        app:rippleColor="@color/tongueColor"-->
+<!--                        app:strokeColor="@color/tongueColor" />-->
                     <com.google.android.material.button.MaterialButton
-                        android:onClick="clickToCancel"
-                        android:id="@+id/btnCancel"
-                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        style="@style/Widget.MaterialComponents.Button"
                         android:layout_width="150sp"
                         android:layout_height="wrap_content"
-                        android:text="Hủy yêu cầu"
-                        android:textColor="@color/tongueColor"
-                        app:rippleColor="@color/tongueColor"
-                        app:strokeColor="@color/tongueColor" />
-
+                        android:onClick="clickToHomepage"
+                        android:text="Trang chủ" />
                 </LinearLayout>
 
             </LinearLayout>

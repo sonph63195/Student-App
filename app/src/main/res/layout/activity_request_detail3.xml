@@ -226,6 +226,30 @@
                             android:text="Châu Thị Tuyết Vân"
                             android:textAppearance="@style/MediumText" />
                     </LinearLayout>
+
+                    <View style="@style/Divider" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/margin_medium"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="128sp"
+                            android:layout_height="wrap_content"
+                            android:text="Ngày hoàn thành:"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="19/12/2019"
+                            android:textAppearance="@style/MediumText" />
+                    </LinearLayout>
                 </LinearLayout>
 
                 <View style="@style/Divider" />

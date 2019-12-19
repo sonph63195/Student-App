@@ -5,6 +5,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -21,5 +22,17 @@ public class SettingsActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
+    }
+
+    public void clickToChangePwd(View view) {
+        Toast.makeText(this, "Thay đổi mật khẩu", Toast.LENGTH_SHORT).show();
+    }
+
+    public void clickToForgotPwd(View view) {
+        Toast.makeText(this, "Quên mật khẩu", Toast.LENGTH_SHORT).show();
+    }
+
+    public void clickToLang(View view) {
+        Toast.makeText(this, "Thay đổi ngôn ngữ ứng dụng", Toast.LENGTH_SHORT).show();
     }
 }
