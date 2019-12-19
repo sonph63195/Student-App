@@ -192,6 +192,7 @@
                 android:focusable="true"
                 android:gravity="center"
                 android:onClick="clickToSignOut"
+                android:id="@+id/btnSignOut"
                 android:orientation="horizontal"
                 android:paddingHorizontal="@dimen/padding_large"
                 android:paddingVertical="@dimen/padding_small"
