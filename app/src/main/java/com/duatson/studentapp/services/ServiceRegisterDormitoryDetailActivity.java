@@ -15,7 +15,7 @@ import com.google.android.material.chip.Chip;
 public class ServiceRegisterDormitoryDetailActivity extends Activity {
 
     private Button btnCancel;
-    private TextView txtTitle, txtFee;
+    private TextView txtTitle, txtFee, txtReasonCancel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,22 +23,27 @@ public class ServiceRegisterDormitoryDetailActivity extends Activity {
         setContentView(R.layout.activity_service_register_dormitory_detail);
 //        btnCancel = findViewById(R.id.btnCancel);
 //        btnCancel.setOnClickListener(cancelRequest);
+////        btnCancel.setOnClickListener(clickToCancel(cli););
+//        txtReasonCancel = findViewById(R.id.txtReasonCancel);
 //        Intent intent = this.getIntent();
 //        txtTitle = findViewById(R.id.txtTitle);
 //        txtFee = findViewById(R.id.txtFee);
 
     }
 
-    private View.OnClickListener cancelRequest = new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            Toast.makeText(ServiceRegisterDormitoryDetailActivity.this, "Hủy thành công", Toast.LENGTH_SHORT).show();
-            Chip chipConfirmStatus = findViewById(R.id.chipConfirmStatus);
-            chipConfirmStatus.setText("Đã hủy");
-            btnCancel.setClickable(false);
-//            btnCancel.setVisibility(View.INVISIBLE);
-        }
-    };
+//    public void clickToCancel(View view) {
+//        if(txtReasonCancel.getText().toString().trim().length() > 0){
+//            Toast.makeText(this, "Hủy thành công", Toast.LENGTH_SHORT).show();
+//            Chip chipConfirmStatus = findViewById(R.id.chipConfirmStatus);
+//            chipConfirmStatus.setText("Đã hủy");
+//            Button btnCancel = findViewById(R.id.btnCancel);
+//            btnCancel.setVisibility(View.GONE);
+//            txtReasonCancel.setVisibility(View.GONE);
+//        }else{
+//            txtReasonCancel.setError("Bạn không thể để trống lý do khi hủy yêu cầu.");
+//
+//        }
+//    }
 
     public void clickToHomepage(View view) {
         this.finish();

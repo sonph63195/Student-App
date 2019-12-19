@@ -19,7 +19,7 @@ import java.util.Date;
 
 public class ServiceHealthInsuranceDetailActivity extends AppCompatActivity {
 
-    private TextView txtResult, txtDate, txtId, txtFee;
+    private TextView txtResult, txtDate, txtId, txtFee, txtReasonCancel;
     private LinearLayout lnId;
     private View line;
     @Override
@@ -43,11 +43,17 @@ public class ServiceHealthInsuranceDetailActivity extends AppCompatActivity {
     }
 
     public void clickToCancel(View view) {
+        if(txtReasonCancel.getText().toString().trim().length() > 0){
         Toast.makeText(this, "Hủy thành công", Toast.LENGTH_SHORT).show();
         Chip chipConfirmStatus = findViewById(R.id.chipConfirmStatus);
         chipConfirmStatus.setText("Đã hủy");
         Button btnCancel = findViewById(R.id.btnCancel);
-        btnCancel.setVisibility(View.INVISIBLE);
+        btnCancel.setVisibility(View.GONE);
+            txtReasonCancel.setVisibility(View.GONE);
+        }else{
+            txtReasonCancel.setError("Bạn không thể để trống lý do khi hủy yêu cầu.");
+
+        }
     }
 
     private void findView(){

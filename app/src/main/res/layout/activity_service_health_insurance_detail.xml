@@ -164,8 +164,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginVertical="@dimen/margin_medium"
-                        android:visibility="gone"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:visibility="gone">
 
                         <TextView
 
@@ -184,11 +184,13 @@
                             android:text="123"
                             android:textAppearance="@style/MediumText" />
                     </LinearLayout>
+
                     <View
                         android:id="@+id/line"
-                        android:visibility="gone"
                         style="@style/Divider"
-                        android:layout_marginTop="@dimen/grid_spacing" />
+                        android:layout_marginTop="@dimen/grid_spacing"
+                        android:visibility="gone" />
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -203,11 +205,11 @@
                             android:textSize="16sp" />
 
                         <TextView
+                            android:id="@+id/txtDate"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="end"
-                            android:id="@+id/txtDate"
                             android:text="18/12/2019"
                             android:textAppearance="@style/MediumText" />
                     </LinearLayout>
@@ -270,14 +272,14 @@
                     android:gravity="center"
                     android:orientation="horizontal">
 
-<!--                    <com.google.android.material.button.MaterialButton-->
-<!--                        android:layout_marginRight="@dimen/margin_medium"-->
-<!--                        android:id="@+id/btnCancel"-->
-<!--                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"-->
-<!--                        android:layout_width="150sp"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:onClick="clickToCancel"-->
-<!--                        android:text="Hủy yêu cầu" />-->
+                    <!--                    <com.google.android.material.button.MaterialButton-->
+                    <!--                        android:layout_marginRight="@dimen/margin_medium"-->
+                    <!--                        android:id="@+id/btnCancel"-->
+                    <!--                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"-->
+                    <!--                        android:layout_width="150sp"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:onClick="clickToCancel"-->
+                    <!--                        android:text="Hủy yêu cầu" />-->
 
                     <com.google.android.material.button.MaterialButton
                         style="@style/Widget.MaterialComponents.Button"
