@@ -5,7 +5,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    tools:context=".services.ServiceRegisterDormitoryActivity">
+    tools:context=".services.ServiceHealthInsuranceCardActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -22,6 +22,7 @@
             app:navigationIcon="@drawable/ic_arrow_back"
             app:titleTextColor="@color/whiteColor"
             tools:targetApi="lollipop">
+
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="32sp"
@@ -36,7 +37,6 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <ScrollView
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent" android:layout_height="100dp"
         android:layout_weight="1.0" android:fadingEdge="none">
         <LinearLayout
@@ -45,76 +45,109 @@
             android:layout_marginVertical="@dimen/margin_medium"
             android:orientation="vertical"
             android:paddingHorizontal="@dimen/padding_large">
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="@dimen/margin_small"
-                android:hint="Mã thẻ (bắt buộc)"
-                app:boxBackgroundColor="@color/whiteColor">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edtId"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-            </com.google.android.material.textfield.TextInputLayout>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:paddingBottom="@dimen/padding_small"
-                android:text="Lý do làm lại thẻ ký túc xá:"
-                android:textStyle="bold"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textSize="16sp" />
-
-            <RadioGroup
-                android:id="@+id/rdGroup"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="@dimen/padding_medium">
-
-                <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Mất thẻ"
-                    android:textSize="16sp" />
-
-                <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Quá cũ hình ảnh không thể nhận diện"
-                    android:textSize="16sp" />
-                <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Thẻ sai thông tin"
-                    android:textSize="16sp" />
-                <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Thẻ bị hỏng"
-                    android:textSize="16sp" />
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Lý do khác: "
-                    android:textSize="16sp" />
-            </RadioGroup>
-            <EditText
-                android:layout_marginTop="-46dp"
-                android:layout_marginLeft="130dp"
-                android:id="@+id/edtOther"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-
-                />
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:orientation="vertical"
                 >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingBottom="@dimen/padding_small"
+                    android:text="Lý do làm thẻ BHYT:"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textSize="16sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdGroup1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/padding_medium">
+
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Chưa có, muốn đăng ký làm thẻ"
+                        android:textSize="16sp" />
+
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Cấp lại thẻ"
+                        android:textSize="16sp" />
+                </RadioGroup>
+                <LinearLayout
+                    android:id="@+id/lnLose"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    >
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/margin_small"
+                    android:hint="Mã thẻ (bắt buộc)"
+                    app:boxBackgroundColor="@color/whiteColor">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingBottom="@dimen/padding_small"
+                    android:text="Lý do làm lại thẻ BHYT:"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textSize="16sp" />
+
+                <RadioGroup
+                    android:id="@+id/rdGroup2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/padding_medium">
+
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Mất thẻ"
+                        android:textSize="16sp" />
+
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Quá cũ hình ảnh không thể nhận diện"
+                        android:textSize="16sp" />
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Thẻ sai thông tin"
+                        android:textSize="16sp" />
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Thẻ bị hỏng"
+                        android:textSize="16sp" />
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lý do khác: "
+                        android:textSize="16sp" />
+                </RadioGroup>
+                    <EditText
+                        android:layout_marginTop="-46dp"
+                        android:layout_marginLeft="130dp"
+                        android:id="@+id/edtOther"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -133,7 +166,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Ảnh thẻ (bắt buộc):"
+                        android:text="Ảnh thẻ 2x3 (bắt buộc):"
                         android:textSize="16sp"
                         />
                     <com.google.android.material.card.MaterialCardView
@@ -146,13 +179,13 @@
                         android:layout_gravity="center">
 
                         <ImageView
+                            android:id="@+id/imgSelectPicture"
                             android:layout_width="150dp"
                             android:layout_height="200dp"
-                            android:src="@drawable/profile_photo"
-                            android:scaleType="centerCrop"
                             android:layout_gravity="center"
-                            android:id="@+id/imgPicture"
-                            android:layout_margin="@dimen/margin_medium"/>
+                            android:layout_margin="@dimen/margin_medium"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/profile_photo" />
 
                     </com.google.android.material.card.MaterialCardView>
                     <com.google.android.material.button.MaterialButton
@@ -163,55 +196,6 @@
                         android:text="Chọn ảnh"
                         android:id="@+id/btnSelectPicture"
                         />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginBottom="10dp"
-                    >
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Ảnh giấy xác nhận sinh viên (bắt buộc):"
-                        android:textSize="16sp"
-                        />
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:cardElevation="0dp"
-                        app:strokeWidth="1dp"
-                        app:strokeColor="@color/outlineColor"
-                        app:cardCornerRadius="10dp"
-                        android:layout_gravity="center">
-
-                        <ImageView
-                            android:layout_width="300dp"
-                            android:layout_height="200dp"
-                            android:src="@drawable/image"
-                            android:scaleType="centerCrop"
-                            android:layout_gravity="center"
-                            android:id="@+id/imgConfirmStudent"
-                            android:layout_margin="@dimen/margin_medium"/>
-
-                    </com.google.android.material.card.MaterialCardView>
-                    <com.google.android.material.button.MaterialButton
-                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                        android:layout_width="182dp"
-                        android:layout_gravity="center"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/btnSelectConfirmStudent"
-                        android:text="Chọn ảnh"
-                        />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginBottom="10dp"
-                    >
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -235,7 +219,6 @@
                             android:layout_gravity="center"
                             android:id="@+id/imgFrontImage"
                             android:layout_margin="@dimen/margin_medium"/>
-
                     </com.google.android.material.card.MaterialCardView>
                     <com.google.android.material.button.MaterialButton
                         style="@style/Widget.MaterialComponents.Button.OutlinedButton"

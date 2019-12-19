@@ -110,7 +110,7 @@
                 android:layout_height="wrap_content"
                 android:text="Lý do cấp bảng điểm (bắt buộc)"
                 android:layout_marginTop="@dimen/margin_medium"
-                android:textSize="16sp"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 android:textAppearance="?attr/textAppearanceCaption"
                 android:layout_marginBottom="@dimen/margin_small"/>
@@ -120,16 +120,19 @@
                 android:layout_height="wrap_content">
 
                 <RadioButton
+                    android:textSize="16sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Làm hồ sơ xin việc"/>
 
                 <RadioButton
+                    android:textSize="16sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Xét duyệt học bổng - trợ cấp"/>
 
                 <RadioButton
+                    android:textSize="16sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Lý do khác"/>
@@ -141,7 +144,7 @@
                 android:layout_height="wrap_content"
                 android:text="Chọn loại cấp bảng điểm (bắt buộc)"
                 android:layout_marginTop="@dimen/margin_medium"
-                android:textSize="16sp"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 android:textAppearance="?attr/textAppearanceCaption"
                 android:layout_marginBottom="@dimen/margin_small"/>
@@ -151,11 +154,13 @@
                 android:layout_height="wrap_content">
 
                 <RadioButton
+                    android:textSize="16sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Cấp qua file (PDF, Word)" />
 
                 <RadioButton
+                    android:textSize="16sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Cấp qua giấy (Có dấu mộc đỏ)" />

@@ -17,6 +17,7 @@ import com.duatson.studentapp.RequestDetail1Activity;
 import com.duatson.studentapp.RequestDetail2Activity;
 import com.duatson.studentapp.RequestDetail3Activity;
 import com.duatson.studentapp.RequestDetail4Activity;
+import com.duatson.studentapp.RequestDetail5Activity;
 import com.duatson.studentapp.RequestDetailActivity;
 import com.duatson.studentapp.adapter.RequestListAdapter;
 import com.duatson.studentapp.application.ExpandableHeightListView;
@@ -80,9 +81,9 @@ public class HistoryFragment extends Fragment {
                 case "4":
                     intent = new Intent(getContext(), RequestDetail4Activity.class);
                     break;
-//                case "5":
-//                    intent = new Intent(getContext(), RequestDetailActivity.class);
-//                    break;
+                case "5":
+                    intent = new Intent(getContext(), RequestDetail5Activity.class);
+                    break;
             }
 
             intent.putExtra("REQUEST", request);

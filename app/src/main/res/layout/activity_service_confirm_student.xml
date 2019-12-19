@@ -47,8 +47,53 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:paddingBottom="@dimen/padding_small"
-            android:text="Mục đích cấp giấy xác nhận sinh viên: (bắt buộc)"
+            android:text="Tên sinh viên:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtStdName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Mã số sinh viên:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtMSSV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Ngành học:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtMajor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingVertical="@dimen/padding_small"
+            android:text="Mục đích cấp giấy xác nhận sinh viên:"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -92,6 +137,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="50sp"
                 android:text="Mục đích khác"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edtOther"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:textSize="16sp" />
         </RadioGroup>
 

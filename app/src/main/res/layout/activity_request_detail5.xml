@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".RequestDetail4Activity">
+    tools:context=".RequestDetail5Activity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -59,7 +59,7 @@
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:scaleType="fitXY"
-                        android:src="@drawable/ic_library"
+                        android:src="@drawable/ic_dormitory"
                         tools:ignore="ContentDescription" />
 
                     <LinearLayout
@@ -75,7 +75,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:gravity="center"
-                            android:text="Đăng ký thẻ BHYT"
+                            android:text="Làm thẻ ký túc xá"
                             android:textAppearance="?attr/textAppearanceHeadline5"
                             android:textSize="22sp"
                             android:textStyle="bold" />
@@ -108,7 +108,26 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/grid_spacing"
-                    android:text="564.000đ"
+                    android:text="30.000đ"
+                    android:textAppearance="?attr/textAppearanceHeadline5"
+                    android:textSize="18sp"
+                    tools:ignore="UnusedAttribute" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/grid_spacing"
+                    android:layout_marginTop="@dimen/grid_spacing"
+                    android:text="Lý do làm thẻ"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    android:textSize="16sp"
+                    tools:ignore="UnusedAttribute" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/grid_spacing"
+                    android:text="Thẻ bị sai thông tin"
                     android:textAppearance="?attr/textAppearanceHeadline5"
                     android:textSize="18sp"
                     tools:ignore="UnusedAttribute" />
@@ -203,7 +222,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="end"
-                            android:text="Châu Thị Tuyết Vân"
+                            android:text="Hoàng Thị Loan"
                             android:textAppearance="@style/MediumText" />
                     </LinearLayout>
                 </LinearLayout>
