@@ -45,11 +45,79 @@
             android:layout_marginVertical="@dimen/margin_medium"
             android:orientation="vertical"
             android:paddingHorizontal="@dimen/padding_large">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tên"
+                android:textSize="16sp"
+                android:textAppearance="?attr/textAppearanceCaption"
+                android:layout_marginTop="@dimen/grid_spacing"/>
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Phạm Hoàng Sơn"
+                    android:enabled="false"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MSSV"
+                android:textSize="16sp"
+                android:textAppearance="?attr/textAppearanceCaption"
+                android:layout_marginTop="@dimen/grid_spacing"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SE63195"
+                    android:enabled="false"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ngành học"
+                android:textSize="16sp"
+                android:textAppearance="?attr/textAppearanceCaption"
+                android:layout_marginTop="@dimen/grid_spacing"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kỹ Thuật Phần Mềm"
+                    android:enabled="false"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mã thẻ (bắt buộc)"
+                android:textSize="16sp"
+                android:textAppearance="?attr/textAppearanceCaption"
+                android:layout_marginTop="@dimen/grid_spacing"/>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginVertical="@dimen/margin_small"
-                android:hint="Mã thẻ (bắt buộc)"
                 app:boxBackgroundColor="@color/whiteColor">
 
                 <com.google.android.material.textfield.TextInputEditText
