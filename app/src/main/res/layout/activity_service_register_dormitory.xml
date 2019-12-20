@@ -118,7 +118,7 @@
                 android:layout_gravity="center"
                 android:paddingBottom="@dimen/padding_small"
                 android:layout_marginTop="@dimen/margin_medium"
-                android:text="Lý do làm lại thẻ ký túc xá:"
+                android:text="Lý do làm lại thẻ ký túc xá (bắt buộc):"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textSize="16sp"
                 android:textStyle="bold" />

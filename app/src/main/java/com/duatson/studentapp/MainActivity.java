@@ -114,4 +114,14 @@ public class MainActivity extends AppCompatActivity implements NavigationHost {
         AlertDialog dialog = builder.create();
         dialog.show();
     }
+
+    public void click1(View view) {
+        Intent intent = new Intent(this, RequestDetail3Activity.class);
+        startActivity(intent);
+    }
+
+    public void click2(View view) {
+        Intent intent = new Intent(this, RequestDetail4Activity.class);
+        startActivity(intent);
+    }
 }

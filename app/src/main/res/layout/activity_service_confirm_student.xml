@@ -124,7 +124,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/margin_medium"
                 android:paddingVertical="@dimen/padding_small"
-                android:text="Mục đích cấp giấy xác nhận sinh viên:"
+                android:text="Mục đích cấp giấy xác nhận sinh viên (bắt buộc):"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textSize="18sp"
                 android:textStyle="bold" />

@@ -26,14 +26,18 @@ public class CancelRequest2Activity extends AppCompatActivity {
         btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showDialog();
                 Intent returnIntent = new Intent();
                 TextInputEditText text = findViewById(R.id.tvReason);
-                returnIntent.putExtra("result", "Đã hủy");
-                returnIntent.putExtra("reason", text.getText().toString());
-                setResult(Activity.RESULT_OK, returnIntent);
-                Toast.makeText(CancelRequest2Activity.this, "Đã gửi", Toast.LENGTH_SHORT).show();
-                finish();
+                if (text.getText().toString().trim().length() == 0) {
+                    Toast.makeText(CancelRequest2Activity.this, "Vui lòng điền lý do hủy yêu cầu", Toast.LENGTH_SHORT).show();
+                } else {
+                    showDialog();
+                    returnIntent.putExtra("result", "Đã hủy");
+                    returnIntent.putExtra("reason", text.getText().toString());
+                    setResult(Activity.RESULT_OK, returnIntent);
+                    Toast.makeText(CancelRequest2Activity.this, "Đã gửi", Toast.LENGTH_SHORT).show();
+                    finish();
+                }
             }
         });
         topToolBar.setNavigationOnClickListener(new View.OnClickListener() {

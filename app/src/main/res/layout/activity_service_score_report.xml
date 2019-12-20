@@ -16,9 +16,9 @@
             style="@style/Widget.StudentApp.Toolbar"
             android:layout_width="match_parent"
             android:layout_height="@dimen/toolbar_height"
-            app:navigationIcon="@drawable/ic_arrow_back"
             android:background="@color/primaryDarkColor"
             android:elevation="8sp"
+            app:navigationIcon="@drawable/ic_arrow_back"
             app:titleTextColor="@color/whiteColor"
             tools:ignore="UnusedAttribute">
 
@@ -45,13 +45,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="@dimen/grid_spacing">
+            android:paddingHorizontal="@dimen/grid_spacing">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/grid_spacing"
-                android:text="Tên"
+                android:text="Tên sinh viên"
                 android:textAppearance="?attr/textAppearanceCaption"
                 android:textSize="16sp" />
 
@@ -73,7 +73,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/grid_spacing"
-                android:text="MSSV"
+                android:text="Mã số"
                 android:textAppearance="?attr/textAppearanceCaption"
                 android:textSize="16sp" />
 
@@ -142,13 +142,14 @@
                 android:layout_marginTop="@dimen/margin_medium"
                 android:layout_marginBottom="@dimen/margin_small"
                 android:text="Lý do cấp bảng điểm (bắt buộc)"
-                android:textAppearance="?attr/textAppearanceCaption"
+                android:textAppearance="?attr/textAppearanceHeadline5"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
             <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/padding_medium">
 
                 <RadioButton
                     android:layout_width="match_parent"
@@ -182,13 +183,14 @@
                 android:layout_marginTop="@dimen/margin_medium"
                 android:layout_marginBottom="@dimen/margin_small"
                 android:text="Chọn loại cấp bảng điểm (bắt buộc)"
-                android:textAppearance="?attr/textAppearanceCaption"
+                android:textAppearance="?attr/textAppearanceHeadline5"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
             <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/padding_medium">
 
                 <RadioButton
                     android:layout_width="match_parent"
@@ -203,6 +205,219 @@
                     android:textSize="16sp" />
 
             </RadioGroup>
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="@dimen/margin_medium"-->
+<!--                android:layout_marginBottom="@dimen/margin_small"-->
+<!--                android:text="Bạn muốn cấp bảng điểm theo:"-->
+<!--                android:textAppearance="?attr/textAppearanceHeadline5"-->
+<!--                android:textSize="18sp"-->
+<!--                android:textStyle="bold" />-->
+
+<!--            <RadioGroup-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:paddingLeft="@dimen/padding_medium">-->
+
+<!--                <RadioButton-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Học kỳ"-->
+<!--                    android:textSize="16sp" />-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:paddingLeft="@dimen/padding_large">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <CheckBox-->
+<!--                            android:id="@+id/int_id"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginRight="@dimen/margin_medium"-->
+<!--                            android:text="HK 1" />-->
+
+<!--                        <CheckBox-->
+<!--                            android:id="@+id/double_id"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginRight="@dimen/margin_medium"-->
+<!--                            android:text="HK 2" />-->
+
+<!--                        <CheckBox-->
+<!--                            android:id="@+id/string_id"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginRight="@dimen/margin_medium"-->
+<!--                            android:text="HK 3" />-->
+
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <CheckBox-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginRight="@dimen/margin_medium"-->
+<!--                            android:text="HK 4" />-->
+
+<!--                        <CheckBox-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginRight="@dimen/margin_medium"-->
+<!--                            android:text="HK 5" />-->
+
+<!--                        <CheckBox-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginRight="@dimen/margin_medium"-->
+<!--                            android:text="HK 6" />-->
+
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <CheckBox-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginRight="@dimen/margin_medium"-->
+<!--                            android:enabled="false"-->
+<!--                            android:text="HK 7" />-->
+
+<!--                        <CheckBox-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginRight="@dimen/margin_medium"-->
+<!--                            android:enabled="false"-->
+<!--                            android:text="HK 8" />-->
+
+<!--                        <CheckBox-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginRight="@dimen/margin_medium"-->
+<!--                            android:enabled="false"-->
+<!--                            android:text="HK 9" />-->
+
+<!--                    </LinearLayout>-->
+
+<!--                    <CheckBox-->
+<!--                        android:id="@+id/all"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Tất cả các học kỳ (đến học kỳ hiện tại)" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <RadioButton-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Các môn đã học"-->
+<!--                    android:textSize="16sp" />-->
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:paddingLeft="@dimen/padding_large">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <CheckBox-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginRight="@dimen/margin_medium"-->
+<!--                            android:text="PRO192" />-->
+
+<!--                        <CheckBox-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginRight="@dimen/margin_medium"-->
+<!--                            android:text="HK 2" />-->
+
+<!--                        <CheckBox-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginRight="@dimen/margin_medium"-->
+<!--                            android:text="HK 3" />-->
+
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <CheckBox-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginRight="@dimen/margin_medium"-->
+<!--                            android:text="HK 4" />-->
+
+<!--                        <CheckBox-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginRight="@dimen/margin_medium"-->
+<!--                            android:text="HK 5" />-->
+
+<!--                        <CheckBox-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginRight="@dimen/margin_medium"-->
+<!--                            android:text="HK 6" />-->
+
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <CheckBox-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginRight="@dimen/margin_medium"-->
+<!--                            android:enabled="false"-->
+<!--                            android:text="HK 7" />-->
+
+<!--                        <CheckBox-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginRight="@dimen/margin_medium"-->
+<!--                            android:enabled="false"-->
+<!--                            android:text="HK 8" />-->
+
+<!--                        <CheckBox-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginRight="@dimen/margin_medium"-->
+<!--                            android:enabled="false"-->
+<!--                            android:text="HK 9" />-->
+
+<!--                    </LinearLayout>-->
+
+<!--                    <CheckBox-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Tất cả các môn học (đến học kỳ hiện tại)" />-->
+
+<!--                </LinearLayout>-->
+<!--            </RadioGroup>-->
 
         </LinearLayout>
 

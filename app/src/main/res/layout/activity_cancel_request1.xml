@@ -103,7 +103,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingVertical="@dimen/padding_extra_small"
-                    android:text="Vui lòng điền lý do mà bạn muốn hủy yêu cầu: "
+                    android:text="Vui lòng điền lý do mà bạn muốn hủy yêu cầu (bắt buộc): "
                     android:textAppearance="?attr/textAppearanceHeadline5"
                     android:textSize="16sp" />
 
